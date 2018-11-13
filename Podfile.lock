@@ -1,0 +1,160 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AxcAE_TabBar (1.0.5)
+  - AxcDrawPath_Tool (1.0.1)
+  - DZNSegmentedControl (1.3.3)
+  - FBDigitalFont (0.0.4)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GPUImage (0.1.7)
+  - IQKeyboardManager (6.2.0)
+  - JWNetAutoCache (0.0.2)
+  - KSPhotoBrowser (0.2.4):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage (~> 4.0)
+    - SDWebImage/GIF
+  - LLDebugTool (1.2.2):
+    - LLDebugTool/AppInfo (= 1.2.2)
+    - LLDebugTool/Crash (= 1.2.2)
+    - LLDebugTool/General (= 1.2.2)
+    - LLDebugTool/Log (= 1.2.2)
+    - LLDebugTool/Network (= 1.2.2)
+    - LLDebugTool/Sandbox (= 1.2.2)
+    - LLDebugTool/Screenshot (= 1.2.2)
+    - LLDebugTool/StorageManager (= 1.2.2)
+  - LLDebugTool/AppInfo (1.2.2):
+    - LLDebugTool/General
+  - LLDebugTool/Crash (1.2.2):
+    - LLDebugTool/StorageManager
+  - LLDebugTool/General (1.2.2)
+  - LLDebugTool/Log (1.2.2):
+    - LLDebugTool/StorageManager
+  - LLDebugTool/Network (1.2.2):
+    - LLDebugTool/StorageManager
+  - LLDebugTool/Sandbox (1.2.2):
+    - LLDebugTool/General
+  - LLDebugTool/Screenshot (1.2.2):
+    - LLDebugTool/General
+  - LLDebugTool/StorageManager (1.2.2):
+    - FMDB
+    - LLDebugTool/General
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.15.7)
+  - PGPickerView (1.3.3)
+  - PPNumberButton (0.8.0)
+  - PSCityPickerView (1.0.0)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SDWebImage/GIF (4.4.2):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
+  - SVProgressHUD (2.1.2)
+  - WHC_Model (1.7.0.1)
+  - WMPageController (2.4.3)
+  - zhPopupController (1.0.3)
+  - ZLPhotoBrowser (2.7.4):
+    - GPUImage
+    - SDWebImage
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - AxcAE_TabBar
+  - AxcDrawPath_Tool
+  - DZNSegmentedControl
+  - FBDigitalFont
+  - IQKeyboardManager
+  - JWNetAutoCache
+  - KSPhotoBrowser
+  - LLDebugTool
+  - Masonry
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh
+  - PGPickerView
+  - PPNumberButton
+  - PSCityPickerView
+  - SDCycleScrollView
+  - SDWebImage (~> 4.4.2)
+  - SVProgressHUD (~> 2.1.2)
+  - WHC_Model
+  - WMPageController (~> 2.4.0)
+  - zhPopupController
+  - ZLPhotoBrowser
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AxcAE_TabBar
+    - AxcDrawPath_Tool
+    - DZNSegmentedControl
+    - FBDigitalFont
+    - FLAnimatedImage
+    - FMDB
+    - GPUImage
+    - IQKeyboardManager
+    - JWNetAutoCache
+    - KSPhotoBrowser
+    - LLDebugTool
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - PGPickerView
+    - PPNumberButton
+    - PSCityPickerView
+    - SDCycleScrollView
+    - SDWebImage
+    - SVProgressHUD
+    - WHC_Model
+    - WMPageController
+    - zhPopupController
+    - ZLPhotoBrowser
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AxcAE_TabBar: 1d5bcf6c4921889dc38839b6ba2c584a9b55251a
+  AxcDrawPath_Tool: 979de77fdeb741909897c6cad95867ad39f5613b
+  DZNSegmentedControl: ecc2f31c5581cce10c4d766ea4bd2d0781814c1f
+  FBDigitalFont: 20a6c7d54b1302aa77facca9cd6be2bc4e3342d4
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  JWNetAutoCache: 434f10855da06d29a381359552ae9d27ef35cad7
+  KSPhotoBrowser: 1f60c68401f34bcc223838c8592269b4a10a83bf
+  LLDebugTool: 37e600681126878a2e398508e4ee82678aef21f2
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  PGPickerView: 0b781b1d8fb153db5ef09ac3842941f29cbca8a4
+  PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
+  PSCityPickerView: 88ecae3def30a127152d75a87df22ff3d1e6e770
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  WHC_Model: 8268100386a9d450fa7ff72e9671910da8334e3f
+  WMPageController: 4c7f2c636675a71aea5eecf8fdc07a0ce86954e3
+  zhPopupController: 4e6bd734062cb9c7ebe8113568550bade168bed7
+  ZLPhotoBrowser: b666fe8f68edc63dc5c4edccca071885b87553f5
+
+PODFILE CHECKSUM: 1589ce8fd9c3458c57e400484e244d596f0bd1b5
+
+COCOAPODS: 1.5.3
