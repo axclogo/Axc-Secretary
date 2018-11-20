@@ -6,12 +6,14 @@
 //  Copyright © 2018 AxcLogo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MGSwipeTableCell.h"
 #import "TaskModel.h"
+#import "AxcDrawDefine.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TaskCell : UITableViewCell
+@interface TaskCell : MGSwipeTableCell
 
 @property (weak, nonatomic) IBOutlet UILabel *dayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *weekLabel;
@@ -21,14 +23,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *introductionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *unfoldBtn;
+@property (weak, nonatomic) IBOutlet UIButton *unfoldBtn_;
 
+@property (weak, nonatomic) IBOutlet UILabel *transactionLabel;
 
 @property(nonatomic , strong)MonthEventModel *monthEvent;
 
 // Cell之前的分割线尺寸
 @property(nonatomic, assign)UIEdgeInsets mergeUnitInset;
 @property(nonatomic, assign)UIEdgeInsets noMergeUnitInset;
-
 
 @end
 

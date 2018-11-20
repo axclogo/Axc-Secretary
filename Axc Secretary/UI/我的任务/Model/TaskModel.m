@@ -9,6 +9,23 @@
 #import "TaskModel.h"
 
 @implementation MonthEventModel
+- (NSString *)levelStr{
+    switch (self.level) {
+        case 0:  return @"普通";  break;
+        case 1:
+        case 2:
+        case 3:  return @"正常";  break;
+        case 4:
+        case 5:
+        case 6:  return @"一般";  break;
+        case 7:
+        case 8:
+        case 9:  return @"重要";  break;
+        case 10: return @"紧急";  break;
+            break;
+        default: return @"未知";  break;
+    }
+}
 
 @end
 @implementation TaskModel
@@ -26,6 +43,9 @@
             if ([obj.date AxcTool_compareDaysWithDate:onModel.date]) { // 和上一个相等
                 onModel.isMergeUnit = YES;
                 obj.isHiddenDate = YES;
+            }else{
+                onModel.isMergeUnit = NO;
+                obj.isHiddenDate = NO;
             }
         }
     }];

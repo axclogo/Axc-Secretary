@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7E31884DAC8B7FE30B3FA525 /* libPods-Axc Secretary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8817DBBF060476B1F8AC40 /* libPods-Axc Secretary.a */; };
+		EA09EDF6219AA04500713AFB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA09EDF5219AA04500713AFB /* libsqlite3.0.tbd */; };
+		EA0B110C21A2554900340FEA /* AxcDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0B110B21A2554900340FEA /* AxcDBManager.m */; };
 		EA1E435021995A9500B95CF8 /* AxcBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E434F21995A9500B95CF8 /* AxcBaseModel.m */; };
 		EA1E435321995AA900B95CF8 /* TaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E435221995AA900B95CF8 /* TaskModel.m */; };
 		EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E435A21995AD300B95CF8 /* TaskCell.m */; };
@@ -93,6 +95,9 @@
 /* Begin PBXFileReference section */
 		7FB384BC73673694CC99A1B5 /* Pods-Axc Secretary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axc Secretary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary.debug.xcconfig"; sourceTree = "<group>"; };
 		AE8817DBBF060476B1F8AC40 /* libPods-Axc Secretary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Axc Secretary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA09EDF5219AA04500713AFB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		EA0B110A21A2554900340FEA /* AxcDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcDBManager.h; sourceTree = "<group>"; };
+		EA0B110B21A2554900340FEA /* AxcDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AxcDBManager.m; sourceTree = "<group>"; };
 		EA1E434E21995A9500B95CF8 /* AxcBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxcBaseModel.h; sourceTree = "<group>"; };
 		EA1E434F21995A9500B95CF8 /* AxcBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxcBaseModel.m; sourceTree = "<group>"; };
 		EA1E435121995AA900B95CF8 /* TaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskModel.h; sourceTree = "<group>"; };
@@ -229,6 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA09EDF6219AA04500713AFB /* libsqlite3.0.tbd in Frameworks */,
 				7E31884DAC8B7FE30B3FA525 /* libPods-Axc Secretary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +268,19 @@
 		B43A4CD3579CEA4125EAC544 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA09EDF5219AA04500713AFB /* libsqlite3.0.tbd */,
 				AE8817DBBF060476B1F8AC40 /* libPods-Axc Secretary.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA0B110921A2553700340FEA /* AxcDBManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA0B110A21A2554900340FEA /* AxcDBManager.h */,
+				EA0B110B21A2554900340FEA /* AxcDBManager.m */,
+			);
+			path = AxcDBManager;
 			sourceTree = "<group>";
 		};
 		EA1E434C21995A6300B95CF8 /* Model */ = {
@@ -396,6 +412,7 @@
 		EAADC2432187F3BB0043BB9D /* AxcFramework */ = {
 			isa = PBXGroup;
 			children = (
+				EA0B110921A2553700340FEA /* AxcDBManager */,
 				EAADC2442187F4250043BB9D /* AxcBasicSuit */,
 			);
 			path = AxcFramework;
@@ -1265,6 +1282,7 @@
 				EAADC2CC2187F4250043BB9D /* AxcParameterObj.m in Sources */,
 				EAADC2ED2187F4250043BB9D /* UIImage+AxcSpecialEffectsDrawing.m in Sources */,
 				EAADC2DD2187F4250043BB9D /* NSArray+AxcDataConversionEx.m in Sources */,
+				EA0B110C21A2554900340FEA /* AxcDBManager.m in Sources */,
 				EAADC2F02187F4250043BB9D /* AxcDataCache.m in Sources */,
 				EAADC2E02187F4250043BB9D /* UIButton+AxcButtonContentLayout.m in Sources */,
 				EAC1FDED21884238001AC774 /* AxcNavVC.m in Sources */,

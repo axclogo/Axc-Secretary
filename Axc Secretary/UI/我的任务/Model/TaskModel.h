@@ -21,9 +21,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic , assign)BOOL isMergeUnit;
 // 是否隐藏日期显示
 @property(nonatomic , assign)BOOL isHiddenDate;
+// 事务级别 0-10
+@property(nonatomic , assign)NSInteger level;
+// 事务级别名称
+@property(nonatomic , strong , readonly)NSString *levelStr;
+
+// cell控制展开
+@property(nonatomic , assign)BOOL isSelect;
 
 @end
-
+////////////////////////////////////////////////////////
 @interface TaskModel : AxcBaseModel
 
 
