@@ -73,6 +73,7 @@
 		EAC1FDEF21884C82001AC774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC1FDEE21884C82001AC774 /* Assets.xcassets */; };
 		EAC1FDF221884D13001AC774 /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC1FDF121884D13001AC774 /* SettingVC.m */; };
 		EAC1FDF421885877001AC774 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EAC1FDF321885877001AC774 /* icon.png */; };
+		EAF898BD21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF898BB21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +227,8 @@
 		EAC1FDF021884D13001AC774 /* SettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingVC.h; sourceTree = "<group>"; };
 		EAC1FDF121884D13001AC774 /* SettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
 		EAC1FDF321885877001AC774 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		EAF898BB21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+DGActivityIndicatorView.m"; sourceTree = "<group>"; };
+		EAF898BC21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+DGActivityIndicatorView.h"; sourceTree = "<group>"; };
 		FF841F8DBA0445B1969BC6A0 /* Pods-Axc Secretary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axc Secretary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -412,6 +415,7 @@
 		EAADC2432187F3BB0043BB9D /* AxcFramework */ = {
 			isa = PBXGroup;
 			children = (
+				EAF898B921A55D3200FE54B6 /* Libs */,
 				EA0B110921A2553700340FEA /* AxcDBManager */,
 				EAADC2442187F4250043BB9D /* AxcBasicSuit */,
 			);
@@ -1052,6 +1056,23 @@
 			path = Nav;
 			sourceTree = "<group>";
 		};
+		EAF898B921A55D3200FE54B6 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				EAF898BA21A55D3D00FE54B6 /* SVP+ */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		EAF898BA21A55D3D00FE54B6 /* SVP+ */ = {
+			isa = PBXGroup;
+			children = (
+				EAF898BB21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m */,
+				EAF898BC21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.h */,
+			);
+			path = "SVP+";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1295,6 +1316,7 @@
 				EAC1FDE0218840A8001AC774 /* MyTaskVC.m in Sources */,
 				EAADC2EB2187F4250043BB9D /* UIImage+AxcQRCode.m in Sources */,
 				EAADC2E32187F4250043BB9D /* UIView+AxcViewRectEx.m in Sources */,
+				EAF898BD21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m in Sources */,
 				EAADC2D02187F4250043BB9D /* NSDate+AxcProcessingEx.m in Sources */,
 				EAADC2D32187F4250043BB9D /* NSObject+AxcBasicSuitObjectEx.m in Sources */,
 				EA1E435021995A9500B95CF8 /* AxcBaseModel.m in Sources */,

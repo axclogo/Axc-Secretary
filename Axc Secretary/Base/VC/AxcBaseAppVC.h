@@ -7,10 +7,13 @@
 //
 
 #import "AxcBaseVC.h"
+#import "AxcDBManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AxcBaseAppVC : AxcBaseVC
+
+@property(nonatomic , strong)AxcDBManager *db;
 
 @end
 

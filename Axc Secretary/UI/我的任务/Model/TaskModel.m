@@ -9,6 +9,14 @@
 #import "TaskModel.h"
 
 @implementation MonthEventModel
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.cellHeight = kStartingCellHeight;
+    }
+    return self;
+}
 - (NSString *)levelStr{
     switch (self.level) {
         case 0:  return @"普通";  break;
@@ -26,7 +34,6 @@
         default: return @"未知";  break;
     }
 }
-
 @end
 @implementation TaskModel
 
@@ -41,12 +48,15 @@
         if (idx) {
             MonthEventModel *onModel = [sourceArrM objectAtIndex:idx - 1];
             if ([obj.date AxcTool_compareDaysWithDate:onModel.date]) { // 和上一个相等
-                onModel.isMergeUnit = YES;
-                obj.isHiddenDate = YES;
+                onModel.isMergeUnit = YES;  // 合并
+                obj.isHiddenDate = YES;         // 隐藏日期显示时间标记
             }else{
                 onModel.isMergeUnit = NO;
                 obj.isHiddenDate = NO;
             }
+        }else{
+            obj.isMergeUnit = NO;
+            obj.isHiddenDate = NO;
         }
     }];
     _monthEvents = sourceArrM;

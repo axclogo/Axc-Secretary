@@ -21,6 +21,13 @@
     
 }
 
+#pragma mark - 懒加载
+- (AxcDBManager *)db{
+    if (!_db) {
+        _db = [AxcDBManager manager];
+    }
+    return _db;
+}
 
 #pragma mark - 重写
 - (void)viewWillAppear:(BOOL)animated{

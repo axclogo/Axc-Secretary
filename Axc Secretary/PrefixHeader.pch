@@ -37,6 +37,8 @@
 
 // 三方框架组
 #import <SVProgressHUD.h>               // Tost展示
+#import "SVProgressHUD+DGActivityIndicatorView.h"
+
 #import <Masonry.h>                     // 布局
 #import <IQKeyboardManager.h>           // 键盘弹出
 #import <UIImageView+WebCache.h>        // 网络图片加载

@@ -14,6 +14,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -54,6 +55,12 @@
     // 展开控制
     self.unfoldBtn_.selected = self.unfoldBtn.selected = _monthEvent.isSelect;
     self.unfoldBtn_.transform = self.unfoldBtn.transform = CGAffineTransformMakeRotation(AxcDraw_Angle(_monthEvent.isSelect ? 180 : 0));
+    // 添加时间
+    self.addDateLabel.text = [AxcCalculateTool AxcTool_timeIntervalFromLastTime:_monthEvent.addDate ToCurrentTime:[NSDate date]];
+    self.addDateLabel.textColor = kVCBackColor;
+    // 执行时间
+    self.executionTimeLabel.text = [AxcCalculateTool AxcTool_timeFromTime:_monthEvent.date ToCurrentTime:[NSDate date]];
+    self.executionTimeLabel.textColor = kVCBackColor;
 }
 
 #pragma mark - 懒加载

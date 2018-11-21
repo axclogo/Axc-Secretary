@@ -8,11 +8,17 @@
 
 #import "AxcBaseModel.h"
 
+#define kStartingCellHeight 70
+#define kDateFormat @"yyyy-MM-dd HH:mm:ss"
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MonthEventModel : AxcBaseModel
 // 日期
 @property(nonatomic , strong)NSDate *date;
+// 日期
+@property(nonatomic , strong)NSDate *addDate;
 // 标题
 @property(nonatomic , strong)NSString *title;
 // 简介
@@ -25,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic , assign)NSInteger level;
 // 事务级别名称
 @property(nonatomic , strong , readonly)NSString *levelStr;
+
+// 是否已完成
+@property(nonatomic , assign)BOOL isComplete;
 
 // cell控制展开
 @property(nonatomic , assign)BOOL isSelect;

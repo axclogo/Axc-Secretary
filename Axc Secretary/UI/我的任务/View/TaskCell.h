@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *unfoldBtn_;
 
 @property (weak, nonatomic) IBOutlet UILabel *transactionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *executionTimeLabel;
 
 @property(nonatomic , strong)MonthEventModel *monthEvent;
 

@@ -9,7 +9,7 @@
 #import "MyTaskVC.h"
 #import "TaskCell.h"
 
-#define kStartingCellHeight 60
+
 
 @interface MyTaskVC ()
 
@@ -22,7 +22,10 @@
 
 }
 - (void)createUI{
-    [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationRight image:@"add_white"];
+    WeakSelf;
+    [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationRight image:@"add_white" handler:^(UIButton *barItemBtn) {
+        [weakSelf insertTask];
+    }];
     [self AxcBase_settingTableType:UITableViewStylePlain nibName:@"TaskCell" cellID:@"axc"];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -30,27 +33,24 @@
     }];
     
 }
+- (void)insertTask{
+    MonthEventModel *monthEventModel = [MonthEventModel new];
+    monthEventModel.cellHeight = kStartingCellHeight;
+    monthEventModel.level = arc4random()%11;
+    monthEventModel.title = @"洗衣服";
+    monthEventModel.date = [NSDate AxcTool_getDateString:[NSString stringWithFormat:@"2019-%d-%d",arc4random()%12+1,arc4random()%10+10] withFomant:@"yyyy-MM-dd"];
+    monthEventModel.Introduction = @"我将去楼下将衣服交给洗衣机处理";
+    monthEventModel.addDate = [NSDate date];
+    [self.db addTaskMatter:monthEventModel];
+    [self requestData];
+}
 - (void)requestData{
-    for (int i = 0; i < 3; i ++) {
-        TaskModel *model_0 = [TaskModel new];
-        NSInteger month = i + 10;
-        model_0.date = [NSDate AxcTool_getDateString:[NSString stringWithFormat:@"2018 年 %ld 月",month] withFomant:MonthFormat];
-        
-        NSMutableArray *arr = @[].mutableCopy;
-        for (int j = 0; j < arc4random()%10+10; j ++) {
-            MonthEventModel *monthEventModel = [MonthEventModel new];
-            monthEventModel.cellHeight = kStartingCellHeight;
-            monthEventModel.level = arc4random()%11;
-            monthEventModel.title = @"洗衣服";
-            monthEventModel.date = [NSDate AxcTool_getDateString:[NSString stringWithFormat:@"2018-%ld-%d",month,j+arc4random()%10+10] withFomant:@"yyyy-MM-dd"];
-            monthEventModel.Introduction = @"我将去楼下将衣服交给洗衣机处理我将去楼下将衣服交给洗衣机处理我将去楼下将衣服交给洗衣机处理";
-            [arr addObject:monthEventModel];
-        }
-        model_0.monthEvents = arr;
-        [self.dataListArray addObject:model_0];
-    }
+    self.dataListArray = [self.db getAllTaskMatters].mutableCopy;
+    
     [self.tableView reloadData];
 }
+
+
 - (void )click_moreBtn:(UIButton *)sender {
     MonthEventModel *monthEventModel = [self getDataSourceWithIndexPath:sender.axcIndexPath];
     monthEventModel.cellHeight = sender.selected ? kStartingCellHeight : 200;
@@ -61,16 +61,39 @@
     [self.tableView endUpdates];
     sender.selected = !sender.selected;
 }
-#pragma mark - 复用
-- (void)deleteDataWithIndexPath:(NSIndexPath *)indexPath{
+#pragma mark - 事项操作函数复用
+- (void)completeDataWithIndexPath:(NSIndexPath *)indexPath{
+    // 数据库标记该事项已完成
     TaskModel *model = self.dataListArray[indexPath.section];
+    MonthEventModel *monthModel = model.monthEvents[indexPath.row];
+    [self.db completeTaskMatter:monthModel];
+    // 动画删除
+    [self removeRowWithIndexPath:indexPath animation:UITableViewRowAnimationRight];
+    [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@\n已完成！",monthModel.title]];
+}
+- (void)deleteDataWithIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation )animation{
+    // 数据库删除
+    [self.db deleteTaskMatter:[self getDataSourceWithIndexPath:indexPath]];
+    // 动画删除
+    [self removeRowWithIndexPath:indexPath animation:animation];
+}
+- (void)removeRowWithIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation )animation{
+    TaskModel *model = self.dataListArray[indexPath.section];
+    // 数据源删除
     NSMutableArray *arr_M = model.monthEvents.mutableCopy;
     [arr_M removeObjectAtIndex:indexPath.row];
-    model.monthEvents = arr_M;
-    [self.dataListArray replaceObjectAtIndex:indexPath.section withObject:model];
-    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
-    [self.tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.3];    // 数据对齐
+    if (arr_M.count) {  // 还有数据
+        model.monthEvents = arr_M;
+        [self.dataListArray replaceObjectAtIndex:indexPath.section withObject:model];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:animation];
+    }else{  // 无数据，表头也可以删了
+        [self.dataListArray removeObjectAtIndex:indexPath.section];
+        [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:animation];
+    }
+    // 数据对齐
+    [self.tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.3];
 }
+
 #pragma mark - Table|Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
 }
@@ -86,7 +109,14 @@
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     TaskModel *model = self.dataListArray[section];
+    if ([model.date AxcTool_isThisMonth] && [model.date AxcTool_isThisYear] ) return @"今月";
     return [model.date AxcTool_getDateWithFomant:MonthFormat];
+}
+-(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    TaskModel *model = self.dataListArray[section];
+    header.backgroundView.backgroundColor = ([model.date AxcTool_isThisMonth] && [model.date AxcTool_isThisYear]) ? KScienceTechnologyBlue : kVCBackColor;
+    header.textLabel.textColor = [UIColor whiteColor];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TaskCell *cell = [tableView dequeueReusableCellWithIdentifier:@"axc"];
@@ -98,8 +128,8 @@
     cell.rightButtons = [self rightButtons];
     cell.rightSwipeSettings.transition = MGSwipeTransitionStatic;
     cell.leftSwipeSettings.transition = MGSwipeTransitionDrag;
-    cell.rightExpansion.buttonIndex = cell.leftExpansion.buttonIndex = 0;
-    cell.swipeBackgroundColor = [UIColor AxcTool_colorHex:@"f6f6f6"];
+//    cell.leftExpansion.buttonIndex = 0;
+    cell.swipeBackgroundColor = [UIColor groupTableViewBackgroundColor];
     return cell;
 }
 - (MonthEventModel *)getDataSourceWithIndexPath:(NSIndexPath *)indexPath{
@@ -110,21 +140,21 @@
 - (NSArray <MGSwipeButton *>*)leftButtons{
     WeakSelf;
     MGSwipeButton *completeBtn = [self swipeBtnWithImg:@"complete" callBack:^(TaskCell * _Nonnull cell) {
-
+        [weakSelf completeDataWithIndexPath:cell.unfoldBtn.axcIndexPath];
     }];
     return @[completeBtn];
 }
 - (NSArray <MGSwipeButton *>*)rightButtons{
     WeakSelf;
     MGSwipeButton *deleteBtn = [self swipeBtnWithImg:@"delete" callBack:^(TaskCell * _Nonnull cell) {
-        [weakSelf deleteDataWithIndexPath:cell.unfoldBtn.axcIndexPath];
+        [weakSelf deleteDataWithIndexPath:cell.unfoldBtn.axcIndexPath animation:UITableViewRowAnimationLeft];
     }];
     return @[deleteBtn];
 }
 - (MGSwipeButton *)swipeBtnWithImg:(NSString *)imgName callBack:(void (^)(TaskCell * _Nonnull cell))callBack{
     MGSwipeButton *swipeBtn = [MGSwipeButton buttonWithTitle:@""
                               icon:[UIImage imageNamed:imgName]
-                   backgroundColor:[UIColor AxcTool_colorHex:@"f6f6f6"]
+                   backgroundColor:[UIColor groupTableViewBackgroundColor]
                           callback:^BOOL(MGSwipeTableCell * _Nonnull cell) {
                               TaskCell *cell_ = (TaskCell *)cell;
                               callBack(cell_);
