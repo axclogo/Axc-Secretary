@@ -8,10 +8,11 @@
 
 #import "MyTaskVC.h"
 #import "TaskCell.h"
-
-
+#import "DZNSegmentedControl.h"
 
 @interface MyTaskVC ()
+
+@property(nonatomic , strong)DZNSegmentedControl *titleSegmentedControl;
 
 @end
 
@@ -22,6 +23,7 @@
 
 }
 - (void)createUI{
+    self.navigationItem.titleView = self.titleSegmentedControl;
     WeakSelf;
     [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationRight image:@"add_white" handler:^(UIButton *barItemBtn) {
         [weakSelf insertTask];
@@ -163,5 +165,19 @@
     swipeBtn.buttonWidth = SwipeButtonWidth;
     swipeBtn.imageView.contentMode = UIViewContentModeScaleAspectFit;
     return swipeBtn;
+}
+
+- (DZNSegmentedControl *)titleSegmentedControl{
+    if (!_titleSegmentedControl) {
+        _titleSegmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"待处理",@"打卡任务",@"已完成"]];
+        _titleSegmentedControl.backgroundColor = [UIColor clearColor];
+        _titleSegmentedControl.frame = CGRectMake(0, 0, 200, 28);
+        _titleSegmentedControl.tintColor = KScienceTechnologyBlue;
+        _titleSegmentedControl.showsCount = NO;
+        _titleSegmentedControl.hairlineColor = [UIColor clearColor];
+        [_titleSegmentedControl setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//        [_titleSegmentedControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    }
+    return _titleSegmentedControl;
 }
 @end
