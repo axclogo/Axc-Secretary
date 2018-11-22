@@ -12,8 +12,8 @@ target “Axc Secretary” do
    pod 'AFNetworking', '~> 3.1.0'
    pod 'SDWebImage', '~> 4.4.2'
 
-   pod 'MBProgressHUD', '~> 1.0.0'
-   pod 'SVProgressHUD', '~> 2.1.2'
+   pod 'MBProgressHUD'
+   pod 'SVProgressHUD'
    pod 'IQKeyboardManager'
    pod 'JWNetAutoCache'
    pod 'WHC_Model'
@@ -22,7 +22,7 @@ target “Axc Secretary” do
    pod 'SDCycleScrollView'
    pod 'KSPhotoBrowser'
    pod 'ZLPhotoBrowser'
-   pod 'WMPageController', '~> 2.4.0'
+   pod 'WMPageController'
    pod 'PPNumberButton'
    pod 'DZNSegmentedControl'
    pod 'zhPopupController'
@@ -30,6 +30,7 @@ target “Axc Secretary” do
    pod 'PSCityPickerView'
    pod 'FBDigitalFont'
    pod 'MGSwipeTableCell'
+   pod 'iCarousel'
 
 # Axc套件
    pod 'AxcAE_TabBar'

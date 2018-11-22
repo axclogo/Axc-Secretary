@@ -50,17 +50,17 @@
     // 合并后需要圆圈标注
     self.dayLabel.layer.masksToBounds = _monthEvent.isMergeUnit;
     self.dayLabel.layer.cornerRadius = _monthEvent.isMergeUnit ? self.dayLabel.axcTool_width/2 : 0;
-    self.dayLabel.backgroundColor = _monthEvent.isMergeUnit ? kVCBackColor : [UIColor clearColor];
+    self.dayLabel.backgroundColor = _monthEvent.isMergeUnit ? kPicBackColor : [UIColor clearColor];
     self.dayLabel.textColor = _monthEvent.isMergeUnit ? [UIColor whiteColor] : [UIColor blackColor];
     // 展开控制
     self.unfoldBtn_.selected = self.unfoldBtn.selected = _monthEvent.isSelect;
     self.unfoldBtn_.transform = self.unfoldBtn.transform = CGAffineTransformMakeRotation(AxcDraw_Angle(_monthEvent.isSelect ? 180 : 0));
     // 添加时间
     self.addDateLabel.text = [AxcCalculateTool AxcTool_timeIntervalFromLastTime:_monthEvent.addDate ToCurrentTime:[NSDate date]];
-    self.addDateLabel.textColor = kVCBackColor;
+    self.addDateLabel.textColor = kPicBackColor;
     // 执行时间
     self.executionTimeLabel.text = [AxcCalculateTool AxcTool_timeFromTime:_monthEvent.date ToCurrentTime:[NSDate date]];
-    self.executionTimeLabel.textColor = kVCBackColor;
+    self.executionTimeLabel.textColor = kPicBackColor;
 }
 
 #pragma mark - 懒加载

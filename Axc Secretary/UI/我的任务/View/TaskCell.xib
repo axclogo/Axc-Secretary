@@ -20,7 +20,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KR9-ro-zRz">
                         <rect key="frame" x="0.0" y="0.0" width="44" height="200"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUA-HU-QQC">
                                 <rect key="frame" x="0.0" y="122" width="44" height="17"/>
@@ -36,7 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="44" height="70"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxG-YE-dtf">
@@ -78,7 +78,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2K-8S-Jlz">
-                        <rect key="frame" x="44" y="70" width="266" height="1"/>
+                        <rect key="frame" x="44" y="52" width="266" height="1"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -94,7 +94,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-Vk-eIP">
-                        <rect key="frame" x="49" y="186" width="126" height="10"/>
+                        <rect key="frame" x="49" y="186" width="263" height="10"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -106,6 +106,7 @@
             <connections>
                 <outlet property="addDateLabel" destination="JMw-Eg-ZCh" id="0bg-WX-UX1"/>
                 <outlet property="dayLabel" destination="KxG-YE-dtf" id="lBg-55-hko"/>
+                <outlet property="disLineView" destination="V2K-8S-Jlz" id="BNg-ng-Gdw"/>
                 <outlet property="executionTimeLabel" destination="A5M-Vk-eIP" id="qYe-tq-rMH"/>
                 <outlet property="introductionLabel" destination="dEf-v3-YeE" id="Z4C-a6-znl"/>
                 <outlet property="lineView" destination="olV-aE-m0h" id="wWt-Tj-Ul5"/>

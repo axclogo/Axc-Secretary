@@ -57,7 +57,7 @@
     monthEventModel.isSelect = !sender.selected;        // 已选中展开
     [self.tableView beginUpdates];
     sender.transform = CGAffineTransformMakeRotation(AxcDraw_Angle(monthEventModel.isSelect ? 180 : 0));
-    [self.tableView reloadRowsAtIndexPaths:@[sender.axcIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView reloadRowsAtIndexPaths:@[sender.axcIndexPath] withRowAnimation:UITableViewRowAnimationNone];
     [self.tableView endUpdates];
     sender.selected = !sender.selected;
 }
@@ -115,7 +115,7 @@
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     TaskModel *model = self.dataListArray[section];
-    header.backgroundView.backgroundColor = ([model.date AxcTool_isThisMonth] && [model.date AxcTool_isThisYear]) ? KScienceTechnologyBlue : kVCBackColor;
+    header.backgroundView.backgroundColor = ([model.date AxcTool_isThisMonth] && [model.date AxcTool_isThisYear]) ? KScienceTechnologyBlue : kBackColor;
     header.textLabel.textColor = [UIColor whiteColor];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

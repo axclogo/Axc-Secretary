@@ -23,6 +23,7 @@ PODS:
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
   - GPUImage (0.1.7)
+  - iCarousel (1.8.3)
   - IQKeyboardManager (6.2.0)
   - JWNetAutoCache (0.0.2)
   - KSPhotoBrowser (0.2.4):
@@ -86,12 +87,13 @@ DEPENDENCIES:
   - AxcDrawPath_Tool
   - DZNSegmentedControl
   - FBDigitalFont
+  - iCarousel
   - IQKeyboardManager
   - JWNetAutoCache
   - KSPhotoBrowser
   - LLDebugTool
   - Masonry
-  - MBProgressHUD (~> 1.0.0)
+  - MBProgressHUD
   - MGSwipeTableCell
   - MJRefresh
   - PGPickerView
@@ -99,10 +101,10 @@ DEPENDENCIES:
   - PSCityPickerView
   - SDCycleScrollView
   - SDWebImage (~> 4.4.2)
-  - SVProgressHUD (~> 2.1.2)
+  - SVProgressHUD
   - WHC_Model
   - WHC_ModelSqliteKit
-  - WMPageController (~> 2.4.0)
+  - WMPageController
   - zhPopupController
   - ZLPhotoBrowser
 
@@ -116,6 +118,7 @@ SPEC REPOS:
     - FLAnimatedImage
     - FMDB
     - GPUImage
+    - iCarousel
     - IQKeyboardManager
     - JWNetAutoCache
     - KSPhotoBrowser
@@ -145,6 +148,7 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   JWNetAutoCache: 434f10855da06d29a381359552ae9d27ef35cad7
   KSPhotoBrowser: 1f60c68401f34bcc223838c8592269b4a10a83bf
@@ -165,6 +169,6 @@ SPEC CHECKSUMS:
   zhPopupController: 4e6bd734062cb9c7ebe8113568550bade168bed7
   ZLPhotoBrowser: b666fe8f68edc63dc5c4edccca071885b87553f5
 
-PODFILE CHECKSUM: 3589a6415ac2368a4adf4138eb109ed89783c986
+PODFILE CHECKSUM: 150807b97c689b7046c9c011efb98d5181be5f1e
 
 COCOAPODS: 1.5.3
