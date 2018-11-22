@@ -24,6 +24,7 @@
 }
 - (void)createUI{
     self.navigationItem.titleView = self.titleSegmentedControl;
+    self.navigationController.navigationBar.prefersLargeTitles = YES; // 滑动大标题
     WeakSelf;
     [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationRight image:@"add_white" handler:^(UIButton *barItemBtn) {
         [weakSelf insertTask];
