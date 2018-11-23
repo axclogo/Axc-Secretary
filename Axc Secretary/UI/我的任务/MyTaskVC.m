@@ -170,7 +170,7 @@
 
 - (DZNSegmentedControl *)titleSegmentedControl{
     if (!_titleSegmentedControl) {
-        _titleSegmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"待处理",@"打卡任务",@"已完成"]];
+        _titleSegmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"待处理",@"每日任务",@"已完成"]];
         _titleSegmentedControl.backgroundColor = [UIColor clearColor];
         _titleSegmentedControl.frame = CGRectMake(0, 0, 200, 28);
         _titleSegmentedControl.tintColor = KScienceTechnologyBlue;

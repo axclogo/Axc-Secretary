@@ -23,10 +23,9 @@
     self.window.rootViewController = [BaseTabbarVC new];
     
     [LLConfig sharedConfig].colorStyle = LLConfigColorStyleSimple;
-    [[LLConfig sharedConfig] configBackgroundColor:[UIColor orangeColor]
-                                         textColor:[UIColor whiteColor]
+    [[LLConfig sharedConfig] configBackgroundColor:[UIColor whiteColor]
+                                         textColor:kBackColor
                                     statusBarStyle:UIStatusBarStyleDefault];
-    [LLConfig sharedConfig].useSystemColor = YES;
     [[LLDebugTool sharedTool] startWorking];
     
     
