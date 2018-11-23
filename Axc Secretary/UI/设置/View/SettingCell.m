@@ -1,0 +1,50 @@
+//
+//  SettingCell.m
+//  Axc Secretary
+//
+//  Created by AxcLogo on 2018/11/23.
+//  Copyright © 2018 AxcLogo. All rights reserved.
+//
+
+#import "SettingCell.h"
+
+@implementation SettingCell
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.backgroundColor = kNavColor;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    // 设置UI
+    self.switchOn.onTintColor = kSelectedGreenColor;
+    self.switchOn.tintColor = kUncheckColor;
+    [self.switchOn addTarget:self action:@selector(changeSwitchState) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+- (void)changeSwitchState{
+    [self.model trigger];
+}
+
+- (void)setModel:(SettingModel *)model{
+    _model = model;
+    self.accessoryType = _model.accessoryType;
+    self.titleLabel.text = _model.title;
+    // 设置状态
+    self.switchOn.hidden = YES;
+    switch (_model.settingType) {
+        case SettingTypeSwitch:{
+            self.switchOn.hidden = NO;
+            // 匹配开关状态
+            self.switchOn.on = _model.switch_on;
+        }break;
+            
+        default:  break;
+    }
+}
+
+@end
