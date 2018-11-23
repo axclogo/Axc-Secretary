@@ -328,7 +328,7 @@
         
         int seconds = ((int)time)%(3600*24)%3600%60;
         
-        return [[NSString alloc] initWithFormat:@"仅剩%i天%i小时%i分%i秒",days,hours,minutes,seconds];
+        return [[NSString alloc] initWithFormat:@"仅剩%i天%i时%i分%i秒",days,hours,minutes,seconds];
     }
     return @"";
 }

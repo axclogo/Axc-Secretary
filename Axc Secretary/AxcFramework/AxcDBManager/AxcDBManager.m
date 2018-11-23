@@ -69,7 +69,7 @@ static AxcDBManager    *_axcDBManager;
         model.isComplete = [resultSet intForColumn:@"is_complete"];
         [allTask addObject:model];
         
-        NSString *monthStr = [NSString stringWithFormat:@"%ld",[model.date month]];
+        NSString *monthStr = [NSString stringWithFormat:@"%ld-%ld",[model.date years],[model.date month]];
         // 检测一遍，set比fotKey更耗性能
         if (![allMonthKey objectForKey:monthStr]) { // 如果没有该月份
             [allMonthKey setObject:monthStr forKey:monthStr];
@@ -81,7 +81,11 @@ static AxcDBManager    *_axcDBManager;
     [[allMonthKey allKeys] enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSMutableArray <MonthEventModel *>*monthTask = @[].mutableCopy;
         [allTask enumerateObjectsUsingBlock:^(MonthEventModel * _Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ([obj integerValue] == model.date.month) {   // 相同月份的添加
+            NSArray *obj_date = [obj componentsSeparatedByString:@"-"];
+            NSInteger years = [obj_date.firstObject integerValue];
+            NSInteger month = [obj_date.lastObject integerValue];
+            if (years == model.date.years &&    // 相同年分
+                month == model.date.month) {   // 相同月份的添加
                 [monthTask addObject:model];
             }
         }];

@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "BaseTabbarVC.h"
 
-#import <LLDebug.h>
+#import "AppDelegate+LLDebug_Ex.h"
 
 @interface AppDelegate ()
 
@@ -19,14 +19,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = kMainBackColor;
     self.window.rootViewController = [BaseTabbarVC new];
     
-    [LLConfig sharedConfig].colorStyle = LLConfigColorStyleSimple;
-    [[LLConfig sharedConfig] configBackgroundColor:[UIColor whiteColor]
-                                         textColor:kBackColor
-                                    statusBarStyle:UIStatusBarStyleDefault];
-    [[LLDebugTool sharedTool] startWorking];
+    [self settingLLDebug];
     
     
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];

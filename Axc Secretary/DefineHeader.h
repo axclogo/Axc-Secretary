@@ -16,7 +16,13 @@
 #define MonthFormat @"yyyy 年 MM 月"
 #define WEEK_DAY_STRINGS @[@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六"]
 
+#define kSettingKeys @"kSettingKeys_"
 
+#define kSetting_DebugAirBubbles @"kSetting_DebugAirBubbles"
+#define kSetting_TaskQuickOperation @"kSetting_TaskQuickOperation"
+
+
+#define kNotification_TaskQuickOperationChange @"kNotification_TaskQuickOperationChange"
 // 导航
 #define kNavColor [UIColor AxcTool_colorHex:@"212A36"]
 // 主背景色
@@ -27,3 +33,7 @@
 #define kSelectedGreenColor [UIColor AxcTool_colorHex:@"5CA479"]
 // 警示红
 #define kWarningRedColor [UIColor AxcTool_colorHex:@"F86865"]
+// 深色导航
+#define kNavDarkColor [UIColor AxcTool_colorHex:@"171D26"]
+
+

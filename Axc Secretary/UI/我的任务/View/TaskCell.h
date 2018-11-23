@@ -29,12 +29,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *addDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *executionTimeLabel;
 @property (weak, nonatomic) IBOutlet UIView *disLineView;
+@property (weak, nonatomic) IBOutlet UIView *leftBackGroundView;
 
 @property(nonatomic , strong)MonthEventModel *monthEvent;
 
 // Cell之前的分割线尺寸
 @property(nonatomic, assign)UIEdgeInsets mergeUnitInset;
 @property(nonatomic, assign)UIEdgeInsets noMergeUnitInset;
+
 
 @end
 

@@ -15,10 +15,16 @@
 		EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E435A21995AD300B95CF8 /* TaskCell.m */; };
 		EA1E435D21995AD300B95CF8 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1E435B21995AD300B95CF8 /* TaskCell.xib */; };
 		EA2570C721A7912100FCF7EE /* ActivityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570C621A7912100FCF7EE /* ActivityVC.m */; };
+		EA2570CB21A7D1E200FCF7EE /* AddTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570CA21A7D1E200FCF7EE /* AddTaskVC.m */; };
+		EA2570D521A7D6B000FCF7EE /* AxcTemporarilyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2570D321A7D6B000FCF7EE /* AxcTemporarilyDataView.xib */; };
+		EA2570D621A7D6B000FCF7EE /* AxcTemporarilyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570D421A7D6B000FCF7EE /* AxcTemporarilyDataView.m */; };
+		EA2570DA21A7DD9200FCF7EE /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570D921A7DD9200FCF7EE /* SettingModel.m */; };
+		EA2570DF21A7DE0200FCF7EE /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570DD21A7DE0200FCF7EE /* SettingCell.m */; };
+		EA2570E021A7DE0200FCF7EE /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2570DE21A7DE0200FCF7EE /* SettingCell.xib */; };
+		EA2570E421A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */; };
 		EA444648219680A700D387DA /* UISearchBar+AxcTextFieldEx.m in Sources */ = {isa = PBXBuildFile; fileRef = EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */; };
 		EA8443CE2196B5740054BC20 /* UITableView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */; };
 		EA8443D12196B57E0054BC20 /* UICollectionView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443D02196B57E0054BC20 /* UICollectionView+AxcEmptyData.m */; };
-		EA8443D32196B9860054BC20 /* paipai.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EA8443D22196B9860054BC20 /* paipai.jpeg */; };
 		EA891EB62186FB67008AFD21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891EB52186FB67008AFD21 /* AppDelegate.m */; };
 		EA891EB92186FB67008AFD21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891EB82186FB67008AFD21 /* ViewController.m */; };
 		EA891EBC2186FB67008AFD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA891EBA2186FB67008AFD21 /* Main.storyboard */; };
@@ -110,13 +116,24 @@
 		EA1E435E219964DA00B95CF8 /* DefineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineHeader.h; sourceTree = "<group>"; };
 		EA2570C521A7912100FCF7EE /* ActivityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityVC.h; sourceTree = "<group>"; };
 		EA2570C621A7912100FCF7EE /* ActivityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityVC.m; sourceTree = "<group>"; };
+		EA2570C921A7D1E200FCF7EE /* AddTaskVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddTaskVC.h; path = "../../../../../Axc Secretary/Axc Secretary/UI/活动/AddTaskVC.h"; sourceTree = "<group>"; };
+		EA2570CA21A7D1E200FCF7EE /* AddTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AddTaskVC.m; path = "../../../../../Axc Secretary/Axc Secretary/UI/活动/AddTaskVC.m"; sourceTree = "<group>"; };
+		EA2570D221A7D6B000FCF7EE /* AxcTemporarilyDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxcTemporarilyDataView.h; sourceTree = "<group>"; };
+		EA2570D321A7D6B000FCF7EE /* AxcTemporarilyDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AxcTemporarilyDataView.xib; sourceTree = "<group>"; };
+		EA2570D421A7D6B000FCF7EE /* AxcTemporarilyDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxcTemporarilyDataView.m; sourceTree = "<group>"; };
+		EA2570D821A7DD9200FCF7EE /* SettingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
+		EA2570D921A7DD9200FCF7EE /* SettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
+		EA2570DC21A7DE0200FCF7EE /* SettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
+		EA2570DD21A7DE0200FCF7EE /* SettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		EA2570DE21A7DE0200FCF7EE /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		EA2570E221A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LLDebug_Ex.h"; sourceTree = "<group>"; };
+		EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LLDebug_Ex.m"; sourceTree = "<group>"; };
 		EA444646219680A700D387DA /* UISearchBar+AxcTextFieldEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+AxcTextFieldEx.h"; sourceTree = "<group>"; };
 		EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+AxcTextFieldEx.m"; sourceTree = "<group>"; };
 		EA8443CC2196B5740054BC20 /* UITableView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AxcEmptyData.h"; sourceTree = "<group>"; };
 		EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AxcEmptyData.m"; sourceTree = "<group>"; };
 		EA8443CF2196B57D0054BC20 /* UICollectionView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+AxcEmptyData.h"; sourceTree = "<group>"; };
 		EA8443D02196B57E0054BC20 /* UICollectionView+AxcEmptyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+AxcEmptyData.m"; sourceTree = "<group>"; };
-		EA8443D22196B9860054BC20 /* paipai.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paipai.jpeg; sourceTree = "<group>"; };
 		EA891EB12186FB67008AFD21 /* Axc Secretary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Axc Secretary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA891EB42186FB67008AFD21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA891EB52186FB67008AFD21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -316,6 +333,61 @@
 			path = "活动";
 			sourceTree = "<group>";
 		};
+		EA2570C821A7D1D300FCF7EE /* SubVC */ = {
+			isa = PBXGroup;
+			children = (
+				EA2570C921A7D1E200FCF7EE /* AddTaskVC.h */,
+				EA2570CA21A7D1E200FCF7EE /* AddTaskVC.m */,
+			);
+			path = SubVC;
+			sourceTree = "<group>";
+		};
+		EA2570D021A7D69400FCF7EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA2570D121A7D6B000FCF7EE /* AxcTemporarilyDataView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA2570D121A7D6B000FCF7EE /* AxcTemporarilyDataView */ = {
+			isa = PBXGroup;
+			children = (
+				EA2570D221A7D6B000FCF7EE /* AxcTemporarilyDataView.h */,
+				EA2570D421A7D6B000FCF7EE /* AxcTemporarilyDataView.m */,
+				EA2570D321A7D6B000FCF7EE /* AxcTemporarilyDataView.xib */,
+			);
+			path = AxcTemporarilyDataView;
+			sourceTree = "<group>";
+		};
+		EA2570D721A7DD7B00FCF7EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA2570D821A7DD9200FCF7EE /* SettingModel.h */,
+				EA2570D921A7DD9200FCF7EE /* SettingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA2570DB21A7DDF400FCF7EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA2570DC21A7DE0200FCF7EE /* SettingCell.h */,
+				EA2570DD21A7DE0200FCF7EE /* SettingCell.m */,
+				EA2570DE21A7DE0200FCF7EE /* SettingCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA2570E121A7ECAF00FCF7EE /* AppDelegate+ */ = {
+			isa = PBXGroup;
+			children = (
+				EA2570E221A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.h */,
+				EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */,
+			);
+			path = "AppDelegate+";
+			sourceTree = "<group>";
+		};
 		EA44463C21967FCB00D387DA /* UISearchBar+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +442,7 @@
 			children = (
 				EA891EB42186FB67008AFD21 /* AppDelegate.h */,
 				EA891EB52186FB67008AFD21 /* AppDelegate.m */,
+				EA2570E121A7ECAF00FCF7EE /* AppDelegate+ */,
 				EAADC2432187F3BB0043BB9D /* AxcFramework */,
 				EAC1FDD72188405C001AC774 /* UI */,
 				EA891EE62186FB6D008AFD21 /* Base */,
@@ -976,6 +1049,7 @@
 			children = (
 				EAADC2F32187F4490043BB9D /* AxcBaseAppVC.h */,
 				EAADC2F42187F4490043BB9D /* AxcBaseAppVC.m */,
+				EA2570D021A7D69400FCF7EE /* View */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1007,6 +1081,7 @@
 			children = (
 				EAC1FDDE218840A8001AC774 /* MyTaskVC.h */,
 				EAC1FDDF218840A8001AC774 /* MyTaskVC.m */,
+				EA2570C821A7D1D300FCF7EE /* SubVC */,
 				EA1E434C21995A6300B95CF8 /* Model */,
 				EAC1FDDD21884095001AC774 /* View */,
 			);
@@ -1034,7 +1109,6 @@
 		EAC1FDDB21884085001AC774 /* 相册保险柜 */ = {
 			isa = PBXGroup;
 			children = (
-				EA8443D22196B9860054BC20 /* paipai.jpeg */,
 				EAC1FDE7218840F7001AC774 /* AlbumSafeVC.h */,
 				EAC1FDE8218840F7001AC774 /* AlbumSafeVC.m */,
 			);
@@ -1046,6 +1120,8 @@
 			children = (
 				EAC1FDF021884D13001AC774 /* SettingVC.h */,
 				EAC1FDF121884D13001AC774 /* SettingVC.m */,
+				EA2570DB21A7DDF400FCF7EE /* View */,
+				EA2570D721A7DD7B00FCF7EE /* Model */,
 			);
 			path = "设置";
 			sourceTree = "<group>";
@@ -1193,10 +1269,11 @@
 			files = (
 				EAC1FDF421885877001AC774 /* icon.png in Resources */,
 				EA891EC12186FB68008AFD21 /* LaunchScreen.storyboard in Resources */,
+				EA2570E021A7DE0200FCF7EE /* SettingCell.xib in Resources */,
+				EA2570D521A7D6B000FCF7EE /* AxcTemporarilyDataView.xib in Resources */,
 				EAC1FDEF21884C82001AC774 /* Assets.xcassets in Resources */,
 				EA891EBC2186FB67008AFD21 /* Main.storyboard in Resources */,
 				EA1E435D21995AD300B95CF8 /* TaskCell.xib in Resources */,
-				EA8443D32196B9860054BC20 /* paipai.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1322,12 +1399,14 @@
 				EAC1FDED21884238001AC774 /* AxcNavVC.m in Sources */,
 				EAADC2D72187F4250043BB9D /* NSString+Axc_MD5_Ex.m in Sources */,
 				EAADC2E52187F4250043BB9D /* UIView+AxcViewAppearanceEx.m in Sources */,
+				EA2570E421A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m in Sources */,
 				EAADC2D62187F4250043BB9D /* NSString+AxcTextCalculation.m in Sources */,
 				EAADC2F92187F4C40043BB9D /* BaseTabbarVC.m in Sources */,
 				EAADC2EF2187F4250043BB9D /* AxcTouchManager.m in Sources */,
 				EA891EB92186FB67008AFD21 /* ViewController.m in Sources */,
 				EAC1FDE0218840A8001AC774 /* MyTaskVC.m in Sources */,
 				EAADC2EB2187F4250043BB9D /* UIImage+AxcQRCode.m in Sources */,
+				EA2570D621A7D6B000FCF7EE /* AxcTemporarilyDataView.m in Sources */,
 				EAADC2E32187F4250043BB9D /* UIView+AxcViewRectEx.m in Sources */,
 				EAF898BD21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m in Sources */,
 				EAADC2D02187F4250043BB9D /* NSDate+AxcProcessingEx.m in Sources */,
@@ -1336,13 +1415,16 @@
 				EAADC2DE2187F4250043BB9D /* UITextField+AxcPlaceholderLabelEx.m in Sources */,
 				EAADC2E12187F4250043BB9D /* UIButton+AxcButtonCountDown.m in Sources */,
 				EAADC2F52187F4490043BB9D /* AxcBaseAppVC.m in Sources */,
+				EA2570CB21A7D1E200FCF7EE /* AddTaskVC.m in Sources */,
 				EAADC2CF2187F4250043BB9D /* NSDate+AxcDateArithmeticEx.m in Sources */,
 				EAADC2DC2187F4250043BB9D /* NSData+AxcDataConversionEx.m in Sources */,
+				EA2570DF21A7DE0200FCF7EE /* SettingCell.m in Sources */,
 				EAADC2D52187F4250043BB9D /* NSString+AxcStringIsReasonable.m in Sources */,
 				EAADC2E22187F4250043BB9D /* UIView+AxcGetSuperVC.m in Sources */,
 				EAADC2D92187F4250043BB9D /* NSString+AxcReplaceRichText.m in Sources */,
 				EAADC2EA2187F4250043BB9D /* UIImage+AxcImageRotating.m in Sources */,
 				EA1E435321995AA900B95CF8 /* TaskModel.m in Sources */,
+				EA2570DA21A7DD9200FCF7EE /* SettingModel.m in Sources */,
 				EA891EC42186FB68008AFD21 /* main.m in Sources */,
 				EA8443D12196B57E0054BC20 /* UICollectionView+AxcEmptyData.m in Sources */,
 				EA444648219680A700D387DA /* UISearchBar+AxcTextFieldEx.m in Sources */,

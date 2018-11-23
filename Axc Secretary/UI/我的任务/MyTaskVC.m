@@ -9,62 +9,83 @@
 #import "MyTaskVC.h"
 #import "TaskCell.h"
 #import "DZNSegmentedControl.h"
+#import "AddTaskVC.h"
 
 @interface MyTaskVC ()
 
 @property(nonatomic , strong)DZNSegmentedControl *titleSegmentedControl;
-
+// 防止反复取值造成的性能浪费，保存快速滑动处理的开关
+@property(nonatomic , assign)BOOL isSwipeSettings;
 @end
 
 @implementation MyTaskVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self loadDataBaseData];
 }
 - (void)createUI{
     self.navigationItem.titleView = self.titleSegmentedControl;
-    self.navigationController.navigationBar.prefersLargeTitles = YES; // 滑动大标题
     WeakSelf;
     [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationRight image:@"add_white" handler:^(UIButton *barItemBtn) {
         [weakSelf insertTask];
     }];
-    [self AxcBase_settingTableType:UITableViewStylePlain nibName:@"TaskCell" cellID:@"axc"];
+    [self AxcBase_settingTableType:UITableViewStylePlain nibName:@"TaskCell" cellID:@"axc" refreshing:YES loading:NO];
+    MJRefreshNormalHeader *refreshHeader = (MJRefreshNormalHeader *)self.tableView.mj_header;
+    refreshHeader.lastUpdatedTimeLabel.textColor = refreshHeader.stateLabel.textColor = kUncheckColor;
+    self.emptyDataView.disLable.text = @"目前暂无事项";
+    self.tableView.axcPlaceHolderView = self.emptyDataView;
+    self.tableView.backgroundColor = kMainBackColor;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
-    
+    // 当设置中心的滑动方式改变，需要进行刷新
+    [self.notificationCenter addObserver:self selector:@selector(loadDataBaseData)
+                                    name:kNotification_TaskQuickOperationChange
+                                  object:nil];
 }
+// 加载数据库内数据
+- (void)loadDataBaseData{
+    NSDictionary *settingKeys = [self.userDefaults objectForKey:kSettingKeys];
+    self.isSwipeSettings = [[settingKeys objectForKey:kSetting_TaskQuickOperation] integerValue];
+    NSInteger index = self.titleSegmentedControl.selectedSegmentIndex;
+    // 数据库查询开辟分线程操作，否则会卡主主线程，使动画不够流畅
+    kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{
+        [SVProgressHUD show];
+        switch (index) {
+            case 0:{    // 待处理
+                self.dataListArray = [self.db getAllTaskMatters].mutableCopy;
+            }break;
+            case 1:{    // 每日任务
+                //            self.dataListArray = [self.db getAllTaskMatters].mutableCopy;
+            }break;
+            case 2:{    // 已完成
+                //            self.dataListArray = [self.db getAllTaskMatters].mutableCopy;
+            }break;
+                
+            default: break;
+        }
+        // 回调主线程刷新
+        kDISPATCH_MAIN_THREAD(^{
+            [self.tableView reloadData];
+            [self AxcBase_tableEndRefreshing];
+            [SVProgressHUD dismiss];
+        });
+    });
+}
+
+// 插入事件
 - (void)insertTask{
-    MonthEventModel *monthEventModel = [MonthEventModel new];
-    monthEventModel.cellHeight = kStartingCellHeight;
-    monthEventModel.level = arc4random()%11;
-    monthEventModel.title = @"洗衣服";
-    monthEventModel.date = [NSDate AxcTool_getDateString:[NSString stringWithFormat:@"2019-%d-%d",arc4random()%12+1,arc4random()%10+10] withFomant:@"yyyy-MM-dd"];
-    monthEventModel.Introduction = @"我将去楼下将衣服交给洗衣机处理";
-    monthEventModel.addDate = [NSDate date];
-    [self.db addTaskMatter:monthEventModel];
-    [self requestData];
+    AddTaskVC *vc = [AddTaskVC new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
-- (void)requestData{
-    self.dataListArray = [self.db getAllTaskMatters].mutableCopy;
-    
-    [self.tableView reloadData];
-}
-
-
-- (void )click_moreBtn:(UIButton *)sender {
-    MonthEventModel *monthEventModel = [self getDataSourceWithIndexPath:sender.axcIndexPath];
-    monthEventModel.cellHeight = sender.selected ? kStartingCellHeight : 200;
-    monthEventModel.isSelect = !sender.selected;        // 已选中展开
-    [self.tableView beginUpdates];
-    sender.transform = CGAffineTransformMakeRotation(AxcDraw_Angle(monthEventModel.isSelect ? 180 : 0));
-    [self.tableView reloadRowsAtIndexPaths:@[sender.axcIndexPath] withRowAnimation:UITableViewRowAnimationNone];
-    [self.tableView endUpdates];
-    sender.selected = !sender.selected;
+// 下拉刷新数据
+- (void)tableView_headerAction{
+    [self loadDataBaseData];
 }
 #pragma mark - 事项操作函数复用
+// 完成某个事项索引
 - (void)completeDataWithIndexPath:(NSIndexPath *)indexPath{
     // 数据库标记该事项已完成
     TaskModel *model = self.dataListArray[indexPath.section];
@@ -74,12 +95,14 @@
     [self removeRowWithIndexPath:indexPath animation:UITableViewRowAnimationRight];
     [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"%@\n已完成！",monthModel.title]];
 }
+// 从数据上删除某个索引
 - (void)deleteDataWithIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation )animation{
     // 数据库删除
     [self.db deleteTaskMatter:[self getDataSourceWithIndexPath:indexPath]];
     // 动画删除
     [self removeRowWithIndexPath:indexPath animation:animation];
 }
+// 移除某个cell
 - (void)removeRowWithIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation )animation{
     TaskModel *model = self.dataListArray[indexPath.section];
     // 数据源删除
@@ -96,7 +119,17 @@
     // 数据对齐
     [self.tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.3];
 }
-
+// 控制Cell展开
+- (void )click_moreBtn:(UIButton *)sender {
+    MonthEventModel *monthEventModel = [self getDataSourceWithIndexPath:sender.axcIndexPath];
+    monthEventModel.cellHeight = sender.selected ? kStartingCellHeight : 200;
+    monthEventModel.isSelect = !sender.selected;        // 已选中展开
+    [self.tableView beginUpdates];
+    sender.transform = CGAffineTransformMakeRotation(AxcDraw_Angle(monthEventModel.isSelect ? 180 : 0));
+    [self.tableView reloadRowsAtIndexPaths:@[sender.axcIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableView endUpdates];
+    sender.selected = !sender.selected;
+}
 #pragma mark - Table|Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
 }
@@ -118,8 +151,9 @@
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     TaskModel *model = self.dataListArray[section];
-    header.backgroundView.backgroundColor = ([model.date AxcTool_isThisMonth] && [model.date AxcTool_isThisYear]) ? KScienceTechnologyBlue : kBackColor;
-    header.textLabel.textColor = [UIColor whiteColor];
+    BOOL isToday = ([model.date AxcTool_isThisMonth] && [model.date AxcTool_isThisYear]);
+    header.backgroundView.backgroundColor = isToday ? kSelectedGreenColor : kNavDarkColor;
+    header.textLabel.textColor = [UIColor whiteColor] ;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     TaskCell *cell = [tableView dequeueReusableCellWithIdentifier:@"axc"];
@@ -127,12 +161,13 @@
     cell.unfoldBtn_.axcIndexPath = cell.unfoldBtn.axcIndexPath = indexPath;
     [cell.unfoldBtn addTarget:self action:@selector(click_moreBtn:) forControlEvents:UIControlEventTouchUpInside];
     [cell.unfoldBtn_ addTarget:self action:@selector(click_moreBtn:) forControlEvents:UIControlEventTouchUpInside];
-    cell.leftButtons = [self leftButtons];
-    cell.rightButtons = [self rightButtons];
+    cell.leftButtons = [self leftButtonsColor:kNavColor];
+    cell.rightButtons = [self rightButtonsColor:kNavColor];
     cell.rightSwipeSettings.transition = MGSwipeTransitionStatic;
     cell.leftSwipeSettings.transition = MGSwipeTransitionDrag;
-//    cell.leftExpansion.buttonIndex = 0;
-    cell.swipeBackgroundColor = [UIColor groupTableViewBackgroundColor];
+    // 设置中心的快速滑动处理
+    cell.rightExpansion.buttonIndex = cell.leftExpansion.buttonIndex = self.isSwipeSettings ? 0 : -1;
+    cell.swipeBackgroundColor = kNavColor;
     return cell;
 }
 - (MonthEventModel *)getDataSourceWithIndexPath:(NSIndexPath *)indexPath{
@@ -140,24 +175,24 @@
     return model.monthEvents[indexPath.row];
 }
 #define SwipeButtonWidth 60
-- (NSArray <MGSwipeButton *>*)leftButtons{
+- (NSArray <MGSwipeButton *>*)leftButtonsColor:(UIColor *)itemColor{
     WeakSelf;
-    MGSwipeButton *completeBtn = [self swipeBtnWithImg:@"complete" callBack:^(TaskCell * _Nonnull cell) {
+    MGSwipeButton *completeBtn = [self swipeBtnWithImg:@"complete" color:itemColor callBack:^(TaskCell * _Nonnull cell) {
         [weakSelf completeDataWithIndexPath:cell.unfoldBtn.axcIndexPath];
     }];
     return @[completeBtn];
 }
-- (NSArray <MGSwipeButton *>*)rightButtons{
+- (NSArray <MGSwipeButton *>*)rightButtonsColor:(UIColor *)itemColor{
     WeakSelf;
-    MGSwipeButton *deleteBtn = [self swipeBtnWithImg:@"delete" callBack:^(TaskCell * _Nonnull cell) {
+    MGSwipeButton *deleteBtn = [self swipeBtnWithImg:@"delete" color:itemColor callBack:^(TaskCell * _Nonnull cell) {
         [weakSelf deleteDataWithIndexPath:cell.unfoldBtn.axcIndexPath animation:UITableViewRowAnimationLeft];
     }];
     return @[deleteBtn];
 }
-- (MGSwipeButton *)swipeBtnWithImg:(NSString *)imgName callBack:(void (^)(TaskCell * _Nonnull cell))callBack{
+- (MGSwipeButton *)swipeBtnWithImg:(NSString *)imgName color:(UIColor *)itemColor callBack:(void (^)(TaskCell * _Nonnull cell))callBack{
     MGSwipeButton *swipeBtn = [MGSwipeButton buttonWithTitle:@""
                               icon:[UIImage imageNamed:imgName]
-                   backgroundColor:[UIColor groupTableViewBackgroundColor]
+                   backgroundColor:itemColor
                           callback:^BOOL(MGSwipeTableCell * _Nonnull cell) {
                               TaskCell *cell_ = (TaskCell *)cell;
                               callBack(cell_);
@@ -173,12 +208,15 @@
         _titleSegmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"待处理",@"每日任务",@"已完成"]];
         _titleSegmentedControl.backgroundColor = [UIColor clearColor];
         _titleSegmentedControl.frame = CGRectMake(0, 0, 200, 28);
-        _titleSegmentedControl.tintColor = KScienceTechnologyBlue;
+        _titleSegmentedControl.tintColor = kSelectedGreenColor;
         _titleSegmentedControl.showsCount = NO;
         _titleSegmentedControl.hairlineColor = [UIColor clearColor];
-        [_titleSegmentedControl setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//        [_titleSegmentedControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+        [_titleSegmentedControl setTitleColor:kUncheckColor forState:UIControlStateNormal];
+        [_titleSegmentedControl addTarget:self action:@selector(loadDataBaseData) forControlEvents:UIControlEventValueChanged];
     }
     return _titleSegmentedControl;
+}
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:kNotification_TaskQuickOperationChange object:nil];
 }
 @end
