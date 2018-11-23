@@ -15,13 +15,13 @@
 		EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E435A21995AD300B95CF8 /* TaskCell.m */; };
 		EA1E435D21995AD300B95CF8 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1E435B21995AD300B95CF8 /* TaskCell.xib */; };
 		EA2570C721A7912100FCF7EE /* ActivityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570C621A7912100FCF7EE /* ActivityVC.m */; };
-		EA2570CB21A7D1E200FCF7EE /* AddTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570CA21A7D1E200FCF7EE /* AddTaskVC.m */; };
 		EA2570D521A7D6B000FCF7EE /* AxcTemporarilyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2570D321A7D6B000FCF7EE /* AxcTemporarilyDataView.xib */; };
 		EA2570D621A7D6B000FCF7EE /* AxcTemporarilyDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570D421A7D6B000FCF7EE /* AxcTemporarilyDataView.m */; };
 		EA2570DA21A7DD9200FCF7EE /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570D921A7DD9200FCF7EE /* SettingModel.m */; };
 		EA2570DF21A7DE0200FCF7EE /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570DD21A7DE0200FCF7EE /* SettingCell.m */; };
 		EA2570E021A7DE0200FCF7EE /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2570DE21A7DE0200FCF7EE /* SettingCell.xib */; };
 		EA2570E421A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */; };
+		EA2570E721A7F49900FCF7EE /* AddTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E621A7F49900FCF7EE /* AddTaskVC.m */; };
 		EA444648219680A700D387DA /* UISearchBar+AxcTextFieldEx.m in Sources */ = {isa = PBXBuildFile; fileRef = EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */; };
 		EA8443CE2196B5740054BC20 /* UITableView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */; };
 		EA8443D12196B57E0054BC20 /* UICollectionView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443D02196B57E0054BC20 /* UICollectionView+AxcEmptyData.m */; };
@@ -116,8 +116,6 @@
 		EA1E435E219964DA00B95CF8 /* DefineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineHeader.h; sourceTree = "<group>"; };
 		EA2570C521A7912100FCF7EE /* ActivityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityVC.h; sourceTree = "<group>"; };
 		EA2570C621A7912100FCF7EE /* ActivityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityVC.m; sourceTree = "<group>"; };
-		EA2570C921A7D1E200FCF7EE /* AddTaskVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddTaskVC.h; path = "../../../../../Axc Secretary/Axc Secretary/UI/活动/AddTaskVC.h"; sourceTree = "<group>"; };
-		EA2570CA21A7D1E200FCF7EE /* AddTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AddTaskVC.m; path = "../../../../../Axc Secretary/Axc Secretary/UI/活动/AddTaskVC.m"; sourceTree = "<group>"; };
 		EA2570D221A7D6B000FCF7EE /* AxcTemporarilyDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxcTemporarilyDataView.h; sourceTree = "<group>"; };
 		EA2570D321A7D6B000FCF7EE /* AxcTemporarilyDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AxcTemporarilyDataView.xib; sourceTree = "<group>"; };
 		EA2570D421A7D6B000FCF7EE /* AxcTemporarilyDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxcTemporarilyDataView.m; sourceTree = "<group>"; };
@@ -128,6 +126,8 @@
 		EA2570DE21A7DE0200FCF7EE /* SettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		EA2570E221A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LLDebug_Ex.h"; sourceTree = "<group>"; };
 		EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LLDebug_Ex.m"; sourceTree = "<group>"; };
+		EA2570E521A7F49900FCF7EE /* AddTaskVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTaskVC.h; sourceTree = "<group>"; };
+		EA2570E621A7F49900FCF7EE /* AddTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTaskVC.m; sourceTree = "<group>"; };
 		EA444646219680A700D387DA /* UISearchBar+AxcTextFieldEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+AxcTextFieldEx.h"; sourceTree = "<group>"; };
 		EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+AxcTextFieldEx.m"; sourceTree = "<group>"; };
 		EA8443CC2196B5740054BC20 /* UITableView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AxcEmptyData.h"; sourceTree = "<group>"; };
@@ -336,8 +336,8 @@
 		EA2570C821A7D1D300FCF7EE /* SubVC */ = {
 			isa = PBXGroup;
 			children = (
-				EA2570C921A7D1E200FCF7EE /* AddTaskVC.h */,
-				EA2570CA21A7D1E200FCF7EE /* AddTaskVC.m */,
+				EA2570E521A7F49900FCF7EE /* AddTaskVC.h */,
+				EA2570E621A7F49900FCF7EE /* AddTaskVC.m */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -1406,6 +1406,7 @@
 				EA891EB92186FB67008AFD21 /* ViewController.m in Sources */,
 				EAC1FDE0218840A8001AC774 /* MyTaskVC.m in Sources */,
 				EAADC2EB2187F4250043BB9D /* UIImage+AxcQRCode.m in Sources */,
+				EA2570E721A7F49900FCF7EE /* AddTaskVC.m in Sources */,
 				EA2570D621A7D6B000FCF7EE /* AxcTemporarilyDataView.m in Sources */,
 				EAADC2E32187F4250043BB9D /* UIView+AxcViewRectEx.m in Sources */,
 				EAF898BD21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m in Sources */,
@@ -1415,7 +1416,6 @@
 				EAADC2DE2187F4250043BB9D /* UITextField+AxcPlaceholderLabelEx.m in Sources */,
 				EAADC2E12187F4250043BB9D /* UIButton+AxcButtonCountDown.m in Sources */,
 				EAADC2F52187F4490043BB9D /* AxcBaseAppVC.m in Sources */,
-				EA2570CB21A7D1E200FCF7EE /* AddTaskVC.m in Sources */,
 				EAADC2CF2187F4250043BB9D /* NSDate+AxcDateArithmeticEx.m in Sources */,
 				EAADC2DC2187F4250043BB9D /* NSData+AxcDataConversionEx.m in Sources */,
 				EA2570DF21A7DE0200FCF7EE /* SettingCell.m in Sources */,

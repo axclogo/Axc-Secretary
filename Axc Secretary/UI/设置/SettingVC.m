@@ -24,6 +24,7 @@
 - (void)createUI{
     [self AxcBase_settingTableType:UITableViewStyleGrouped nibName:@"SettingCell" cellID:@"axc"];
     self.tableView.backgroundColor = kMainBackColor;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);

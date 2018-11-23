@@ -174,7 +174,7 @@
     TaskModel *model = self.dataListArray[indexPath.section];
     return model.monthEvents[indexPath.row];
 }
-#define SwipeButtonWidth 60
+#define SwipeButtonWidth 50
 - (NSArray <MGSwipeButton *>*)leftButtonsColor:(UIColor *)itemColor{
     WeakSelf;
     MGSwipeButton *completeBtn = [self swipeBtnWithImg:@"complete" color:itemColor callBack:^(TaskCell * _Nonnull cell) {
