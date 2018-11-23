@@ -14,6 +14,7 @@
 		EA1E435321995AA900B95CF8 /* TaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E435221995AA900B95CF8 /* TaskModel.m */; };
 		EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E435A21995AD300B95CF8 /* TaskCell.m */; };
 		EA1E435D21995AD300B95CF8 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1E435B21995AD300B95CF8 /* TaskCell.xib */; };
+		EA2570C721A7912100FCF7EE /* ActivityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570C621A7912100FCF7EE /* ActivityVC.m */; };
 		EA444648219680A700D387DA /* UISearchBar+AxcTextFieldEx.m in Sources */ = {isa = PBXBuildFile; fileRef = EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */; };
 		EA8443CE2196B5740054BC20 /* UITableView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */; };
 		EA8443D12196B57E0054BC20 /* UICollectionView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443D02196B57E0054BC20 /* UICollectionView+AxcEmptyData.m */; };
@@ -107,6 +108,8 @@
 		EA1E435A21995AD300B95CF8 /* TaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
 		EA1E435B21995AD300B95CF8 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		EA1E435E219964DA00B95CF8 /* DefineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineHeader.h; sourceTree = "<group>"; };
+		EA2570C521A7912100FCF7EE /* ActivityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityVC.h; sourceTree = "<group>"; };
+		EA2570C621A7912100FCF7EE /* ActivityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityVC.m; sourceTree = "<group>"; };
 		EA444646219680A700D387DA /* UISearchBar+AxcTextFieldEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+AxcTextFieldEx.h"; sourceTree = "<group>"; };
 		EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+AxcTextFieldEx.m"; sourceTree = "<group>"; };
 		EA8443CC2196B5740054BC20 /* UITableView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AxcEmptyData.h"; sourceTree = "<group>"; };
@@ -302,6 +305,15 @@
 				EA1E434F21995A9500B95CF8 /* AxcBaseModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EA2570C421A7910B00FCF7EE /* 活动 */ = {
+			isa = PBXGroup;
+			children = (
+				EA2570C521A7912100FCF7EE /* ActivityVC.h */,
+				EA2570C621A7912100FCF7EE /* ActivityVC.m */,
+			);
+			path = "活动";
 			sourceTree = "<group>";
 		};
 		EA44463C21967FCB00D387DA /* UISearchBar+ */ = {
@@ -984,6 +996,7 @@
 				EAC1FDDB21884085001AC774 /* 相册保险柜 */,
 				EAC1FDDA2188407D001AC774 /* 趋势图表 */,
 				EAC1FDD921884077001AC774 /* 我的物品 */,
+				EA2570C421A7910B00FCF7EE /* 活动 */,
 				EAC1FDD821884067001AC774 /* 我的任务 */,
 			);
 			path = UI;
@@ -1336,6 +1349,7 @@
 				EAADC2CD2187F4250043BB9D /* AxcLanguageManagement.m in Sources */,
 				EA891EB62186FB67008AFD21 /* AppDelegate.m in Sources */,
 				EAC1FDE6218840E5001AC774 /* TrendChartVC.m in Sources */,
+				EA2570C721A7912100FCF7EE /* ActivityVC.m in Sources */,
 				EAADC2F12187F4250043BB9D /* AxcBaseVC.m in Sources */,
 				EAADC2EE2187F4250043BB9D /* AxcCalculateTool.m in Sources */,
 				EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */,

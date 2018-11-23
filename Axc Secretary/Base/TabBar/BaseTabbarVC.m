@@ -30,6 +30,7 @@
     
     NSArray <NSDictionary *>*tabBarItems =
     @[@{@"VCName":@"MyTaskVC",@"itemTitle":@"任务",@"VCTitle":@"我的任务",@"nomalImageName":@"tabbar_task"},
+      @{@"VCName":@"ActivityVC",@"itemTitle":@"活动",@"VCTitle":@"每日活动",@"nomalImageName":@"tabbar_activity"},
       @{@"VCName":@"MyItemsVC",@"itemTitle":@"物品",@"VCTitle":@"我的物品",@"nomalImageName":@"tabbat_items"},
       @{@"VCName":@"TrendChartVC",@"itemTitle":@"趋势",@"VCTitle":@"趋势图表",@"nomalImageName":@"tabbar_trend"},
       @{@"VCName":@"AlbumSafeVC",@"itemTitle":@"相册",@"VCTitle":@"相册保险柜",@"nomalImageName":@"tabbar_photo"},
