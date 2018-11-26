@@ -22,7 +22,10 @@
 }
 - (void)AxcBase_settingBackBtn{
     [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationLeft
-                             image:@"whiteBack_img"];
+                             image:@"back_white"
+                           handler:^(UIButton *barItemBtn) {
+                               [self.navigationController popViewControllerAnimated:YES];
+                           }];
 }
 
 

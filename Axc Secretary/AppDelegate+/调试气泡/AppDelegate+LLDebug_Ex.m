@@ -14,7 +14,7 @@
 - (void)settingLLDebug{
     [LLConfig sharedConfig].colorStyle = LLConfigColorStyleSimple;
     [[LLConfig sharedConfig] configBackgroundColor:kNavColor
-                                         textColor:kSelectedGreenColor
+                                         textColor:kSelectedColor
                                     statusBarStyle:UIStatusBarStyleDefault];
     NSDictionary *settingKeys = [self.userDefaults objectForKey:kSettingKeys];
     if ([[settingKeys objectForKey:kSetting_DebugAirBubbles] integerValue]) {

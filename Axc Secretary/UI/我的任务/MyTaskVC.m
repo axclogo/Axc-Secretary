@@ -11,11 +11,15 @@
 #import "DZNSegmentedControl.h"
 #import "AddTaskVC.h"
 
-@interface MyTaskVC ()
+@interface MyTaskVC ()<
+UIViewControllerPreviewingDelegate
+>
 
 @property(nonatomic , strong)DZNSegmentedControl *titleSegmentedControl;
 // 防止反复取值造成的性能浪费，保存快速滑动处理的开关
 @property(nonatomic , assign)BOOL isSwipeSettings;
+// 上滑隐藏导航的开关
+@property(nonatomic , assign)BOOL isHideNavigation;
 @end
 
 @implementation MyTaskVC
@@ -82,11 +86,18 @@
 // 插入事件
 - (void)insertTask{
     AddTaskVC *vc = [AddTaskVC new];
+    [vc AxcBase_settingBackBtn];
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 // 下拉刷新数据
 - (void)tableView_headerAction{
     [self loadDataBaseData];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.isHideNavigation = [[[self.userDefaults objectForKey:kSettingKeys] objectForKey:kSetting_HideNavigation] integerValue];
 }
 #pragma mark - 事项操作函数复用
 // 完成某个事项索引
@@ -140,12 +151,12 @@
 // 上滑隐藏Nav
 static CGFloat onOffsetY = 0;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if ([scrollView isEqual:self.tableView]) {
+    if (self.isHideNavigation) {
         CGFloat offsetY = scrollView.contentOffset.y;
-        if (offsetY > 100) {
+        if (offsetY > self.axcTopBarAllHeight) {
             [self.navigationController setNavigationBarHidden:(onOffsetY < offsetY) animated:YES];
-            onOffsetY = offsetY;
         }
+        onOffsetY = offsetY;
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
@@ -169,7 +180,7 @@ static CGFloat onOffsetY = 0;
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     TaskModel *model = self.dataListArray[section];
     BOOL isToday = ([model.date AxcTool_isThisMonth] && [model.date AxcTool_isThisYear]);
-    header.backgroundView.backgroundColor = isToday ? kSelectedGreenColor : kNavDarkColor;
+    header.backgroundView.backgroundColor = isToday ? kSelectedColor : kNavDarkColor;
     header.textLabel.textColor = [UIColor whiteColor] ;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -178,13 +189,18 @@ static CGFloat onOffsetY = 0;
     cell.unfoldBtn_.axcIndexPath = cell.unfoldBtn.axcIndexPath = indexPath;
     [cell.unfoldBtn addTarget:self action:@selector(click_moreBtn:) forControlEvents:UIControlEventTouchUpInside];
     [cell.unfoldBtn_ addTarget:self action:@selector(click_moreBtn:) forControlEvents:UIControlEventTouchUpInside];
-    cell.leftButtons = [self leftButtonsColor:kNavColor];
-    cell.rightButtons = [self rightButtonsColor:kNavColor];
+    cell.leftButtons = [self leftButtonsColor:kViceColor];
+    cell.rightButtons = [self rightButtonsColor:kViceColor];
     cell.rightSwipeSettings.transition = MGSwipeTransitionStatic;
     cell.leftSwipeSettings.transition = MGSwipeTransitionDrag;
     // 设置中心的快速滑动处理
     cell.rightExpansion.buttonIndex = cell.leftExpansion.buttonIndex = self.isSwipeSettings ? 0 : -1;
-    cell.swipeBackgroundColor = kNavColor;
+    cell.swipeBackgroundColor = kViceColor;
+    // 注册3DTouch
+    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
+        //给cell注册3DTouch的peek（预览）和pop功能 ，注册(在哪个页面上使用该功能就注册在哪个页面上)
+        [self registerForPreviewingWithDelegate:self sourceView:cell];
+    }
     return cell;
 }
 - (MonthEventModel *)getDataSourceWithIndexPath:(NSIndexPath *)indexPath{
@@ -220,12 +236,13 @@ static CGFloat onOffsetY = 0;
     return swipeBtn;
 }
 
+#pragma mark - 懒加载
 - (DZNSegmentedControl *)titleSegmentedControl{
     if (!_titleSegmentedControl) {
         _titleSegmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"待处理",@"每日任务",@"已完成"]];
         _titleSegmentedControl.backgroundColor = [UIColor clearColor];
         _titleSegmentedControl.frame = CGRectMake(0, 0, 200, 28);
-        _titleSegmentedControl.tintColor = kSelectedGreenColor;
+        _titleSegmentedControl.tintColor = kSelectedColor;
         _titleSegmentedControl.showsCount = NO;
         _titleSegmentedControl.hairlineColor = [UIColor clearColor];
         [_titleSegmentedControl setTitleColor:kUncheckColor forState:UIControlStateNormal];
@@ -233,6 +250,25 @@ static CGFloat onOffsetY = 0;
     }
     return _titleSegmentedControl;
 }
+#pragma mark - 3DTouch
+#pragma mark UIViewControllerPreviewingDelegate（实现代理的方法）
+- (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    UIViewController *vc = [[UIViewController alloc]init];
+    vc.view.backgroundColor = kMainBackColor;
+    //获取按压的cell所在行，[previewingContext sourceView]就是按压的那个视图
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell* )[previewingContext sourceView]];
+    //设定预览的界面
+    //调整不被虚化的范围，按压的那个cell不被虚化（轻轻按压时周边会被虚化，再少用力展示预览，再加力跳页至设定界面）
+    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width,kStartingCellHeight);
+    previewingContext.sourceRect = rect;
+    
+    return vc;
+}
+- (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
+    [self.navigationController pushViewController:viewControllerToCommit animated:YES];
+}
+
+
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self name:kNotification_TaskQuickOperationChange object:nil];
 }

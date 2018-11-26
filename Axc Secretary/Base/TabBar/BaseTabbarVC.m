@@ -47,8 +47,8 @@
         model.normalBackgroundColor = [UIColor clearColor];
         // 点击状态
         model.selectImageName = [obj objectForKey:@"nomalImageName"];
-        model.selectColor = kSelectedGreenColor;
-        model.selectTintColor = kSelectedGreenColor; // 直接渲染颜色即可
+        model.selectColor = kSelectedColor;
+        model.selectTintColor = kSelectedColor; // 直接渲染颜色即可
         model.selectBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
         // 设置所有点击动画
         model.interactionEffectStyle = AxcAE_TabBarInteractionEffectStyleSpring;

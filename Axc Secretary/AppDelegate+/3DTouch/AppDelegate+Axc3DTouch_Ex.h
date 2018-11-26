@@ -1,5 +1,5 @@
 //
-//  AppDelegate+Sakura_Ex.h
+//  AppDelegate+Axc3DTouch_Ex.h
 //  Axc Secretary
 //
 //  Created by AxcLogo on 2018/11/26.
@@ -10,10 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppDelegate (Sakura_Ex)
+@interface AppDelegate (Axc3DTouch_Ex)
 
-- (void)loadTheme;
-
+- (void)setting3DTouch;
 
 @end
 

@@ -351,7 +351,9 @@ static NSString * const kleftBarItemBlock  = @"leftBarItemBlock";
                           buttons:(NSArray <UIButton *>*)btns{
     NSMutableArray *barBtnItems = @[].mutableCopy;
     [btns enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:obj];
+        UIView *customView = [[UIView alloc] initWithFrame: obj.frame];
+        [customView addSubview: obj];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:customView];
         [barBtnItems addObject:item];
     }];
     switch (bearing) {
@@ -375,7 +377,7 @@ static NSString * const kleftBarItemBlock  = @"leftBarItemBlock";
                                       title:(NSString *)title
                                        font:(UIFont *)font
                                      action:(SEL )action{
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 30)];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
     [button setTitleColor:self.themeColor forState:UIControlStateNormal];
     if (image) { [button setImage:image forState:UIControlStateNormal];}
     if (title) {

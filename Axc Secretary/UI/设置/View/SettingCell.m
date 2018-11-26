@@ -12,14 +12,15 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.backgroundColor = kNavColor;
+    self.backgroundColor = kViceColor;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     // 设置UI
-    self.switchOn.onTintColor = kSelectedGreenColor;
+    self.switchOn.onTintColor = kSelectedColor;
     self.switchOn.tintColor = kUncheckColor;
     [self.switchOn addTarget:self action:@selector(changeSwitchState) forControlEvents:UIControlEventValueChanged];
     
-    self.disTitleLabel.textColor = kUncheckColor;
+    self.disTitleLabel.textColor = kMarkColor;
+    self.titleLabel.textColor = kMainTitleColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

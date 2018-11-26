@@ -7,6 +7,7 @@
 //
 
 #import "AddTaskVC.h"
+#import "DZNSegmentedControl.h"
 
 @interface AddTaskVC ()
 
@@ -16,17 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+- (void)createUI{
+    self.title = @"添加新任务";
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

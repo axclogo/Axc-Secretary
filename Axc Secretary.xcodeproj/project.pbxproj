@@ -23,8 +23,11 @@
 		EA2570E421A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */; };
 		EA2570E721A7F49900FCF7EE /* AddTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E621A7F49900FCF7EE /* AddTaskVC.m */; };
 		EA444648219680A700D387DA /* UISearchBar+AxcTextFieldEx.m in Sources */ = {isa = PBXBuildFile; fileRef = EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */; };
-		EA5FEEA921ABCC4200405C28 /* AppDelegate+Sakura_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEA821ABCC4200405C28 /* AppDelegate+Sakura_Ex.m */; };
 		EA5FEEAE21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */; };
+		EA5FEEB321ABDAA200405C28 /* AxcThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB221ABDAA200405C28 /* AxcThemeManager.m */; };
+		EA5FEEB721ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB621ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m */; };
+		EA5FEEBB21ABE3F600405C28 /* SwitchThemeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEBA21ABE3F600405C28 /* SwitchThemeVC.m */; };
+		EA5FEEBF21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEBE21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m */; };
 		EA8443CE2196B5740054BC20 /* UITableView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */; };
 		EA8443D12196B57E0054BC20 /* UICollectionView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443D02196B57E0054BC20 /* UICollectionView+AxcEmptyData.m */; };
 		EA891EB62186FB67008AFD21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891EB52186FB67008AFD21 /* AppDelegate.m */; };
@@ -132,10 +135,16 @@
 		EA2570E621A7F49900FCF7EE /* AddTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTaskVC.m; sourceTree = "<group>"; };
 		EA444646219680A700D387DA /* UISearchBar+AxcTextFieldEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+AxcTextFieldEx.h"; sourceTree = "<group>"; };
 		EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+AxcTextFieldEx.m"; sourceTree = "<group>"; };
-		EA5FEEA721ABCC4200405C28 /* AppDelegate+Sakura_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Sakura_Ex.h"; sourceTree = "<group>"; };
-		EA5FEEA821ABCC4200405C28 /* AppDelegate+Sakura_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Sakura_Ex.m"; sourceTree = "<group>"; };
 		EA5FEEAC21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD_Ex.h"; sourceTree = "<group>"; };
 		EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD_Ex.m"; sourceTree = "<group>"; };
+		EA5FEEB121ABDAA200405C28 /* AxcThemeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcThemeManager.h; sourceTree = "<group>"; };
+		EA5FEEB221ABDAA200405C28 /* AxcThemeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AxcThemeManager.m; sourceTree = "<group>"; };
+		EA5FEEB521ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AxcThemeManager_Ex.h"; sourceTree = "<group>"; };
+		EA5FEEB621ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AxcThemeManager_Ex.m"; sourceTree = "<group>"; };
+		EA5FEEB921ABE3F600405C28 /* SwitchThemeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchThemeVC.h; sourceTree = "<group>"; };
+		EA5FEEBA21ABE3F600405C28 /* SwitchThemeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchThemeVC.m; sourceTree = "<group>"; };
+		EA5FEEBD21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Axc3DTouch_Ex.h"; sourceTree = "<group>"; };
+		EA5FEEBE21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Axc3DTouch_Ex.m"; sourceTree = "<group>"; };
 		EA8443CC2196B5740054BC20 /* UITableView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AxcEmptyData.h"; sourceTree = "<group>"; };
 		EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AxcEmptyData.m"; sourceTree = "<group>"; };
 		EA8443CF2196B57D0054BC20 /* UICollectionView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+AxcEmptyData.h"; sourceTree = "<group>"; };
@@ -388,9 +397,10 @@
 		EA2570E121A7ECAF00FCF7EE /* AppDelegate+ */ = {
 			isa = PBXGroup;
 			children = (
+				EA5FEEBC21ABF56900405C28 /* 3DTouch */,
+				EA5FEEB421ABDC4100405C28 /* 主题管理 */,
 				EA5FEEAB21ABCCB500405C28 /* 提示HUD */,
 				EA5FEEAA21ABCC4B00405C28 /* 调试气泡 */,
-				EA5FEEA621ABCC3000405C28 /* 主题管理 */,
 			);
 			path = "AppDelegate+";
 			sourceTree = "<group>";
@@ -402,16 +412,6 @@
 				EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */,
 			);
 			path = "UISearchBar+";
-			sourceTree = "<group>";
-		};
-		EA5FEEA621ABCC3000405C28 /* 主题管理 */ = {
-			isa = PBXGroup;
-			children = (
-				EA5FEEA721ABCC4200405C28 /* AppDelegate+Sakura_Ex.h */,
-				EA5FEEA821ABCC4200405C28 /* AppDelegate+Sakura_Ex.m */,
-				EA5FEEAF21ABCD4C00405C28 /* ThemeFile */,
-			);
-			path = "主题管理";
 			sourceTree = "<group>";
 		};
 		EA5FEEAA21ABCC4B00405C28 /* 调试气泡 */ = {
@@ -432,11 +432,40 @@
 			path = "提示HUD";
 			sourceTree = "<group>";
 		};
-		EA5FEEAF21ABCD4C00405C28 /* ThemeFile */ = {
+		EA5FEEB021ABDA8D00405C28 /* AxcThemeManager */ = {
 			isa = PBXGroup;
 			children = (
+				EA5FEEB121ABDAA200405C28 /* AxcThemeManager.h */,
+				EA5FEEB221ABDAA200405C28 /* AxcThemeManager.m */,
 			);
-			path = ThemeFile;
+			path = AxcThemeManager;
+			sourceTree = "<group>";
+		};
+		EA5FEEB421ABDC4100405C28 /* 主题管理 */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FEEB521ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.h */,
+				EA5FEEB621ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m */,
+			);
+			path = "主题管理";
+			sourceTree = "<group>";
+		};
+		EA5FEEB821ABE3D900405C28 /* SubVC */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FEEB921ABE3F600405C28 /* SwitchThemeVC.h */,
+				EA5FEEBA21ABE3F600405C28 /* SwitchThemeVC.m */,
+			);
+			path = SubVC;
+			sourceTree = "<group>";
+		};
+		EA5FEEBC21ABF56900405C28 /* 3DTouch */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FEEBD21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.h */,
+				EA5FEEBE21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m */,
+			);
+			path = 3DTouch;
 			sourceTree = "<group>";
 		};
 		EA8443C92196B53A0054BC20 /* UITableView+ */ = {
@@ -542,6 +571,7 @@
 		EAADC2432187F3BB0043BB9D /* AxcFramework */ = {
 			isa = PBXGroup;
 			children = (
+				EA5FEEB021ABDA8D00405C28 /* AxcThemeManager */,
 				EAF898B921A55D3200FE54B6 /* Libs */,
 				EA0B110921A2553700340FEA /* AxcDBManager */,
 				EAADC2442187F4250043BB9D /* AxcBasicSuit */,
@@ -1162,6 +1192,7 @@
 			children = (
 				EAC1FDF021884D13001AC774 /* SettingVC.h */,
 				EAC1FDF121884D13001AC774 /* SettingVC.m */,
+				EA5FEEB821ABE3D900405C28 /* SubVC */,
 				EA2570DB21A7DDF400FCF7EE /* View */,
 				EA2570D721A7DD7B00FCF7EE /* Model */,
 			);
@@ -1421,6 +1452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA5FEEB721ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m in Sources */,
 				EAADC2D82187F4250043BB9D /* NSString+AxcRegularEx.m in Sources */,
 				EAADC2D22187F4250043BB9D /* NSObject+AxcBasicSuitIndexPath.m in Sources */,
 				EAADC2DF2187F4250043BB9D /* UIColor+AxcColorEx.m in Sources */,
@@ -1449,7 +1481,6 @@
 				EAC1FDE0218840A8001AC774 /* MyTaskVC.m in Sources */,
 				EAADC2EB2187F4250043BB9D /* UIImage+AxcQRCode.m in Sources */,
 				EA2570E721A7F49900FCF7EE /* AddTaskVC.m in Sources */,
-				EA5FEEA921ABCC4200405C28 /* AppDelegate+Sakura_Ex.m in Sources */,
 				EA2570D621A7D6B000FCF7EE /* AxcTemporarilyDataView.m in Sources */,
 				EAADC2E32187F4250043BB9D /* UIView+AxcViewRectEx.m in Sources */,
 				EAF898BD21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m in Sources */,
@@ -1464,6 +1495,7 @@
 				EA2570DF21A7DE0200FCF7EE /* SettingCell.m in Sources */,
 				EAADC2D52187F4250043BB9D /* NSString+AxcStringIsReasonable.m in Sources */,
 				EAADC2E22187F4250043BB9D /* UIView+AxcGetSuperVC.m in Sources */,
+				EA5FEEB321ABDAA200405C28 /* AxcThemeManager.m in Sources */,
 				EAADC2D92187F4250043BB9D /* NSString+AxcReplaceRichText.m in Sources */,
 				EAADC2EA2187F4250043BB9D /* UIImage+AxcImageRotating.m in Sources */,
 				EA1E435321995AA900B95CF8 /* TaskModel.m in Sources */,
@@ -1471,12 +1503,14 @@
 				EA891EC42186FB68008AFD21 /* main.m in Sources */,
 				EA8443D12196B57E0054BC20 /* UICollectionView+AxcEmptyData.m in Sources */,
 				EA444648219680A700D387DA /* UISearchBar+AxcTextFieldEx.m in Sources */,
+				EA5FEEBF21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m in Sources */,
 				EAADC2CD2187F4250043BB9D /* AxcLanguageManagement.m in Sources */,
 				EA891EB62186FB67008AFD21 /* AppDelegate.m in Sources */,
 				EAC1FDE6218840E5001AC774 /* TrendChartVC.m in Sources */,
 				EA2570C721A7912100FCF7EE /* ActivityVC.m in Sources */,
 				EAADC2F12187F4250043BB9D /* AxcBaseVC.m in Sources */,
 				EAADC2EE2187F4250043BB9D /* AxcCalculateTool.m in Sources */,
+				EA5FEEBB21ABE3F600405C28 /* SwitchThemeVC.m in Sources */,
 				EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */,
 				EAADC2E62187F4250043BB9D /* UIViewController+AxcVCPushName.m in Sources */,
 				EAADC2D42187F4250043BB9D /* NSString+AxcUrlEncode.m in Sources */,

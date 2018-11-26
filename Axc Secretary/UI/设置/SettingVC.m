@@ -41,23 +41,22 @@
     taskSwipeSettings.tiggerBlock = ^(id  _Nonnull obj) {
         [weakSelf.notificationCenter postNotificationName:kNotification_TaskQuickOperationChange object:nil];
     };
-    ////////////////////////////////////////////////////////////
-    SettingGroupModel *operationGroupModel = [SettingGroupModel title:@"操作"
-                                                            subModels:@[taskSwipeSettings]];
-    [self.dataListArray addObject:operationGroupModel];
+    /** 事项页自动隐藏导航条 **************************************/
+    SettingModel *hideNavigationSetting = [SettingModel title:@"上滑时自动隐藏导航条"
+                                                    settingKey:kSetting_HideNavigation];
+    hideNavigationSetting.settingType = SettingTypeSwitch;
     
-    
-    /** 事项左右滑动的设定 **************************************/
+    /** 主题变更 **************************************/
     SettingModel *themeSettings = [SettingModel title:@"变更主题"
                                              disTitle:@"尊贵人生"];
     themeSettings.settingType = SettingTypeDisTitle;
     themeSettings.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     themeSettings.tiggerBlock = ^(id  _Nonnull obj) {
-        
+        [self AxcTool_pushVCName:@"SwitchThemeVC"];
     };
     ////////////////////////////////////////////////////////////
     SettingGroupModel *UIGroupModel = [SettingGroupModel title:@"界面"
-                                                     subModels:@[themeSettings]];
+                                                     subModels:@[taskSwipeSettings,hideNavigationSetting,themeSettings]];
     [self.dataListArray addObject:UIGroupModel];
     
     

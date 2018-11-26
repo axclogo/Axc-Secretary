@@ -19,7 +19,7 @@
     self.disLineView.axcTool_height = 0.3;
     self.disLineView.hidden = YES;
     self.backgroundColor =  kMainBackColor;
-    self.leftBackGroundView.backgroundColor =  kNavColor ;
+    self.leftBackGroundView.backgroundColor =  kViceColor ;
     
     self.unfoldBtn.imageView.image = [self.unfoldBtn.imageView.image imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)];
     [self.unfoldBtn.imageView setTintColor:kUncheckColor];
@@ -40,7 +40,7 @@
     _monthEvent.date.AxcTool_isThisMonth &&
     _monthEvent.date.AxcTool_isToday; // 是否是今天
     self.weekLabel.text = isToday ? @"今天" : WEEK_DAY_STRINGS[_monthEvent.date.week];
-    self.weekLabel.backgroundColor = isToday ? kSelectedGreenColor : [UIColor clearColor];
+    self.weekLabel.backgroundColor = isToday ? kSelectedColor : [UIColor clearColor];
     self.weekLabel.textColor = isToday ? [UIColor whiteColor] : [UIColor lightGrayColor];
     self.weekLabel.layer.masksToBounds = YES;
     self.weekLabel.layer.cornerRadius = self.weekLabel.axcTool_height/2;
@@ -49,7 +49,7 @@
     self.titleLabel.text = _monthEvent.title;
     self.introductionLabel.text = _monthEvent.Introduction;
     
-    self.titleLabel.textColor = [UIColor whiteColor];
+    self.titleLabel.textColor = kMainTitleColor;
     self.introductionLabel.textColor = kUncheckColor;
     
     // 如果天数相同显示时分秒即可
@@ -62,9 +62,9 @@
     // 合并后需要圆圈标注
     self.dayLabel.layer.masksToBounds = YES;
     self.dayLabel.layer.cornerRadius = self.dayLabel.axcTool_width/2;
-    self.dayLabel.backgroundColor = _monthEvent.isMergeUnit ? kUncheckColor : [UIColor clearColor];
-    if (isToday && _monthEvent.isMergeUnit) self.dayLabel.backgroundColor = kSelectedGreenColor;
-    self.dayLabel.textColor = _monthEvent.isMergeUnit ? [UIColor whiteColor] : [UIColor whiteColor];
+    self.dayLabel.backgroundColor = _monthEvent.isMergeUnit ? kMarkColor : [UIColor clearColor];
+    if (isToday && _monthEvent.isMergeUnit) self.dayLabel.backgroundColor = kSelectedColor;
+    self.dayLabel.textColor = _monthEvent.isMergeUnit ? [UIColor whiteColor] : kViceTitleColor;
     // 展开控制
     self.unfoldBtn_.selected = self.unfoldBtn.selected = _monthEvent.isSelect;
     self.unfoldBtn_.transform = self.unfoldBtn.transform = CGAffineTransformMakeRotation(AxcDraw_Angle(_monthEvent.isSelect ? 180 : 0));
