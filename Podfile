@@ -17,7 +17,7 @@ target “Axc Secretary” do
    pod 'IQKeyboardManager'
    pod 'JWNetAutoCache'
    pod 'WHC_Model'
-   pod 'WHC_ModelSqliteKit'
+   pod 'FMDB'
 # 可视化组件
    pod 'SDCycleScrollView'
    pod 'KSPhotoBrowser'
@@ -31,7 +31,6 @@ target “Axc Secretary” do
    pod 'FBDigitalFont'
    pod 'MGSwipeTableCell'
    pod 'iCarousel'
-   pod 'SakuraKit'  # 主题管理
 
 # Axc套件
    pod 'AxcAE_TabBar'
@@ -44,3 +43,5 @@ target “Axc Secretary” do
 
 
 end
+#pod 'SakuraKit'  # 主题管理
+#pod 'WHC_ModelSqliteKit'   # 对象存储

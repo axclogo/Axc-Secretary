@@ -23,6 +23,8 @@
 		EA2570E421A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */; };
 		EA2570E721A7F49900FCF7EE /* AddTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E621A7F49900FCF7EE /* AddTaskVC.m */; };
 		EA444648219680A700D387DA /* UISearchBar+AxcTextFieldEx.m in Sources */ = {isa = PBXBuildFile; fileRef = EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */; };
+		EA5FEEA921ABCC4200405C28 /* AppDelegate+Sakura_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEA821ABCC4200405C28 /* AppDelegate+Sakura_Ex.m */; };
+		EA5FEEAE21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */; };
 		EA8443CE2196B5740054BC20 /* UITableView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */; };
 		EA8443D12196B57E0054BC20 /* UICollectionView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443D02196B57E0054BC20 /* UICollectionView+AxcEmptyData.m */; };
 		EA891EB62186FB67008AFD21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891EB52186FB67008AFD21 /* AppDelegate.m */; };
@@ -130,6 +132,10 @@
 		EA2570E621A7F49900FCF7EE /* AddTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTaskVC.m; sourceTree = "<group>"; };
 		EA444646219680A700D387DA /* UISearchBar+AxcTextFieldEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+AxcTextFieldEx.h"; sourceTree = "<group>"; };
 		EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+AxcTextFieldEx.m"; sourceTree = "<group>"; };
+		EA5FEEA721ABCC4200405C28 /* AppDelegate+Sakura_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Sakura_Ex.h"; sourceTree = "<group>"; };
+		EA5FEEA821ABCC4200405C28 /* AppDelegate+Sakura_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Sakura_Ex.m"; sourceTree = "<group>"; };
+		EA5FEEAC21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD_Ex.h"; sourceTree = "<group>"; };
+		EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD_Ex.m"; sourceTree = "<group>"; };
 		EA8443CC2196B5740054BC20 /* UITableView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AxcEmptyData.h"; sourceTree = "<group>"; };
 		EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AxcEmptyData.m"; sourceTree = "<group>"; };
 		EA8443CF2196B57D0054BC20 /* UICollectionView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+AxcEmptyData.h"; sourceTree = "<group>"; };
@@ -382,8 +388,9 @@
 		EA2570E121A7ECAF00FCF7EE /* AppDelegate+ */ = {
 			isa = PBXGroup;
 			children = (
-				EA2570E221A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.h */,
-				EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */,
+				EA5FEEAB21ABCCB500405C28 /* 提示HUD */,
+				EA5FEEAA21ABCC4B00405C28 /* 调试气泡 */,
+				EA5FEEA621ABCC3000405C28 /* 主题管理 */,
 			);
 			path = "AppDelegate+";
 			sourceTree = "<group>";
@@ -395,6 +402,41 @@
 				EA444647219680A700D387DA /* UISearchBar+AxcTextFieldEx.m */,
 			);
 			path = "UISearchBar+";
+			sourceTree = "<group>";
+		};
+		EA5FEEA621ABCC3000405C28 /* 主题管理 */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FEEA721ABCC4200405C28 /* AppDelegate+Sakura_Ex.h */,
+				EA5FEEA821ABCC4200405C28 /* AppDelegate+Sakura_Ex.m */,
+				EA5FEEAF21ABCD4C00405C28 /* ThemeFile */,
+			);
+			path = "主题管理";
+			sourceTree = "<group>";
+		};
+		EA5FEEAA21ABCC4B00405C28 /* 调试气泡 */ = {
+			isa = PBXGroup;
+			children = (
+				EA2570E221A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.h */,
+				EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */,
+			);
+			path = "调试气泡";
+			sourceTree = "<group>";
+		};
+		EA5FEEAB21ABCCB500405C28 /* 提示HUD */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FEEAC21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.h */,
+				EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */,
+			);
+			path = "提示HUD";
+			sourceTree = "<group>";
+		};
+		EA5FEEAF21ABCD4C00405C28 /* ThemeFile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThemeFile;
 			sourceTree = "<group>";
 		};
 		EA8443C92196B53A0054BC20 /* UITableView+ */ = {
@@ -1407,6 +1449,7 @@
 				EAC1FDE0218840A8001AC774 /* MyTaskVC.m in Sources */,
 				EAADC2EB2187F4250043BB9D /* UIImage+AxcQRCode.m in Sources */,
 				EA2570E721A7F49900FCF7EE /* AddTaskVC.m in Sources */,
+				EA5FEEA921ABCC4200405C28 /* AppDelegate+Sakura_Ex.m in Sources */,
 				EA2570D621A7D6B000FCF7EE /* AxcTemporarilyDataView.m in Sources */,
 				EAADC2E32187F4250043BB9D /* UIView+AxcViewRectEx.m in Sources */,
 				EAF898BD21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m in Sources */,
@@ -1438,6 +1481,7 @@
 				EAADC2E62187F4250043BB9D /* UIViewController+AxcVCPushName.m in Sources */,
 				EAADC2D42187F4250043BB9D /* NSString+AxcUrlEncode.m in Sources */,
 				EAC1FDF221884D13001AC774 /* SettingVC.m in Sources */,
+				EA5FEEAE21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m in Sources */,
 				EAADC2D12187F4250043BB9D /* NSMutableArray+AxcOperationEx.m in Sources */,
 				EAADC2E42187F4250043BB9D /* UIView+AxcScreenshotsViewEx.m in Sources */,
 				EAADC2DA2187F4250043BB9D /* NSString+AxcEnumerate.m in Sources */,

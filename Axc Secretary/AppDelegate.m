@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "BaseTabbarVC.h"
 
+#import "AppDelegate+SVProgressHUD_Ex.h"
 #import "AppDelegate+LLDebug_Ex.h"
+#import "AppDelegate+Sakura_Ex.h"
 
 @interface AppDelegate ()
 
@@ -21,18 +23,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.backgroundColor = kMainBackColor;
     self.window.rootViewController = [BaseTabbarVC new];
-    
-    [self settingLLDebug];
-    
-    
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
-    [SVProgressHUD setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
-    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
-    [SVProgressHUD setMinimumDismissTimeInterval:3];
-    [SVProgressHUD setActivityIndicatorType:7];
-    [SVProgressHUD setActivityIndicatorTintColor:[UIColor whiteColor]];
+    // 加载三方资源
+    [self loadLibResources];
     
     return YES;
+}
+
+- (void)loadLibResources{
+    // 设置提示HUD
+    [self settingSVProgressHUD];
+    // 设置调试气泡
+    [self settingLLDebug];
+    // 加载主题
+    [self loadTheme];
 }
 
 
