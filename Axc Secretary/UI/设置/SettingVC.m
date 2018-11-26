@@ -31,18 +31,52 @@
     }];
 }
 - (void)requestData{
+    // 移除所有数据
+    [self.dataListArray removeAllObjects];
     WeakSelf;
+    /** 事项左右滑动的设定 **************************************/
     SettingModel *taskSwipeSettings = [SettingModel title:@"滑动快速处理"
                                                settingKey:kSetting_TaskQuickOperation];
     taskSwipeSettings.settingType = SettingTypeSwitch;
     taskSwipeSettings.tiggerBlock = ^(id  _Nonnull obj) {
         [weakSelf.notificationCenter postNotificationName:kNotification_TaskQuickOperationChange object:nil];
     };
+    ////////////////////////////////////////////////////////////
+    SettingGroupModel *operationGroupModel = [SettingGroupModel title:@"操作"
+                                                            subModels:@[taskSwipeSettings]];
+    [self.dataListArray addObject:operationGroupModel];
     
-    SettingGroupModel *groupModel = [SettingGroupModel title:@"操作类"
-                                                   subModels:@[taskSwipeSettings]];
-    [self.dataListArray addObject:groupModel];
-
+    
+    /** 事项左右滑动的设定 **************************************/
+    SettingModel *themeSettings = [SettingModel title:@"变更主题"
+                                             disTitle:@"尊贵人生"];
+    themeSettings.settingType = SettingTypeDisTitle;
+    themeSettings.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    themeSettings.tiggerBlock = ^(id  _Nonnull obj) {
+        
+    };
+    ////////////////////////////////////////////////////////////
+    SettingGroupModel *UIGroupModel = [SettingGroupModel title:@"界面"
+                                                     subModels:@[themeSettings]];
+    [self.dataListArray addObject:UIGroupModel];
+    
+    
+    
+    /** 清理缓存 **************************************/
+    SettingModel *clearCache = [SettingModel title:@"清理缓存"
+                                          disTitle:[NSString stringWithFormat:@"%.2fMB",
+                                                    ([[SDImageCache sharedImageCache] getSize]/1000.f/1000.f)]];
+    clearCache.settingType = SettingTypeDisTitle;
+    clearCache.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    clearCache.tiggerBlock = ^(id  _Nonnull obj) {
+        kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{   //   异步清缓存
+            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                [[SDImageCache sharedImageCache] clearMemory];
+                [weakSelf requestData];
+            }];
+        });
+    };
+    /** DeBug的气泡开关 **************************************/
     SettingModel *debugAirBubblesSetting = [SettingModel title:@"开启调试气泡"
                                                     settingKey:kSetting_DebugAirBubbles];
     debugAirBubblesSetting.settingType = SettingTypeSwitch;
@@ -53,9 +87,10 @@
             [[LLDebugTool sharedTool] stopWorking];
         }
     };
-    SettingGroupModel *groupModel1 = [SettingGroupModel title:@"其他"
-                                                   subModels:@[debugAirBubblesSetting]];
-    [self.dataListArray addObject:groupModel1];
+    ////////////////////////////////////////////////////////////
+    SettingGroupModel *otherGroupModel = [SettingGroupModel title:@"性能"
+                                                        subModels:@[clearCache,debugAirBubblesSetting]];
+    [self.dataListArray addObject:otherGroupModel];
 }
 #pragma mark - tableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -94,3 +129,4 @@
 
 
 @end
+

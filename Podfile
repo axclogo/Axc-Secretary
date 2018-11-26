@@ -31,6 +31,7 @@ target “Axc Secretary” do
    pod 'FBDigitalFont'
    pod 'MGSwipeTableCell'
    pod 'iCarousel'
+   pod 'SakuraKit'  # 主题管理
 
 # Axc套件
    pod 'AxcAE_TabBar'

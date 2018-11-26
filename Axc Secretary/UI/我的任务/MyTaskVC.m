@@ -25,6 +25,10 @@
     [self loadDataBaseData];
 }
 - (void)createUI{
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = kNavColor;
+    }
     self.navigationItem.titleView = self.titleSegmentedControl;
     WeakSelf;
     [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationRight image:@"add_white" handler:^(UIButton *barItemBtn) {
@@ -125,12 +129,25 @@
     monthEventModel.cellHeight = sender.selected ? kStartingCellHeight : 200;
     monthEventModel.isSelect = !sender.selected;        // 已选中展开
     [self.tableView beginUpdates];
-    sender.transform = CGAffineTransformMakeRotation(AxcDraw_Angle(monthEventModel.isSelect ? 180 : 0));
+    [UIView animateWithDuration:0.3 animations:^{
+        sender.transform = CGAffineTransformMakeRotation(AxcDraw_Angle(monthEventModel.isSelect ? 180 : 0));
+    }];
     [self.tableView reloadRowsAtIndexPaths:@[sender.axcIndexPath] withRowAnimation:UITableViewRowAnimationNone];
     [self.tableView endUpdates];
     sender.selected = !sender.selected;
 }
 #pragma mark - Table|Delegate
+// 上滑隐藏Nav
+static CGFloat onOffsetY = 0;
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if ([scrollView isEqual:self.tableView]) {
+        CGFloat offsetY = scrollView.contentOffset.y;
+        if (offsetY > 100) {
+            [self.navigationController setNavigationBarHidden:(onOffsetY < offsetY) animated:YES];
+            onOffsetY = offsetY;
+        }
+    }
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
 }
 - (NSInteger )numberOfSectionsInTableView:(UITableView *)tableView{

@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic , strong)SettingModel *model;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *switchOn;
+@property (weak, nonatomic) IBOutlet UILabel *disTitleLabel;
 
 @end
 

@@ -62,6 +62,8 @@ PODS:
   - PGPickerView (1.3.3)
   - PPNumberButton (0.8.0)
   - PSCityPickerView (1.0.0)
+  - SakuraKit (1.0.0):
+    - SSZipArchive
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.4.2):
@@ -70,6 +72,7 @@ PODS:
   - SDWebImage/GIF (4.4.2):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
+  - SSZipArchive (2.1.4)
   - SVProgressHUD (2.1.2)
   - WHC_Model (1.7.0.1)
   - WHC_ModelSqliteKit (1.3.0):
@@ -99,6 +102,7 @@ DEPENDENCIES:
   - PGPickerView
   - PPNumberButton
   - PSCityPickerView
+  - SakuraKit
   - SDCycleScrollView
   - SDWebImage (~> 4.4.2)
   - SVProgressHUD
@@ -130,8 +134,10 @@ SPEC REPOS:
     - PGPickerView
     - PPNumberButton
     - PSCityPickerView
+    - SakuraKit
     - SDCycleScrollView
     - SDWebImage
+    - SSZipArchive
     - SVProgressHUD
     - WHC_Model
     - WHC_ModelSqliteKit
@@ -160,8 +166,10 @@ SPEC CHECKSUMS:
   PGPickerView: 0b781b1d8fb153db5ef09ac3842941f29cbca8a4
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   PSCityPickerView: 88ecae3def30a127152d75a87df22ff3d1e6e770
+  SakuraKit: 9ca56ebff8ad0fd8f61af7a340e2c27d691c554a
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   WHC_Model: 8268100386a9d450fa7ff72e9671910da8334e3f
   WHC_ModelSqliteKit: dfafef3ee872dedd9823395291fc80bf37eac46d
@@ -169,6 +177,6 @@ SPEC CHECKSUMS:
   zhPopupController: 4e6bd734062cb9c7ebe8113568550bade168bed7
   ZLPhotoBrowser: b666fe8f68edc63dc5c4edccca071885b87553f5
 
-PODFILE CHECKSUM: 150807b97c689b7046c9c011efb98d5181be5f1e
+PODFILE CHECKSUM: 0c0a5ccb74b73fd2f3547db49c9ff9fa73adfdd9
 
 COCOAPODS: 1.5.3

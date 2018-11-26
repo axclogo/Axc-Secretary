@@ -18,6 +18,8 @@
     self.switchOn.onTintColor = kSelectedGreenColor;
     self.switchOn.tintColor = kUncheckColor;
     [self.switchOn addTarget:self action:@selector(changeSwitchState) forControlEvents:UIControlEventValueChanged];
+    
+    self.disTitleLabel.textColor = kUncheckColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -36,13 +38,18 @@
     self.titleLabel.text = _model.title;
     // 设置状态
     self.switchOn.hidden = YES;
+    self.disTitleLabel.hidden = YES;
     switch (_model.settingType) {
         case SettingTypeSwitch:{
             self.switchOn.hidden = NO;
             // 匹配开关状态
             self.switchOn.on = _model.switch_on;
         }break;
-            
+        case SettingTypeDisTitle:{
+            self.disTitleLabel.hidden = NO;
+            self.disTitleLabel.text = _model.disTitle;
+        }break;
+
         default:  break;
     }
 }
