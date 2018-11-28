@@ -64,7 +64,7 @@ static AxcThemeManager    *_manager;
             self.viceColor = self.navColor;
             self.viceTitleColor = [UIColor whiteColor];
         }break;
-            
+//            背景色：#262638    圆圈：#363658   绿色：#24B290   黄色：#FFCE33   树枝：#363658
         default:  break;
     }
     if (animation) {

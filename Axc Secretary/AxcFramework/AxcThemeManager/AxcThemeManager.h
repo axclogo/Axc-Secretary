@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, AxcTheme) {
-    AxcThemeNone,          // 无
+    AxcThemeNone,           // 无
     AxcThemeLight,          // 亮色
     AxcThemeDark,           // 黑色
+    AxcThemeHehe,           // 贺贺色
 };
 
 NS_ASSUME_NONNULL_BEGIN

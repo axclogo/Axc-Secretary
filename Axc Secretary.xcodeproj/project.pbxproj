@@ -28,6 +28,10 @@
 		EA5FEEB721ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB621ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m */; };
 		EA5FEEBB21ABE3F600405C28 /* SwitchThemeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEBA21ABE3F600405C28 /* SwitchThemeVC.m */; };
 		EA5FEEBF21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEBE21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m */; };
+		EA5FEEC721ABFB6700405C28 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5FEEC621ABFB6700405C28 /* NotificationCenter.framework */; };
+		EA5FEECB21ABFB6700405C28 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEECA21ABFB6700405C28 /* TodayViewController.m */; };
+		EA5FEECE21ABFB6700405C28 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5FEECC21ABFB6700405C28 /* MainInterface.storyboard */; };
+		EA5FEED221ABFB6700405C28 /* SecretaryTadayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA5FEEC521ABFB6700405C28 /* SecretaryTadayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA8443CE2196B5740054BC20 /* UITableView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */; };
 		EA8443D12196B57E0054BC20 /* UICollectionView+AxcEmptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8443D02196B57E0054BC20 /* UICollectionView+AxcEmptyData.m */; };
 		EA891EB62186FB67008AFD21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891EB52186FB67008AFD21 /* AppDelegate.m */; };
@@ -89,6 +93,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA5FEED021ABFB6700405C28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA891EA92186FB67008AFD21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA5FEEC421ABFB6700405C28;
+			remoteInfo = SecretaryTadayExtension;
+		};
 		EA891ECA2186FB68008AFD21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA891EA92186FB67008AFD21 /* Project object */;
@@ -104,6 +115,20 @@
 			remoteInfo = "Axc Secretary";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA5FEED621ABFB6700405C28 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EA5FEED221ABFB6700405C28 /* SecretaryTadayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7FB384BC73673694CC99A1B5 /* Pods-Axc Secretary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axc Secretary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +170,14 @@
 		EA5FEEBA21ABE3F600405C28 /* SwitchThemeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchThemeVC.m; sourceTree = "<group>"; };
 		EA5FEEBD21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Axc3DTouch_Ex.h"; sourceTree = "<group>"; };
 		EA5FEEBE21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Axc3DTouch_Ex.m"; sourceTree = "<group>"; };
+		EA5FEEC521ABFB6700405C28 /* SecretaryTadayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SecretaryTadayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5FEEC621ABFB6700405C28 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		EA5FEEC921ABFB6700405C28 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		EA5FEECA21ABFB6700405C28 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		EA5FEECD21ABFB6700405C28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		EA5FEECF21ABFB6700405C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA5FEED721ABFBD400405C28 /* Axc Secretary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Axc Secretary.entitlements"; sourceTree = "<group>"; };
+		EA5FEED821ABFBFA00405C28 /* SecretaryTadayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SecretaryTadayExtension.entitlements; sourceTree = "<group>"; };
 		EA8443CC2196B5740054BC20 /* UITableView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+AxcEmptyData.h"; sourceTree = "<group>"; };
 		EA8443CD2196B5740054BC20 /* UITableView+AxcEmptyData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+AxcEmptyData.m"; sourceTree = "<group>"; };
 		EA8443CF2196B57D0054BC20 /* UICollectionView+AxcEmptyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+AxcEmptyData.h"; sourceTree = "<group>"; };
@@ -268,6 +301,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA5FEEC221ABFB6700405C28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5FEEC721ABFB6700405C28 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA891EAE2186FB67008AFD21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,6 +349,7 @@
 			children = (
 				EA09EDF5219AA04500713AFB /* libsqlite3.0.tbd */,
 				AE8817DBBF060476B1F8AC40 /* libPods-Axc Secretary.a */,
+				EA5FEEC621ABFB6700405C28 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -468,6 +510,18 @@
 			path = 3DTouch;
 			sourceTree = "<group>";
 		};
+		EA5FEEC821ABFB6700405C28 /* SecretaryTadayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FEED821ABFBFA00405C28 /* SecretaryTadayExtension.entitlements */,
+				EA5FEEC921ABFB6700405C28 /* TodayViewController.h */,
+				EA5FEECA21ABFB6700405C28 /* TodayViewController.m */,
+				EA5FEECC21ABFB6700405C28 /* MainInterface.storyboard */,
+				EA5FEECF21ABFB6700405C28 /* Info.plist */,
+			);
+			path = SecretaryTadayExtension;
+			sourceTree = "<group>";
+		};
 		EA8443C92196B53A0054BC20 /* UITableView+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +546,7 @@
 				EA891EB32186FB67008AFD21 /* Axc Secretary */,
 				EA891ECC2186FB68008AFD21 /* Axc SecretaryTests */,
 				EA891ED72186FB68008AFD21 /* Axc SecretaryUITests */,
+				EA5FEEC821ABFB6700405C28 /* SecretaryTadayExtension */,
 				EA891EB22186FB67008AFD21 /* Products */,
 				15A685A230AEE24A71D7AD9E /* Pods */,
 				B43A4CD3579CEA4125EAC544 /* Frameworks */,
@@ -504,6 +559,7 @@
 				EA891EB12186FB67008AFD21 /* Axc Secretary.app */,
 				EA891EC92186FB68008AFD21 /* Axc SecretaryTests.xctest */,
 				EA891ED42186FB68008AFD21 /* Axc SecretaryUITests.xctest */,
+				EA5FEEC521ABFB6700405C28 /* SecretaryTadayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -511,6 +567,7 @@
 		EA891EB32186FB67008AFD21 /* Axc Secretary */ = {
 			isa = PBXGroup;
 			children = (
+				EA5FEED721ABFBD400405C28 /* Axc Secretary.entitlements */,
 				EA891EB42186FB67008AFD21 /* AppDelegate.h */,
 				EA891EB52186FB67008AFD21 /* AppDelegate.m */,
 				EA2570E121A7ECAF00FCF7EE /* AppDelegate+ */,
@@ -1238,6 +1295,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA5FEEC421ABFB6700405C28 /* SecretaryTadayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA5FEED321ABFB6700405C28 /* Build configuration list for PBXNativeTarget "SecretaryTadayExtension" */;
+			buildPhases = (
+				EA5FEEC121ABFB6700405C28 /* Sources */,
+				EA5FEEC221ABFB6700405C28 /* Frameworks */,
+				EA5FEEC321ABFB6700405C28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecretaryTadayExtension;
+			productName = SecretaryTadayExtension;
+			productReference = EA5FEEC521ABFB6700405C28 /* SecretaryTadayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		EA891EB02186FB67008AFD21 /* Axc Secretary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA891EDD2186FB68008AFD21 /* Build configuration list for PBXNativeTarget "Axc Secretary" */;
@@ -1247,10 +1321,12 @@
 				EA891EAE2186FB67008AFD21 /* Frameworks */,
 				EA891EAF2186FB67008AFD21 /* Resources */,
 				F05B56834087893476BE1376 /* [CP] Copy Pods Resources */,
+				EA5FEED621ABFB6700405C28 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EA5FEED121ABFB6700405C28 /* PBXTargetDependency */,
 			);
 			name = "Axc Secretary";
 			productName = "Axc Secretary";
@@ -1302,8 +1378,21 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = AxcLogo;
 				TargetAttributes = {
+					EA5FEEC421ABFB6700405C28 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					EA891EB02186FB67008AFD21 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					EA891EC82186FB68008AFD21 = {
 						CreatedOnToolsVersion = 10.0;
@@ -1331,11 +1420,20 @@
 				EA891EB02186FB67008AFD21 /* Axc Secretary */,
 				EA891EC82186FB68008AFD21 /* Axc SecretaryTests */,
 				EA891ED32186FB68008AFD21 /* Axc SecretaryUITests */,
+				EA5FEEC421ABFB6700405C28 /* SecretaryTadayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA5FEEC321ABFB6700405C28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5FEECE21ABFB6700405C28 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA891EAF2186FB67008AFD21 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1448,6 +1546,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA5FEEC121ABFB6700405C28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5FEECB21ABFB6700405C28 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA891EAD2186FB67008AFD21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1542,6 +1648,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA5FEED121ABFB6700405C28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA5FEEC421ABFB6700405C28 /* SecretaryTadayExtension */;
+			targetProxy = EA5FEED021ABFB6700405C28 /* PBXContainerItemProxy */;
+		};
 		EA891ECB2186FB68008AFD21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA891EB02186FB67008AFD21 /* Axc Secretary */;
@@ -1555,6 +1666,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EA5FEECC21ABFB6700405C28 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA5FEECD21ABFB6700405C28 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		EA891EBA2186FB67008AFD21 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1574,6 +1693,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA5FEED421ABFB6700405C28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SecretaryTadayExtension/SecretaryTadayExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5R4T3ZJXKR;
+				INFOPLIST_FILE = SecretaryTadayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AxcLogoCreate.Axc-Secretary.SecretaryTadayExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA5FEED521ABFB6700405C28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SecretaryTadayExtension/SecretaryTadayExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5R4T3ZJXKR;
+				INFOPLIST_FILE = SecretaryTadayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AxcLogoCreate.Axc-Secretary.SecretaryTadayExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EA891EDB2186FB68008AFD21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1691,6 +1848,7 @@
 			baseConfigurationReference = 7FB384BC73673694CC99A1B5 /* Pods-Axc Secretary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Axc Secretary/Axc Secretary.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R4T3ZJXKR;
 				GCC_PREFIX_HEADER = "Axc Secretary/PrefixHeader.pch";
@@ -1710,6 +1868,7 @@
 			baseConfigurationReference = FF841F8DBA0445B1969BC6A0 /* Pods-Axc Secretary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Axc Secretary/Axc Secretary.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R4T3ZJXKR;
 				GCC_PREFIX_HEADER = "Axc Secretary/PrefixHeader.pch";
@@ -1797,6 +1956,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA5FEED321ABFB6700405C28 /* Build configuration list for PBXNativeTarget "SecretaryTadayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA5FEED421ABFB6700405C28 /* Debug */,
+				EA5FEED521ABFB6700405C28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA891EAC2186FB67008AFD21 /* Build configuration list for PBXProject "Axc Secretary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
