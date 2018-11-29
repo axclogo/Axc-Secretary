@@ -19,7 +19,6 @@ target “Axc Secretary” do
    pod 'WHC_Model'
    pod 'FMDB'
 # 可视化组件
-   pod 'QMUIKit'
    pod 'SDCycleScrollView'
    pod 'KSPhotoBrowser'
    pod 'ZLPhotoBrowser'

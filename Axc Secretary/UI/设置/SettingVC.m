@@ -62,18 +62,23 @@
     
     
     /** 清理缓存 **************************************/
+    CGFloat cache = ([[SDImageCache sharedImageCache] getSize]/1000.f/1000.f);
     SettingModel *clearCache = [SettingModel title:@"清理缓存"
-                                          disTitle:[NSString stringWithFormat:@"%.2fMB",
-                                                    ([[SDImageCache sharedImageCache] getSize]/1000.f/1000.f)]];
+                                          disTitle:[NSString stringWithFormat:@"%.2fMB", cache]];
     clearCache.settingType = SettingTypeDisTitle;
     clearCache.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     clearCache.tiggerBlock = ^(id  _Nonnull obj) {
-        kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{   //   异步清缓存
-            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
-                [[SDImageCache sharedImageCache] clearMemory];
-                [weakSelf requestData];
-            }];
-        });
+        [self AxcBase_popPromptQMUIAlertWithTitle:@"清理缓存"
+                                          message:[NSString stringWithFormat:@"当前缓存%.2fMB",cache]
+                                          handler:^(__kindof QMUIAlertController * _Nonnull alertController, QMUIAlertAction * _Nonnull action) {
+                                              kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{   //   异步清缓存
+                                                  [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                                                      [[SDImageCache sharedImageCache] clearMemory];
+                                                      [SVProgressHUD showSuccessWithStatus:@"清理完成!"];
+                                                      [weakSelf requestData];
+                                                  }];
+                                              });
+                                          }];
     };
     /** DeBug的气泡开关 **************************************/
     SettingModel *debugAirBubblesSetting = [SettingModel title:@"开启调试气泡"

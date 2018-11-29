@@ -10,9 +10,17 @@
 #import <MJRefresh.h>                   // 下拉上拉
 #import <JWCacheURLProtocol.h>          // webView内存
 
+
+#define QMUI_Exist __has_include("QMUIAlertController.h")
+#if QMUI_Exist
+#import <QMUIAlertController.h>
+#endif
+
+
 #import "AxcTemporarilyDataView.h"
 
 #import "AxcDBManager.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,31 +31,15 @@ NS_ASSUME_NONNULL_BEGIN
 // 设置返回按钮
 - (void)AxcBase_settingBackBtn;
 
-// tableView
-- (void)tableView_headerAction;
-- (void)tableView_footerAction;
-- (void)AxcBase_tableEndRefreshing;
-- (void)AxcBase_tableEndRefreshingWithDataCount:(NSInteger )count;
-- (void)AxcBase_tableEndRefreshingWithDataCount:(NSInteger )count pageSize:(NSInteger )pageSize;
-- (void)AxcBase_settingTableType:(UITableViewStyle)tableType
-                         nibName:(NSString *)nibName
-                          cellID:(NSString *)cellID
-                      refreshing:(BOOL)refreshing
-                         loading:(BOOL)loading;
-
-// collectionView
-- (void)collectionView_headerAction;
-- (void)collectionView_footerAction;
-- (void)AxcBase_collectionEndRefreshing;
-- (void)AxcBase_collectionEndRefreshingWithDataCount:(NSInteger )count;
-- (void)AxcBase_collectionEndRefreshingWithDataCount:(NSInteger )count pageSize:(NSInteger )pageSize;
-- (void)AxcBase_settingCollectionLayout:(UICollectionViewLayout* )flowLayout
-                                nibName:(NSString *)nibName
-                                 cellID:(NSString *)cellID
-                             refreshing:(BOOL)refreshing
-                                loading:(BOOL)loading;
 // 数据库操作对象
 @property(nonatomic , strong)AxcDBManager *db;
+
+#if QMUI_Exist
+
+- (void)AxcBase_popPromptQMUIAlertWithTitle:(NSString *)title
+                                    message:(NSString *)message
+                                    handler:(void (^)(__kindof QMUIAlertController *alertController,  QMUIAlertAction *action))handler;
+#endif
 
 @end
 

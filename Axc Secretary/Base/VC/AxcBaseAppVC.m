@@ -29,83 +29,30 @@
 }
 
 
-- (void)tableView_headerAction{
-    [self AxcBase_tableEndRefreshing];
-}
-- (void)tableView_footerAction{
-    [self AxcBase_tableEndRefreshing];
-}
-- (void)AxcBase_tableEndRefreshing{
-    [self.tableView.mj_footer endRefreshing];
-    [self.tableView.mj_header endRefreshing];
-}
-- (void)AxcBase_tableEndRefreshingWithDataCount:(NSInteger )count{
-    [self AxcBase_tableEndRefreshingWithDataCount:count pageSize:9];
-}
-- (void)AxcBase_tableEndRefreshingWithDataCount:(NSInteger )count pageSize:(NSInteger )pageSize{
-    if (count <= pageSize) { // 没有更多数据了
-        [self.tableView.mj_header endRefreshing];
-        [self.tableView.mj_footer endRefreshingWithNoMoreData];
-    }else{
-        [self AxcBase_tableEndRefreshing];
-    }
-}
-- (void)AxcBase_settingTableType:(UITableViewStyle)tableType
-                         nibName:(NSString *)nibName
-                          cellID:(NSString *)cellID
-                      refreshing:(BOOL)refreshing
-                         loading:(BOOL)loading{
-    [self AxcBase_settingTableType:tableType nibName:nibName cellID:cellID];
-    if (refreshing) {
-        self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
-                                                                    refreshingAction:@selector(tableView_headerAction)];
-        self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    }
-    if (loading) {
-        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
-                                                                        refreshingAction:@selector(tableView_footerAction)];
-    }
+
+#pragma mark - QMUI
+#if QMUI_Exist
+- (void)AxcBase_popPromptQMUIAlertWithTitle:(NSString *)title
+                                    message:(NSString *)message
+                                    handler:(void (^)(__kindof QMUIAlertController *alertController,  QMUIAlertAction *action))handler{
+    QMUIAlertAction *action1 = [QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:NULL];
+    QMUIAlertAction *action2 = [QMUIAlertAction actionWithTitle:@"确定" style:QMUIAlertActionStyleDestructive handler:handler];
+    QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:title message:message preferredStyle:QMUIAlertControllerStyleAlert];
+    
+    NSMutableDictionary *titleAttributs = [[NSMutableDictionary alloc] initWithDictionary:alertController.alertTitleAttributes];
+    titleAttributs[NSForegroundColorAttributeName] = kMainTitleColor;
+    alertController.alertTitleAttributes = titleAttributs;
+    NSMutableDictionary *messageAttributs = [[NSMutableDictionary alloc] initWithDictionary:alertController.alertMessageAttributes];
+    messageAttributs[NSForegroundColorAttributeName] = kViceTitleColor;
+    alertController.alertHeaderBackgroundColor = kNavDarkColor;
+    alertController.alertSeparatorColor = kUncheckColor;
+
+    [alertController addAction:action1];
+    [alertController addAction:action2];
+    [alertController showWithAnimated:YES];
 }
 
-
-// collectionView
-- (void)collectionView_headerAction{
-    [self AxcBase_collectionEndRefreshing];
-}
-- (void)collectionView_footerAction{
-    [self AxcBase_collectionEndRefreshing];
-}
-- (void)AxcBase_collectionEndRefreshing{
-    [self.collectionView.mj_header endRefreshing];
-    [self.collectionView.mj_footer endRefreshing];
-}
-- (void)AxcBase_collectionEndRefreshingWithDataCount:(NSInteger )count{
-    [self AxcBase_collectionEndRefreshingWithDataCount:count pageSize:9];
-}
-- (void)AxcBase_collectionEndRefreshingWithDataCount:(NSInteger )count pageSize:(NSInteger )pageSize{
-    if (count <= pageSize) { // 没有更多数据了
-        [self.collectionView.mj_header endRefreshing];
-        [self.collectionView.mj_footer endRefreshingWithNoMoreData];
-    }else{
-        [self AxcBase_collectionEndRefreshing];
-    }
-}
-- (void)AxcBase_settingCollectionLayout:(UICollectionViewLayout* )flowLayout
-                                nibName:(NSString *)nibName
-                                 cellID:(NSString *)cellID
-                             refreshing:(BOOL)refreshing
-                                loading:(BOOL)loading{
-    [self AxcBase_settingCollectionLayout:flowLayout nibName:nibName cellID:cellID];
-    if (refreshing) {
-        self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
-                                                                         refreshingAction:@selector(collectionView_headerAction)];
-        self.collectionView.mj_header.automaticallyChangeAlpha = YES;
-    }
-    if (loading) {
-        self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
-                                                                             refreshingAction:@selector(collectionView_footerAction)];
-    }
-}
+#endif
 
 #pragma mark - 懒加载
 - (AxcTemporarilyDataView *)emptyDataView{
