@@ -11,11 +11,6 @@
 #import <JWCacheURLProtocol.h>          // webView内存
 
 
-#define QMUI_Exist __has_include("QMUIAlertController.h")
-#if QMUI_Exist
-#import <QMUIAlertController.h>
-#endif
-
 
 #import "AxcTemporarilyDataView.h"
 
@@ -34,12 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 数据库操作对象
 @property(nonatomic , strong)AxcDBManager *db;
 
-#if QMUI_Exist
 
-- (void)AxcBase_popPromptQMUIAlertWithTitle:(NSString *)title
-                                    message:(NSString *)message
-                                    handler:(void (^)(__kindof QMUIAlertController *alertController,  QMUIAlertAction *action))handler;
-#endif
 
 @end
 

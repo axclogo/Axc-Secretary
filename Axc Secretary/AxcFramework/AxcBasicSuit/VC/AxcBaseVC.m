@@ -147,6 +147,10 @@
     if (!_axcTopBarAllHeight) _axcTopBarAllHeight = self.axcStatusBarHeight + self.axcNavBarHeight;
     return _axcTopBarAllHeight;
 }
+- (BOOL)isHorizontal{
+    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    return (orientation == UIDeviceOrientationLandscapeLeft) || (orientation == UIDeviceOrientationLandscapeRight);
+}
 // 设置Bar字体属性
 - (void)setAxcNavBarTextAttributes:(NSDictionary *)axcNavBarTextAttributes{
     self.navigationController.navigationBar.titleTextAttributes = axcNavBarTextAttributes;

@@ -50,6 +50,8 @@ UICollectionViewDelegate,UICollectionViewDataSource
 @property(nonatomic , strong)UIColor *themeColor;
 /** 默认字号 */
 @property(nonatomic , strong)UIFont *defaultFont;
+/** 是否横屏状态 */
+@property(nonatomic , readonly , assign)BOOL isHorizontal;
 
 //***************** 常用函数 *****************
 /** 快速设置TableView */

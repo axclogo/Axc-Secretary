@@ -151,4 +151,4 @@ return ScreenFor_IPX && models;\
 /** GCD - 开启异步线程 */
 #define kDISPATCH_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlock);
 
-
+#define KDISPATCH_AFTER_MAIN(time,afterBlock) dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), afterBlock);

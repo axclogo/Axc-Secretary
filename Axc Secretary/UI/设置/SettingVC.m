@@ -68,17 +68,13 @@
     clearCache.settingType = SettingTypeDisTitle;
     clearCache.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     clearCache.tiggerBlock = ^(id  _Nonnull obj) {
-        [self AxcBase_popPromptQMUIAlertWithTitle:@"清理缓存"
-                                          message:[NSString stringWithFormat:@"当前缓存%.2fMB",cache]
-                                          handler:^(__kindof QMUIAlertController * _Nonnull alertController, QMUIAlertAction * _Nonnull action) {
-                                              kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{   //   异步清缓存
-                                                  [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
-                                                      [[SDImageCache sharedImageCache] clearMemory];
-                                                      [SVProgressHUD showSuccessWithStatus:@"清理完成!"];
-                                                      [weakSelf requestData];
-                                                  }];
-                                              });
-                                          }];
+        kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{   //   异步清缓存
+            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                [[SDImageCache sharedImageCache] clearMemory];
+                [SVProgressHUD showSuccessWithStatus:@"清理完成!"];
+                [weakSelf requestData];
+            }];
+        });
     };
     /** DeBug的气泡开关 **************************************/
     SettingModel *debugAirBubblesSetting = [SettingModel title:@"开启调试气泡"

@@ -26,7 +26,6 @@
 - (void)createUI{
     self.navigationItem.searchController = self.searchController; // 搜索栏
     self.navigationController.navigationBar.prefersLargeTitles = YES; // 滑动大标题
-    self.navigationController.navigationBar.largeTitleTextAttributes = @{NSForegroundColorAttributeName: kUncheckColor};
     self.axcNavBarTextColor = kUncheckColor;
     
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];

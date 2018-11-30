@@ -7,27 +7,49 @@
 //
 
 #import "ActivityVC.h"
+#import "ActivityPageFrameworkVC.h"
+
 
 @interface ActivityVC ()
-
+// 周分页控制器
+@property(nonatomic, strong)ActivityPageFrameworkVC *weekAcitvityVC;
 @end
 
 @implementation ActivityVC
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+}
+- (void)createUI{
+    WeakSelf;
+    [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationRight image:@"today" handler:^(UIButton *barItemBtn) {
+        [weakSelf.weekAcitvityVC goToday];  // 回到今日
+    }];
+    [self.weekAcitvityVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    [self.weekAcitvityVC forceLayoutSubviews];
+    self.weekAcitvityVC.view.backgroundColor =
+    self.weekAcitvityVC.scrollView.backgroundColor =
+    self.view.backgroundColor;
 }
-*/
+
+
+
+- (ActivityPageFrameworkVC *)weekAcitvityVC{
+    if (!_weekAcitvityVC) {
+        _weekAcitvityVC = [[ActivityPageFrameworkVC alloc] init];
+        [self addChildViewController:_weekAcitvityVC];
+        [self.view addSubview:_weekAcitvityVC.view];
+    }
+    return _weekAcitvityVC;
+}
+
+
 
 @end

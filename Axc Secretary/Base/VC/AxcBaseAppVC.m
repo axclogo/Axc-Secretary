@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kMainBackColor;
-    
-    
+    self.axcNavBarTextColor = kUncheckColor;
+
 }
 - (void)AxcBase_settingBackBtn{
     [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationLeft
@@ -30,29 +30,6 @@
 
 
 
-#pragma mark - QMUI
-#if QMUI_Exist
-- (void)AxcBase_popPromptQMUIAlertWithTitle:(NSString *)title
-                                    message:(NSString *)message
-                                    handler:(void (^)(__kindof QMUIAlertController *alertController,  QMUIAlertAction *action))handler{
-    QMUIAlertAction *action1 = [QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:NULL];
-    QMUIAlertAction *action2 = [QMUIAlertAction actionWithTitle:@"确定" style:QMUIAlertActionStyleDestructive handler:handler];
-    QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:title message:message preferredStyle:QMUIAlertControllerStyleAlert];
-    
-    NSMutableDictionary *titleAttributs = [[NSMutableDictionary alloc] initWithDictionary:alertController.alertTitleAttributes];
-    titleAttributs[NSForegroundColorAttributeName] = kMainTitleColor;
-    alertController.alertTitleAttributes = titleAttributs;
-    NSMutableDictionary *messageAttributs = [[NSMutableDictionary alloc] initWithDictionary:alertController.alertMessageAttributes];
-    messageAttributs[NSForegroundColorAttributeName] = kViceTitleColor;
-    alertController.alertHeaderBackgroundColor = kNavDarkColor;
-    alertController.alertSeparatorColor = kUncheckColor;
-
-    [alertController addAction:action1];
-    [alertController addAction:action2];
-    [alertController showWithAnimated:YES];
-}
-
-#endif
 
 #pragma mark - 懒加载
 - (AxcTemporarilyDataView *)emptyDataView{
