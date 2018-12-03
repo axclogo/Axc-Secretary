@@ -36,7 +36,6 @@ WMPageControllerDelegate
 }
 - (void)loadData{
     [self.taskTypeArray addObject:[TaskTypeModel title:@"普通任务" vcName:@"OrdinaryTaskVC"]];
-    [self.taskTypeArray addObject:[TaskTypeModel title:@"每日任务" vcName:@"DailyTaskVC"]];
     [self.taskTypeArray addObject:[TaskTypeModel title:@"每日活动" vcName:@"AddActivityVC"]];
     
     [self.taskTypeArray addObject:[TaskTypeModel title:@"添加记录" vcName:@"HistoricalRecordTaskVC"]];

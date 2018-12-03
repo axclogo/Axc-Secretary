@@ -8,6 +8,8 @@
 
 #import "ActivityVC.h"
 #import "ActivityPageFrameworkVC.h"
+#import "EditorActivityVC.h"
+
 #import <WMDragView.h>
 
 @interface ActivityVC ()
@@ -33,12 +35,13 @@
     [self.weekAcitvityVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
+    
     [self.view addSubview:self.dragView];
 }
 
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    [self.weekAcitvityVC forceLayoutSubviews];
+//    [self.weekAcitvityVC forceLayoutSubviews];
     self.weekAcitvityVC.view.backgroundColor =
     self.weekAcitvityVC.scrollView.backgroundColor =
     self.view.backgroundColor;
@@ -76,9 +79,9 @@
         _dragView = [[WMDragView alloc] initWithFrame:CGRectZero];
         _dragView.isKeepBounds = YES;
         _dragView.backgroundColor = kSelectedColor;
-    
+        WeakSelf;
         _dragView.clickDragViewBlock = ^(WMDragView *dragView) {
-            NSLog(@"%@",self.editorImageView);
+            [weakSelf AxcTool_pushVCName:@"EditorActivityVC"];
         };
     }
     return _dragView;
@@ -86,6 +89,7 @@
 - (ActivityPageFrameworkVC *)weekAcitvityVC{
     if (!_weekAcitvityVC) {
         _weekAcitvityVC = [[ActivityPageFrameworkVC alloc] init];
+        
         [self addChildViewController:_weekAcitvityVC];
         [self.view addSubview:_weekAcitvityVC.view];
     }

@@ -239,9 +239,9 @@ static CGFloat onOffsetY = 0;
 #pragma mark - 懒加载
 - (DZNSegmentedControl *)titleSegmentedControl{
     if (!_titleSegmentedControl) {
-        _titleSegmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"待处理",@"每日任务",@"已完成"]];
+        _titleSegmentedControl = [[DZNSegmentedControl alloc] initWithItems:@[@"待处理",@"已完成"]];
         _titleSegmentedControl.backgroundColor = [UIColor clearColor];
-        _titleSegmentedControl.frame = CGRectMake(0, 0, 200, 28);
+        _titleSegmentedControl.frame = CGRectMake(0, 0, 130, 28);
         _titleSegmentedControl.tintColor = kSelectedColor;
         _titleSegmentedControl.showsCount = NO;
         _titleSegmentedControl.hairlineColor = [UIColor clearColor];

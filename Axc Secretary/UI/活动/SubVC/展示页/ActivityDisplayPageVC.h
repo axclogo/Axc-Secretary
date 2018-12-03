@@ -7,6 +7,7 @@
 //
 
 #import "AxcBaseAppVC.h"
+#import "ActivityDisplayPageCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -32,7 +32,7 @@ target “Axc Secretary” do
    pod 'MGSwipeTableCell'
    pod 'iCarousel'
    pod 'WMDragView'
-   pod 'QMUIKit/QMUIComponents/QMUIMarqueeLabel'
+#   pod 'QMUIKit/QMUIComponents/QMUIMarqueeLabel'
 
 
 # Axc套件

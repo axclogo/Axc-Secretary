@@ -60,13 +60,6 @@ PODS:
   - MGSwipeTableCell (1.6.7)
   - MJRefresh (3.1.15.7)
   - PPNumberButton (0.8.0)
-  - QMUIKit/QMUIComponents/QMUIMarqueeLabel (2.8.1):
-    - QMUIKit/QMUICore
-  - QMUIKit/QMUICore (2.8.1):
-    - QMUIKit/QMUILog
-    - QMUIKit/QMUIWeakObjectContainer
-  - QMUIKit/QMUILog (2.8.1)
-  - QMUIKit/QMUIWeakObjectContainer (2.8.1)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.4.2):
@@ -100,7 +93,6 @@ DEPENDENCIES:
   - MGSwipeTableCell
   - MJRefresh
   - PPNumberButton
-  - QMUIKit/QMUIComponents/QMUIMarqueeLabel
   - SDCycleScrollView
   - SDWebImage (~> 4.4.2)
   - SVProgressHUD
@@ -129,7 +121,6 @@ SPEC REPOS:
     - MGSwipeTableCell
     - MJRefresh
     - PPNumberButton
-    - QMUIKit
     - SDCycleScrollView
     - SDWebImage
     - SVProgressHUD
@@ -157,7 +148,6 @@ SPEC CHECKSUMS:
   MGSwipeTableCell: fb20e983988bde2b8d0df29c2d9e1d8ffd10b74a
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
-  QMUIKit: 36fe0f01873605e15e86113403db547aca16e6c5
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
@@ -166,6 +156,6 @@ SPEC CHECKSUMS:
   WMPageController: 4c7f2c636675a71aea5eecf8fdc07a0ce86954e3
   ZLPhotoBrowser: b666fe8f68edc63dc5c4edccca071885b87553f5
 
-PODFILE CHECKSUM: 598ed1bb0c0b87d84f06193e73475116b639c16f
+PODFILE CHECKSUM: fdf8a2081a91dc9cc4ce30db07f5f8226df741f0
 
 COCOAPODS: 1.5.3

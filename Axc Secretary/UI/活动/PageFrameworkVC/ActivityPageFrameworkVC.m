@@ -9,10 +9,6 @@
 #import "ActivityPageFrameworkVC.h"
 
 @interface ActivityPageFrameworkVC ()
-// 今日
-@property(nonatomic , strong , readonly)NSDate *today;
-// 每周数组
-@property(nonatomic , strong)NSMutableArray <DayActivityModel *>*weekAcitvityArray;
 // 今日的角标Label
 @property(nonatomic , strong)UILabel *todayBadge;
 @end
@@ -55,7 +51,23 @@
     }
     // 设置数列
     [dates enumerateObjectsUsingBlock:^(NSDate * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [self.weekAcitvityArray addObject:[DayActivityModel title:weekTitle[idx] date:obj]];
+        DayActivityModel *model = [DayActivityModel title:weekTitle[idx] date:obj];
+        // 设置内容二维
+        NSMutableArray <ActivityModel *>*activitys = @[].mutableCopy;
+        for (int i = 0; i < 3; i ++) {
+            ActivityModel *activityModel = [ActivityModel new];
+            NSMutableArray *cells = @[].mutableCopy;
+            for (int j = 0; j < 4; j ++) {
+                ActivityCellModel *cellModel = [ActivityCellModel new];
+                cellModel.date = [[NSDate date] AxcTool_dateByAddingDays:-4 + j];
+                [cells addObject:cellModel];
+            }
+            activityModel.hoursActivitys = cells;
+            [activitys addObject:activityModel];
+        }
+        
+        model.vc.dataListArray = activitys;
+        [self.weekAcitvityArray addObject:model];
     }];
     [self reloadData];
     // 自动选中今日周

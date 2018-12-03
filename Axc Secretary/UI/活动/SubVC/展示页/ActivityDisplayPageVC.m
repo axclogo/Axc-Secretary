@@ -9,18 +9,18 @@
 #import "ActivityDisplayPageVC.h"
 
 @interface ActivityDisplayPageVC ()
-// 中线时间轴
-@property(nonatomic , strong)CAShapeLayer *centerTimeLayer;
+
 @end
 
 @implementation ActivityDisplayPageVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 - (void)createUI{
-    [self AxcBase_settingTableType:UITableViewStylePlain nibName:@"" cellID:@""];
+    [self AxcBase_settingTableType:UITableViewStylePlain nibName:@"ActivityDisplayPageCell" cellID:@"axc"];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = kMainBackColor;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
@@ -42,40 +42,38 @@
     }];
 }
 
-- (void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    CGFloat radius = 2;
-    CGFloat margin = 10;
-    CGFloat x = (self.isHorizontal ? kScreenHeight : kScreenWidth)/2;
-    CGPoint startPoint = CGPointMake(x, margin);
-    CGPoint endPoint = CGPointMake(x, self.view.axcTool_height - margin);
-    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:startPoint radius:radius startAngle:0 endAngle:2*M_PI clockwise:YES];
-    [path appendPath:[AxcDrawPath AxcDrawLineArray:
-                      @[[NSValue valueWithCGPoint:startPoint],
-                        [NSValue valueWithCGPoint:endPoint]]]];
-    [path appendPath:[UIBezierPath bezierPathWithArcCenter:endPoint radius:radius startAngle:0 endAngle:2*M_PI clockwise:YES]];
-    self.centerTimeLayer.path = path.CGPath;
+- (void)setDataListArray:(NSMutableArray *)dataListArray{
+    [super setDataListArray:dataListArray];
+    [self.tableView reloadData];
 }
 
 #pragma mark - delegate
+- (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    ActivityModel *model = self.dataListArray[section];
+    return model.hoursActivitys.count;
+}
+- (NSInteger )numberOfSectionsInTableView:(UITableView *)tableView{
     return self.dataListArray.count;
 }
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"aa";
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    ActivityDisplayPageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"axc"];
+    cell.axcIndexPath = indexPath;
+    BOOL isStart = indexPath.row == 0 && indexPath.section == 0;
+    cell.startPointLayer.hidden = !isStart;
+    ActivityModel *model = self.dataListArray[indexPath.section];
+    BOOL isEnd = indexPath.section == self.dataListArray.count-1 && indexPath.row == model.hoursActivitys.count-1;
+    cell.endPointLayer.hidden = !isEnd;
+    return cell;
 }
 
-#pragma mark - 懒加载
-- (CAShapeLayer *)centerTimeLayer{
-    if (!_centerTimeLayer) {
-        _centerTimeLayer = [CAShapeLayer new];
-        _centerTimeLayer.fillColor =
-        _centerTimeLayer.strokeColor = kSelectedColor.CGColor;
-        _centerTimeLayer.lineWidth = 1;
-        [self.view.layer addSublayer:_centerTimeLayer];
-    }
-    return _centerTimeLayer;
-}
+
+
 
 
 @end

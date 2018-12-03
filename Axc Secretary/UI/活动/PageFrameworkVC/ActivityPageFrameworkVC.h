@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ActivityPageFrameworkVC : WMPageController
 
+// 每周数组
+@property(nonatomic , strong)NSMutableArray <DayActivityModel *>*weekAcitvityArray;
+// 回到今日
 - (void)goToday;
 
 @end

@@ -17,7 +17,6 @@
 		EA23703521B1133100051200 /* TaskTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23703421B1133100051200 /* TaskTypeModel.m */; };
 		EA23703C21B11C3400051200 /* BaseAddTaskSubVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23703B21B11C3400051200 /* BaseAddTaskSubVC.m */; };
 		EA23703F21B11CDB00051200 /* OrdinaryTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23703E21B11CDB00051200 /* OrdinaryTaskVC.m */; };
-		EA23704221B11CFF00051200 /* DailyTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23704121B11CFF00051200 /* DailyTaskVC.m */; };
 		EA23704621B11D4500051200 /* HistoricalRecordTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23704521B11D4500051200 /* HistoricalRecordTaskVC.m */; };
 		EA23704A21B125F000051200 /* AddActivityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23704921B125F000051200 /* AddActivityVC.m */; };
 		EA23705021B1271200051200 /* DayActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA23704F21B1271200051200 /* DayActivityModel.m */; };
@@ -31,6 +30,10 @@
 		EA2570E021A7DE0200FCF7EE /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2570DE21A7DE0200FCF7EE /* SettingCell.xib */; };
 		EA2570E421A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */; };
 		EA2570E721A7F49900FCF7EE /* AddTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2570E621A7F49900FCF7EE /* AddTaskVC.m */; };
+		EA37874C21B51C780049D6F1 /* ActivityDisplayPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA37874A21B51C780049D6F1 /* ActivityDisplayPageCell.m */; };
+		EA37874D21B51C780049D6F1 /* ActivityDisplayPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA37874B21B51C780049D6F1 /* ActivityDisplayPageCell.xib */; };
+		EA37875121B51EBF0049D6F1 /* EditorActivityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA37875021B51EBF0049D6F1 /* EditorActivityVC.m */; };
+		EA37875521B5276C0049D6F1 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA37875421B5276C0049D6F1 /* ActivityModel.m */; };
 		EA5FEEAE21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */; };
 		EA5FEEB321ABDAA200405C28 /* AxcThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB221ABDAA200405C28 /* AxcThemeManager.m */; };
 		EA5FEEB721ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB621ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m */; };
@@ -159,8 +162,6 @@
 		EA23703B21B11C3400051200 /* BaseAddTaskSubVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAddTaskSubVC.m; sourceTree = "<group>"; };
 		EA23703D21B11CDB00051200 /* OrdinaryTaskVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrdinaryTaskVC.h; sourceTree = "<group>"; };
 		EA23703E21B11CDB00051200 /* OrdinaryTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrdinaryTaskVC.m; sourceTree = "<group>"; };
-		EA23704021B11CFF00051200 /* DailyTaskVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskVC.h; sourceTree = "<group>"; };
-		EA23704121B11CFF00051200 /* DailyTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskVC.m; sourceTree = "<group>"; };
 		EA23704421B11D4500051200 /* HistoricalRecordTaskVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoricalRecordTaskVC.h; sourceTree = "<group>"; };
 		EA23704521B11D4500051200 /* HistoricalRecordTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoricalRecordTaskVC.m; sourceTree = "<group>"; };
 		EA23704821B125F000051200 /* AddActivityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddActivityVC.h; sourceTree = "<group>"; };
@@ -185,6 +186,13 @@
 		EA2570E321A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LLDebug_Ex.m"; sourceTree = "<group>"; };
 		EA2570E521A7F49900FCF7EE /* AddTaskVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTaskVC.h; sourceTree = "<group>"; };
 		EA2570E621A7F49900FCF7EE /* AddTaskVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTaskVC.m; sourceTree = "<group>"; };
+		EA37874921B51C780049D6F1 /* ActivityDisplayPageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityDisplayPageCell.h; sourceTree = "<group>"; };
+		EA37874A21B51C780049D6F1 /* ActivityDisplayPageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDisplayPageCell.m; sourceTree = "<group>"; };
+		EA37874B21B51C780049D6F1 /* ActivityDisplayPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityDisplayPageCell.xib; sourceTree = "<group>"; };
+		EA37874F21B51EBF0049D6F1 /* EditorActivityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditorActivityVC.h; sourceTree = "<group>"; };
+		EA37875021B51EBF0049D6F1 /* EditorActivityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditorActivityVC.m; sourceTree = "<group>"; };
+		EA37875321B5276C0049D6F1 /* ActivityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityModel.h; sourceTree = "<group>"; };
+		EA37875421B5276C0049D6F1 /* ActivityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityModel.m; sourceTree = "<group>"; };
 		EA5FEEAC21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD_Ex.h"; sourceTree = "<group>"; };
 		EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD_Ex.m"; sourceTree = "<group>"; };
 		EA5FEEB121ABDAA200405C28 /* AxcThemeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcThemeManager.h; sourceTree = "<group>"; };
@@ -421,7 +429,6 @@
 			isa = PBXGroup;
 			children = (
 				EA23704321B11D2900051200 /* 历史记录 */,
-				EA23703821B11BFE00051200 /* 每日任务 */,
 				EA23703721B11BF500051200 /* 普通任务 */,
 				EA23703921B11C1300051200 /* Base */,
 			);
@@ -435,15 +442,6 @@
 				EA23703E21B11CDB00051200 /* OrdinaryTaskVC.m */,
 			);
 			path = "普通任务";
-			sourceTree = "<group>";
-		};
-		EA23703821B11BFE00051200 /* 每日任务 */ = {
-			isa = PBXGroup;
-			children = (
-				EA23704021B11CFF00051200 /* DailyTaskVC.h */,
-				EA23704121B11CFF00051200 /* DailyTaskVC.m */,
-			);
-			path = "每日任务";
 			sourceTree = "<group>";
 		};
 		EA23703921B11C1300051200 /* Base */ = {
@@ -467,6 +465,7 @@
 		EA23704721B125C300051200 /* SubVC */ = {
 			isa = PBXGroup;
 			children = (
+				EA37874E21B51E9F0049D6F1 /* 编辑活动 */,
 				EA23705121B12A2900051200 /* 展示页 */,
 				EA23704B21B1261700051200 /* 添加每日活动 */,
 			);
@@ -507,6 +506,7 @@
 			children = (
 				EA23705221B12A5200051200 /* ActivityDisplayPageVC.h */,
 				EA23705321B12A5200051200 /* ActivityDisplayPageVC.m */,
+				EA37875221B5275E0049D6F1 /* Model */,
 				EA6AE70A21B4FD3C00543944 /* View */,
 			);
 			path = "展示页";
@@ -589,6 +589,24 @@
 			path = "AppDelegate+";
 			sourceTree = "<group>";
 		};
+		EA37874E21B51E9F0049D6F1 /* 编辑活动 */ = {
+			isa = PBXGroup;
+			children = (
+				EA37874F21B51EBF0049D6F1 /* EditorActivityVC.h */,
+				EA37875021B51EBF0049D6F1 /* EditorActivityVC.m */,
+			);
+			path = "编辑活动";
+			sourceTree = "<group>";
+		};
+		EA37875221B5275E0049D6F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA37875321B5276C0049D6F1 /* ActivityModel.h */,
+				EA37875421B5276C0049D6F1 /* ActivityModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EA5FEEAA21ABCC4B00405C28 /* 调试气泡 */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,6 +676,9 @@
 		EA6AE70A21B4FD3C00543944 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA37874921B51C780049D6F1 /* ActivityDisplayPageCell.h */,
+				EA37874A21B51C780049D6F1 /* ActivityDisplayPageCell.m */,
+				EA37874B21B51C780049D6F1 /* ActivityDisplayPageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1591,6 +1612,7 @@
 				EA891EC12186FB68008AFD21 /* LaunchScreen.storyboard in Resources */,
 				EA2570E021A7DE0200FCF7EE /* SettingCell.xib in Resources */,
 				EA2570D521A7D6B000FCF7EE /* AxcTemporarilyDataView.xib in Resources */,
+				EA37874D21B51C780049D6F1 /* ActivityDisplayPageCell.xib in Resources */,
 				EAC1FDEF21884C82001AC774 /* Assets.xcassets in Resources */,
 				EA891EBC2186FB67008AFD21 /* Main.storyboard in Resources */,
 				EA1E435D21995AD300B95CF8 /* TaskCell.xib in Resources */,
@@ -1706,6 +1728,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EADA9DFB21AF84970003FF9C /* NSString+AxcRegularEx.m in Sources */,
+				EA37875521B5276C0049D6F1 /* ActivityModel.m in Sources */,
 				EADA9E0D21AF84970003FF9C /* UISearchBar+AxcTextFieldEx.m in Sources */,
 				EADA9E0821AF84970003FF9C /* UIView+AxcViewAppearanceEx.m in Sources */,
 				EA23703C21B11C3400051200 /* BaseAddTaskSubVC.m in Sources */,
@@ -1739,6 +1762,7 @@
 				EAADC2F52187F4490043BB9D /* AxcBaseAppVC.m in Sources */,
 				EADA9DF021AF84970003FF9C /* AxcLanguageManagement.m in Sources */,
 				EA2570DF21A7DE0200FCF7EE /* SettingCell.m in Sources */,
+				EA37874C21B51C780049D6F1 /* ActivityDisplayPageCell.m in Sources */,
 				EA23705821B1330100051200 /* ActivityPageFrameworkVC.m in Sources */,
 				EADA9E1621AF84970003FF9C /* AxcDataCache.m in Sources */,
 				EA23703521B1133100051200 /* TaskTypeModel.m in Sources */,
@@ -1747,6 +1771,7 @@
 				EADA9DFE21AF84970003FF9C /* NSString+AxcDataConversionEx.m in Sources */,
 				EADA9E0621AF84970003FF9C /* UIView+AxcViewRectEx.m in Sources */,
 				EADA9E0A21AF84970003FF9C /* UIViewController+AxcVCBackButtonEvent.m in Sources */,
+				EA37875121B51EBF0049D6F1 /* EditorActivityVC.m in Sources */,
 				EADA9DF421AF84970003FF9C /* NSMutableArray+AxcOperationEx.m in Sources */,
 				EADA9DFC21AF84970003FF9C /* NSString+AxcReplaceRichText.m in Sources */,
 				EA1E435321995AA900B95CF8 /* TaskModel.m in Sources */,
@@ -1772,7 +1797,6 @@
 				EADA9E1421AF84970003FF9C /* AxcCalculateTool.m in Sources */,
 				EADA9E0F21AF84970003FF9C /* UICollectionView+AxcEmptyData.m in Sources */,
 				EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */,
-				EA23704221B11CFF00051200 /* DailyTaskVC.m in Sources */,
 				EA23704A21B125F000051200 /* AddActivityVC.m in Sources */,
 				EADA9DF921AF84970003FF9C /* NSString+AxcTextCalculation.m in Sources */,
 				EAC1FDF221884D13001AC774 /* SettingVC.m in Sources */,
