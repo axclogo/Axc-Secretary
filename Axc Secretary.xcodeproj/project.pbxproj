@@ -507,6 +507,7 @@
 			children = (
 				EA23705221B12A5200051200 /* ActivityDisplayPageVC.h */,
 				EA23705321B12A5200051200 /* ActivityDisplayPageVC.m */,
+				EA6AE70A21B4FD3C00543944 /* View */,
 			);
 			path = "展示页";
 			sourceTree = "<group>";
@@ -652,6 +653,13 @@
 				EA5FEECF21ABFB6700405C28 /* Info.plist */,
 			);
 			path = SecretaryTadayExtension;
+			sourceTree = "<group>";
+		};
+		EA6AE70A21B4FD3C00543944 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EA891EA82186FB67008AFD21 = {
@@ -1648,7 +1656,6 @@
 				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/Sandbox/UserInterface/LLSandboxCell.xib",
 				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/General/UserInterface/Resources/LLDebugTool.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/PSCityPickerView/PSCityPickerViewDemo/PSCityPickerView/city.plist",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
@@ -1673,7 +1680,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLSandboxCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLDebugTool.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/city.plist",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",

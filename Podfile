@@ -25,13 +25,15 @@ target “Axc Secretary” do
    pod 'WMPageController'
    pod 'PPNumberButton'
    pod 'DZNSegmentedControl'
-   pod 'zhPopupController'
-   pod 'PGPickerView'
-   pod 'PSCityPickerView'
+#   pod 'zhPopupController'
+#   pod 'PGPickerView'
+#   pod 'PSCityPickerView'
    pod 'FBDigitalFont'
    pod 'MGSwipeTableCell'
    pod 'iCarousel'
    pod 'WMDragView'
+   pod 'QMUIKit/QMUIComponents/QMUIMarqueeLabel'
+
 
 # Axc套件
    pod 'AxcAE_TabBar'

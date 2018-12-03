@@ -9,6 +9,9 @@
 #import "WMPageController.h"
 #import "DayActivityModel.h"
 
+#define kMenuHeight 35
+
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ActivityPageFrameworkVC : WMPageController

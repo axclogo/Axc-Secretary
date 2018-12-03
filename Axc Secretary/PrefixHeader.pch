@@ -33,6 +33,8 @@
 
 // Axc套件
 #import "AxcBasicSuitPrefixHeader.h"
+#import "AxcDrawPath.h"
+
 #import "DefineHeader.h"
 
 // 三方框架组

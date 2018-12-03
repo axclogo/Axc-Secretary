@@ -19,7 +19,6 @@
 
 @implementation ActivityPageFrameworkVC
 
-#define kMenuHeight 35
 #define isHorizontal (([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeLeft) || ([UIDevice currentDevice].orientation == UIDeviceOrientationLandscapeRight))
 
 - (void)viewDidLoad {
@@ -89,7 +88,7 @@
 }
 - (WMMenuItem *)menuView:(WMMenuView *)menu initialMenuItem:(WMMenuItem *)initialMenuItem atIndex:(NSInteger)index{
     if (index == self.today.week) {
-        self.todayBadge.frame = CGRectMake(initialMenuItem.axcTool_width - 20, 0, 25, 13);
+        self.todayBadge.frame = CGRectMake(initialMenuItem.axcTool_width - 17, 2, 25, 13);
         [initialMenuItem addSubview:self.todayBadge];
         [_todayBadge AxcTool_cornerWithRadius:self.todayBadge.axcTool_height/2];
     }
