@@ -20,16 +20,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AxcBaseAppVC : AxcBaseVC
-/** 空值View */
-@property(nonatomic , strong)AxcTemporarilyDataView *emptyDataView;
-
 // 设置返回按钮
 - (void)AxcBase_settingBackBtn;
-
+/** 空值View */
+@property(nonatomic , strong)AxcTemporarilyDataView *emptyDataView;
 // 数据库操作对象
 @property(nonatomic , strong)AxcDBManager *db;
-
-
+// 日期选择
+- (void)AxcBase_showDateSelectCompleteBlock:(void(^)(NSDate *))completeBlock;
 
 @end
 

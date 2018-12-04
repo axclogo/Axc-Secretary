@@ -34,6 +34,10 @@
 		EA37874D21B51C780049D6F1 /* ActivityDisplayPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA37874B21B51C780049D6F1 /* ActivityDisplayPageCell.xib */; };
 		EA37875121B51EBF0049D6F1 /* EditorActivityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA37875021B51EBF0049D6F1 /* EditorActivityVC.m */; };
 		EA37875521B5276C0049D6F1 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA37875421B5276C0049D6F1 /* ActivityModel.m */; };
+		EA5CBE1921B617300024B443 /* WSDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5CBE1521B617300024B443 /* WSDatePickerView.xib */; };
+		EA5CBE1A21B617300024B443 /* WSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE1621B617300024B443 /* WSDatePickerView.m */; };
+		EA5CBE1B21B617300024B443 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE1721B617300024B443 /* NSDate+Extension.m */; };
+		EA5CBE1C21B617300024B443 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE1821B617300024B443 /* UIView+Extension.m */; };
 		EA5FEEAE21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */; };
 		EA5FEEB321ABDAA200405C28 /* AxcThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB221ABDAA200405C28 /* AxcThemeManager.m */; };
 		EA5FEEB721ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB621ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m */; };
@@ -193,6 +197,13 @@
 		EA37875021B51EBF0049D6F1 /* EditorActivityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditorActivityVC.m; sourceTree = "<group>"; };
 		EA37875321B5276C0049D6F1 /* ActivityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityModel.h; sourceTree = "<group>"; };
 		EA37875421B5276C0049D6F1 /* ActivityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityModel.m; sourceTree = "<group>"; };
+		EA5CBE1221B617300024B443 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		EA5CBE1321B617300024B443 /* WSDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDatePickerView.h; sourceTree = "<group>"; };
+		EA5CBE1421B617300024B443 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		EA5CBE1521B617300024B443 /* WSDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSDatePickerView.xib; sourceTree = "<group>"; };
+		EA5CBE1621B617300024B443 /* WSDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDatePickerView.m; sourceTree = "<group>"; };
+		EA5CBE1721B617300024B443 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		EA5CBE1821B617300024B443 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		EA5FEEAC21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD_Ex.h"; sourceTree = "<group>"; };
 		EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD_Ex.m"; sourceTree = "<group>"; };
 		EA5FEEB121ABDAA200405C28 /* AxcThemeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcThemeManager.h; sourceTree = "<group>"; };
@@ -605,6 +616,20 @@
 				EA37875421B5276C0049D6F1 /* ActivityModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EA5CBE1121B617300024B443 /* WSDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				EA5CBE1321B617300024B443 /* WSDatePickerView.h */,
+				EA5CBE1621B617300024B443 /* WSDatePickerView.m */,
+				EA5CBE1521B617300024B443 /* WSDatePickerView.xib */,
+				EA5CBE1221B617300024B443 /* NSDate+Extension.h */,
+				EA5CBE1721B617300024B443 /* NSDate+Extension.m */,
+				EA5CBE1421B617300024B443 /* UIView+Extension.h */,
+				EA5CBE1821B617300024B443 /* UIView+Extension.m */,
+			);
+			path = WSDatePickerView;
 			sourceTree = "<group>";
 		};
 		EA5FEEAA21ABCC4B00405C28 /* 调试气泡 */ = {
@@ -1448,6 +1473,7 @@
 		EAF898B921A55D3200FE54B6 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				EA5CBE1121B617300024B443 /* WSDatePickerView */,
 				EAF898BA21A55D3D00FE54B6 /* SVP+ */,
 			);
 			path = Libs;
@@ -1615,6 +1641,7 @@
 				EA37874D21B51C780049D6F1 /* ActivityDisplayPageCell.xib in Resources */,
 				EAC1FDEF21884C82001AC774 /* Assets.xcassets in Resources */,
 				EA891EBC2186FB67008AFD21 /* Main.storyboard in Resources */,
+				EA5CBE1921B617300024B443 /* WSDatePickerView.xib in Resources */,
 				EA1E435D21995AD300B95CF8 /* TaskCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1741,10 +1768,13 @@
 				EADA9E0921AF84970003FF9C /* UIViewController+AxcVCPushName.m in Sources */,
 				EAC1FDED21884238001AC774 /* AxcNavVC.m in Sources */,
 				EADA9E0321AF84970003FF9C /* UIButton+AxcButtonContentLayout.m in Sources */,
+				EA5CBE1A21B617300024B443 /* WSDatePickerView.m in Sources */,
 				EA2570E421A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m in Sources */,
 				EADA9DF121AF84970003FF9C /* NSDictionary+AxcDataConversionEx.m in Sources */,
+				EA5CBE1B21B617300024B443 /* NSDate+Extension.m in Sources */,
 				EA23705421B12A5200051200 /* ActivityDisplayPageVC.m in Sources */,
 				EAADC2F92187F4C40043BB9D /* BaseTabbarVC.m in Sources */,
+				EA5CBE1C21B617300024B443 /* UIView+Extension.m in Sources */,
 				EA891EB92186FB67008AFD21 /* ViewController.m in Sources */,
 				EADA9E0221AF84970003FF9C /* UIColor+AxcColorEx.m in Sources */,
 				EADA9DEF21AF84970003FF9C /* AxcParameterObj.m in Sources */,

@@ -21,7 +21,18 @@
 
 - (void)createUI{
     [super createUI];
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self AxcBase_showDateSelectCompleteBlock:nil];
 }
 
+
+#pragma mark - 懒加载
+- (UITextField *)taskNameTextFiled{
+    if (!_taskNameTextFiled) {
+        _taskNameTextFiled = [UITextField ];
+    }
+}
 
 @end

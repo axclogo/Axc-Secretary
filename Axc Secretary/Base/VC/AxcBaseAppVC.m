@@ -28,7 +28,15 @@
                            }];
 }
 
-
+- (void)AxcBase_showDateSelectCompleteBlock:(void(^)(NSDate *))completeBlock{
+    WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDay CompleteBlock:completeBlock];
+    datepicker.dateLabelColor = kSelectedColor;
+    datepicker.datePickerColor = kMarkColor;//滚轮日期颜色
+    datepicker.doneButtonColor = kSelectedColor;//确定按钮的颜色
+    datepicker.yearLabelColor = [kUncheckColor colorWithAlphaComponent:0.3]; // 年份
+    datepicker.buttomView.backgroundColor = kMainBackColor;
+    [datepicker show];
+}
 
 
 #pragma mark - 懒加载

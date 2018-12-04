@@ -22,23 +22,24 @@ target “Axc Secretary” do
    pod 'SDCycleScrollView'
    pod 'KSPhotoBrowser'
    pod 'ZLPhotoBrowser'
-   pod 'WMPageController'
+   pod 'WMPageController'   #y 页面滑动选项卡
    pod 'PPNumberButton'
-   pod 'DZNSegmentedControl'
-#   pod 'zhPopupController'
-#   pod 'PGPickerView'
-#   pod 'PSCityPickerView'
+   pod 'DZNSegmentedControl' # 选择器
    pod 'FBDigitalFont'
-   pod 'MGSwipeTableCell'
+   pod 'MGSwipeTableCell'   # cell左右滑动
    pod 'iCarousel'
-   pod 'WMDragView'
-#   pod 'QMUIKit/QMUIComponents/QMUIMarqueeLabel'
+   pod 'WMDragView' # 拖动按钮
+   pod 'JLRoutes'  # 路由跳转模式
+   
+   #   pod 'QMUIKit/QMUIComponents/QMUIMarqueeLabel'
+   #   pod 'zhPopupController'
+   #   pod 'PGPickerView'
+   #   pod 'PSCityPickerView'
 
 
 # Axc套件
    pod 'AxcAE_TabBar'
    pod 'AxcDrawPath_Tool'
-
 
 #开发辅助
    pod 'LLDebugTool'
