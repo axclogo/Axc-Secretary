@@ -38,6 +38,12 @@
 		EA5CBE1A21B617300024B443 /* WSDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE1621B617300024B443 /* WSDatePickerView.m */; };
 		EA5CBE1B21B617300024B443 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE1721B617300024B443 /* NSDate+Extension.m */; };
 		EA5CBE1C21B617300024B443 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE1821B617300024B443 /* UIView+Extension.m */; };
+		EA5CBE2021B64DB80024B443 /* AppDelegate+JLRoutes_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE1F21B64DB80024B443 /* AppDelegate+JLRoutes_Ex.m */; };
+		EA5CBE2421B65F780024B443 /* AxcRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE2321B65F780024B443 /* AxcRoute.m */; };
+		EA5CBE2721B667CD0024B443 /* AnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE2521B667CD0024B443 /* AnimationManager.m */; };
+		EA5CBE2C21B669D10024B443 /* SwitchIconVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE2B21B669D10024B443 /* SwitchIconVC.m */; };
+		EA5CBE2E21B66D4A0024B443 /* newIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5CBE2D21B66D4A0024B443 /* newIcon.png */; };
+		EA5CBE3221B670090024B443 /* ActivityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5CBE3121B670090024B443 /* ActivityHeaderView.m */; };
 		EA5FEEAE21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */; };
 		EA5FEEB321ABDAA200405C28 /* AxcThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB221ABDAA200405C28 /* AxcThemeManager.m */; };
 		EA5FEEB721ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5FEEB621ABDC5700405C28 /* AppDelegate+AxcThemeManager_Ex.m */; };
@@ -204,6 +210,17 @@
 		EA5CBE1621B617300024B443 /* WSDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSDatePickerView.m; sourceTree = "<group>"; };
 		EA5CBE1721B617300024B443 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		EA5CBE1821B617300024B443 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		EA5CBE1E21B64DB80024B443 /* AppDelegate+JLRoutes_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JLRoutes_Ex.h"; sourceTree = "<group>"; };
+		EA5CBE1F21B64DB80024B443 /* AppDelegate+JLRoutes_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JLRoutes_Ex.m"; sourceTree = "<group>"; };
+		EA5CBE2221B65F780024B443 /* AxcRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcRoute.h; sourceTree = "<group>"; };
+		EA5CBE2321B65F780024B443 /* AxcRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AxcRoute.m; sourceTree = "<group>"; };
+		EA5CBE2521B667CD0024B443 /* AnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManager.m; sourceTree = "<group>"; };
+		EA5CBE2621B667CD0024B443 /* AnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManager.h; sourceTree = "<group>"; };
+		EA5CBE2A21B669D10024B443 /* SwitchIconVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchIconVC.h; sourceTree = "<group>"; };
+		EA5CBE2B21B669D10024B443 /* SwitchIconVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchIconVC.m; sourceTree = "<group>"; };
+		EA5CBE2D21B66D4A0024B443 /* newIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newIcon.png; sourceTree = "<group>"; };
+		EA5CBE3021B670090024B443 /* ActivityHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityHeaderView.h; sourceTree = "<group>"; };
+		EA5CBE3121B670090024B443 /* ActivityHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityHeaderView.m; sourceTree = "<group>"; };
 		EA5FEEAC21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SVProgressHUD_Ex.h"; sourceTree = "<group>"; };
 		EA5FEEAD21ABCCC500405C28 /* AppDelegate+SVProgressHUD_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SVProgressHUD_Ex.m"; sourceTree = "<group>"; };
 		EA5FEEB121ABDAA200405C28 /* AxcThemeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcThemeManager.h; sourceTree = "<group>"; };
@@ -592,6 +609,7 @@
 		EA2570E121A7ECAF00FCF7EE /* AppDelegate+ */ = {
 			isa = PBXGroup;
 			children = (
+				EA5CBE1D21B64D910024B443 /* 路由跳转 */,
 				EA5FEEBC21ABF56900405C28 /* 3DTouch */,
 				EA5FEEB421ABDC4100405C28 /* 主题管理 */,
 				EA5FEEAB21ABCCB500405C28 /* 提示HUD */,
@@ -630,6 +648,52 @@
 				EA5CBE1821B617300024B443 /* UIView+Extension.m */,
 			);
 			path = WSDatePickerView;
+			sourceTree = "<group>";
+		};
+		EA5CBE1D21B64D910024B443 /* 路由跳转 */ = {
+			isa = PBXGroup;
+			children = (
+				EA5CBE1E21B64DB80024B443 /* AppDelegate+JLRoutes_Ex.h */,
+				EA5CBE1F21B64DB80024B443 /* AppDelegate+JLRoutes_Ex.m */,
+			);
+			path = "路由跳转";
+			sourceTree = "<group>";
+		};
+		EA5CBE2121B65F5E0024B443 /* AxcRoute */ = {
+			isa = PBXGroup;
+			children = (
+				EA5CBE2221B65F780024B443 /* AxcRoute.h */,
+				EA5CBE2321B65F780024B443 /* AxcRoute.m */,
+			);
+			path = AxcRoute;
+			sourceTree = "<group>";
+		};
+		EA5CBE2821B669B20024B443 /* 选择主题 */ = {
+			isa = PBXGroup;
+			children = (
+				EA5FEEB921ABE3F600405C28 /* SwitchThemeVC.h */,
+				EA5FEEBA21ABE3F600405C28 /* SwitchThemeVC.m */,
+			);
+			path = "选择主题";
+			sourceTree = "<group>";
+		};
+		EA5CBE2921B669BA0024B443 /* 选择图标 */ = {
+			isa = PBXGroup;
+			children = (
+				EA5CBE2A21B669D10024B443 /* SwitchIconVC.h */,
+				EA5CBE2B21B669D10024B443 /* SwitchIconVC.m */,
+			);
+			path = "选择图标";
+			sourceTree = "<group>";
+		};
+		EA5CBE2F21B66FEC0024B443 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA37874921B51C780049D6F1 /* ActivityDisplayPageCell.h */,
+				EA37874A21B51C780049D6F1 /* ActivityDisplayPageCell.m */,
+				EA37874B21B51C780049D6F1 /* ActivityDisplayPageCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EA5FEEAA21ABCC4B00405C28 /* 调试气泡 */ = {
@@ -671,8 +735,8 @@
 		EA5FEEB821ABE3D900405C28 /* SubVC */ = {
 			isa = PBXGroup;
 			children = (
-				EA5FEEB921ABE3F600405C28 /* SwitchThemeVC.h */,
-				EA5FEEBA21ABE3F600405C28 /* SwitchThemeVC.m */,
+				EA5CBE2921B669BA0024B443 /* 选择图标 */,
+				EA5CBE2821B669B20024B443 /* 选择主题 */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -701,9 +765,9 @@
 		EA6AE70A21B4FD3C00543944 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EA37874921B51C780049D6F1 /* ActivityDisplayPageCell.h */,
-				EA37874A21B51C780049D6F1 /* ActivityDisplayPageCell.m */,
-				EA37874B21B51C780049D6F1 /* ActivityDisplayPageCell.xib */,
+				EA5CBE2F21B66FEC0024B443 /* Cell */,
+				EA5CBE3021B670090024B443 /* ActivityHeaderView.h */,
+				EA5CBE3121B670090024B443 /* ActivityHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -780,6 +844,7 @@
 			isa = PBXGroup;
 			children = (
 				EA1E435E219964DA00B95CF8 /* DefineHeader.h */,
+				EA5CBE2D21B66D4A0024B443 /* newIcon.png */,
 				EAC1FDF321885877001AC774 /* icon.png */,
 				EAC1FDEE21884C82001AC774 /* Assets.xcassets */,
 				EAC1FDD62187F5FA001AC774 /* PrefixHeader.pch */,
@@ -796,6 +861,7 @@
 		EAADC2432187F3BB0043BB9D /* AxcFramework */ = {
 			isa = PBXGroup;
 			children = (
+				EA5CBE2121B65F5E0024B443 /* AxcRoute */,
 				EADA9D5C21AF84970003FF9C /* AxcBasicSuit */,
 				EA5FEEB021ABDA8D00405C28 /* AxcThemeManager */,
 				EAF898B921A55D3200FE54B6 /* Libs */,
@@ -817,6 +883,8 @@
 		EAADC2F62187F48E0043BB9D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				EA5CBE2621B667CD0024B443 /* AnimationManager.h */,
+				EA5CBE2521B667CD0024B443 /* AnimationManager.m */,
 				EAADC2F72187F4C40043BB9D /* BaseTabbarVC.h */,
 				EAADC2F82187F4C40043BB9D /* BaseTabbarVC.m */,
 			);
@@ -1637,6 +1705,7 @@
 				EAC1FDF421885877001AC774 /* icon.png in Resources */,
 				EA891EC12186FB68008AFD21 /* LaunchScreen.storyboard in Resources */,
 				EA2570E021A7DE0200FCF7EE /* SettingCell.xib in Resources */,
+				EA5CBE2E21B66D4A0024B443 /* newIcon.png in Resources */,
 				EA2570D521A7D6B000FCF7EE /* AxcTemporarilyDataView.xib in Resources */,
 				EA37874D21B51C780049D6F1 /* ActivityDisplayPageCell.xib in Resources */,
 				EAC1FDEF21884C82001AC774 /* Assets.xcassets in Resources */,
@@ -1755,6 +1824,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EADA9DFB21AF84970003FF9C /* NSString+AxcRegularEx.m in Sources */,
+				EA5CBE2C21B669D10024B443 /* SwitchIconVC.m in Sources */,
 				EA37875521B5276C0049D6F1 /* ActivityModel.m in Sources */,
 				EADA9E0D21AF84970003FF9C /* UISearchBar+AxcTextFieldEx.m in Sources */,
 				EADA9E0821AF84970003FF9C /* UIView+AxcViewAppearanceEx.m in Sources */,
@@ -1798,6 +1868,7 @@
 				EA23703521B1133100051200 /* TaskTypeModel.m in Sources */,
 				EA5FEEB321ABDAA200405C28 /* AxcThemeManager.m in Sources */,
 				EADA9DF321AF84970003FF9C /* NSDate+AxcProcessingEx.m in Sources */,
+				EA5CBE2421B65F780024B443 /* AxcRoute.m in Sources */,
 				EADA9DFE21AF84970003FF9C /* NSString+AxcDataConversionEx.m in Sources */,
 				EADA9E0621AF84970003FF9C /* UIView+AxcViewRectEx.m in Sources */,
 				EADA9E0A21AF84970003FF9C /* UIViewController+AxcVCBackButtonEvent.m in Sources */,
@@ -1809,6 +1880,7 @@
 				EA2570DA21A7DD9200FCF7EE /* SettingModel.m in Sources */,
 				EA891EC42186FB68008AFD21 /* main.m in Sources */,
 				EA5FEEBF21ABF58000405C28 /* AppDelegate+Axc3DTouch_Ex.m in Sources */,
+				EA5CBE3221B670090024B443 /* ActivityHeaderView.m in Sources */,
 				EADA9E0121AF84970003FF9C /* UITextField+AxcPlaceholderLabelEx.m in Sources */,
 				EADA9DF821AF84970003FF9C /* NSString+AxcStringIsReasonable.m in Sources */,
 				EADA9E0421AF84970003FF9C /* UIButton+AxcButtonCountDown.m in Sources */,
@@ -1825,10 +1897,12 @@
 				EA2570C721A7912100FCF7EE /* ActivityVC.m in Sources */,
 				EA5FEEBB21ABE3F600405C28 /* SwitchThemeVC.m in Sources */,
 				EADA9E1421AF84970003FF9C /* AxcCalculateTool.m in Sources */,
+				EA5CBE2021B64DB80024B443 /* AppDelegate+JLRoutes_Ex.m in Sources */,
 				EADA9E0F21AF84970003FF9C /* UICollectionView+AxcEmptyData.m in Sources */,
 				EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */,
 				EA23704A21B125F000051200 /* AddActivityVC.m in Sources */,
 				EADA9DF921AF84970003FF9C /* NSString+AxcTextCalculation.m in Sources */,
+				EA5CBE2721B667CD0024B443 /* AnimationManager.m in Sources */,
 				EAC1FDF221884D13001AC774 /* SettingVC.m in Sources */,
 				EADA9E1521AF84970003FF9C /* AxcTouchManager.m in Sources */,
 				EADA9DF521AF84970003FF9C /* NSObject+AxcBasicSuitIndexPath.m in Sources */,

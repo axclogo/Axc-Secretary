@@ -48,15 +48,24 @@
     
     /** 主题变更 **************************************/
     SettingModel *themeSettings = [SettingModel title:@"变更主题"
-                                             disTitle:@"尊贵人生"];
+                                             disTitle:@"黑色"];
     themeSettings.settingType = SettingTypeDisTitle;
     themeSettings.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     themeSettings.tiggerBlock = ^(id  _Nonnull obj) {
         [self AxcTool_pushVCName:@"SwitchThemeVC"];
     };
+    
+    /** 图标变更 **************************************/
+    SettingModel *iconSettings = [SettingModel title:@"变更App图标"
+                                             disTitle:@""];
+    iconSettings.settingType = SettingTypeDisTitle;
+    iconSettings.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    iconSettings.tiggerBlock = ^(id  _Nonnull obj) {
+        [self AxcTool_pushVCName:@"SwitchIconVC"];
+    };
     ////////////////////////////////////////////////////////////
     SettingGroupModel *UIGroupModel = [SettingGroupModel title:@"界面"
-                                                     subModels:@[taskSwipeSettings,hideNavigationSetting,themeSettings]];
+                                                     subModels:@[taskSwipeSettings,hideNavigationSetting,themeSettings,iconSettings]];
     [self.dataListArray addObject:UIGroupModel];
     
     

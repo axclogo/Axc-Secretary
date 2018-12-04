@@ -56,6 +56,7 @@
 #import "WSDatePickerView.h"            // 时间选择器
 
 #import "AxcThemeManager.h"         // 主题设置
+#import "AxcRoute.h"                // 路由控制
 
 
 #endif /* TasksDynamicProgramming_pch */

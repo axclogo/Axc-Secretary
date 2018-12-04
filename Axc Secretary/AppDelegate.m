@@ -11,6 +11,8 @@
 
 #import "AppDelegate+SVProgressHUD_Ex.h"
 #import "AppDelegate+LLDebug_Ex.h"
+#import "AppDelegate+JLRoutes_Ex.h"
+
 #import "AppDelegate+AxcThemeManager_Ex.h"
 #import "AppDelegate+Axc3DTouch_Ex.h"
 
@@ -42,6 +44,8 @@
     [self settingLLDebug];
     // 设置3DTouch
     [self setting3DTouch];
+    // 注册路由
+    [self registerRoute];
 }
 
 - (void)resetWindow:(BOOL )animation{

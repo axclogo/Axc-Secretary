@@ -25,6 +25,11 @@
 
 #define kNotification_TaskQuickOperationChange @"kNotification_TaskQuickOperationChange"
 
+// 注册路由Key
+#define kRouteScheme @"AxcSecretary"
+
+
+
 // 导航
 #define kNavColor [AxcThemeManager shareManager].navColor
 // 深色导航

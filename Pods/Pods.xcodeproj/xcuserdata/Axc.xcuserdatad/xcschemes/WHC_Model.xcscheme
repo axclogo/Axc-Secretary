@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0B3B2FE25B0AEB11F379BD4FC8492750"
+               BlueprintIdentifier = "C93072680CF221D92405B565F671F832"
                BlueprintName = "WHC_Model"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libWHC_Model.a">

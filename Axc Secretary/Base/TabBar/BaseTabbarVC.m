@@ -8,8 +8,12 @@
 
 #import "BaseTabbarVC.h"
 #import "AxcNavVC.h"
+#import "AnimationManager.h"
 
-@interface BaseTabbarVC ()<AxcAE_TabBarDelegate>
+@interface BaseTabbarVC ()<
+AxcAE_TabBarDelegate,
+UITabBarControllerDelegate
+>
 
 @end
 
@@ -17,7 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kMainBackColor;
+    self.delegate = self;
     [self createUI];
 }
 
@@ -81,5 +86,10 @@
     }
 }
 
+
+// 动画
+- (nullable id <UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController animationControllerForTransitionFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC{
+    return [[AnimationManager alloc] init];
+}
 
 @end

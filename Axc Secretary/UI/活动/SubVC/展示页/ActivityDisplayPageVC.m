@@ -7,9 +7,10 @@
 //
 
 #import "ActivityDisplayPageVC.h"
+#import "ActivityHeaderView.h"
 
 @interface ActivityDisplayPageVC ()
-
+@property(nonatomic , strong)ActivityHeaderView *tableHeaderView;
 @end
 
 @implementation ActivityDisplayPageVC
@@ -21,30 +22,32 @@
     [self AxcBase_settingTableType:UITableViewStylePlain nibName:@"ActivityDisplayPageCell" cellID:@"axc"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = kMainBackColor;
+    self.tableView.tableHeaderView = self.tableHeaderView;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
 }
 
+#define DurationTime 0.5
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.view.alpha = 0;
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:DurationTime animations:^{
         self.view.alpha = 1;
     }];
 }
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    self.view.alpha = 1;
-    [UIView animateWithDuration:0.3 animations:^{
-        self.view.alpha = 0;
-    }];
-}
+
 
 - (void)setDataListArray:(NSMutableArray *)dataListArray{
     [super setDataListArray:dataListArray];
     [self.tableView reloadData];
+}
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    self.tableHeaderView.frame = CGRectMake(0, 0, self.isHorizontal ? kScreenHeight : kScreenWidth, 65);
+    self.tableView.tableHeaderView = self.tableHeaderView;
 }
 
 #pragma mark - delegate
@@ -72,6 +75,16 @@
     return cell;
 }
 
+
+#pragma mark - 懒加载
+- (ActivityHeaderView *)tableHeaderView{
+    if (!_tableHeaderView) {
+        _tableHeaderView = [ActivityHeaderView new];
+        _tableHeaderView.backgroundColor = self.tableView.backgroundColor;
+        _tableHeaderView.date = self.date;
+    }
+    return _tableHeaderView;
+}
 
 
 

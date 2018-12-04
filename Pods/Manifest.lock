@@ -25,6 +25,7 @@ PODS:
   - GPUImage (0.1.7)
   - iCarousel (1.8.3)
   - IQKeyboardManager (6.2.0)
+  - JLRoutes (2.1)
   - JWNetAutoCache (0.0.2)
   - KSPhotoBrowser (0.2.4):
     - FLAnimatedImage (~> 1.0)
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - FMDB
   - iCarousel
   - IQKeyboardManager
+  - JLRoutes
   - JWNetAutoCache
   - KSPhotoBrowser
   - LLDebugTool
@@ -113,6 +115,7 @@ SPEC REPOS:
     - GPUImage
     - iCarousel
     - IQKeyboardManager
+    - JLRoutes
     - JWNetAutoCache
     - KSPhotoBrowser
     - LLDebugTool
@@ -140,6 +143,7 @@ SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   JWNetAutoCache: 434f10855da06d29a381359552ae9d27ef35cad7
   KSPhotoBrowser: 1f60c68401f34bcc223838c8592269b4a10a83bf
   LLDebugTool: 37e600681126878a2e398508e4ee82678aef21f2
@@ -156,6 +160,6 @@ SPEC CHECKSUMS:
   WMPageController: 4c7f2c636675a71aea5eecf8fdc07a0ce86954e3
   ZLPhotoBrowser: b666fe8f68edc63dc5c4edccca071885b87553f5
 
-PODFILE CHECKSUM: fdf8a2081a91dc9cc4ce30db07f5f8226df741f0
+PODFILE CHECKSUM: 4b8f35f87ac4737b9a28e4b31c01ae238dc8ad04
 
 COCOAPODS: 1.5.3

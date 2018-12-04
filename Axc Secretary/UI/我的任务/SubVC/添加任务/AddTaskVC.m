@@ -26,6 +26,7 @@ WMPageControllerDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self AxcBase_settingBackBtn];
     [self loadData];
 }
 - (void)createUI{

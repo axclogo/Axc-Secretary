@@ -19,36 +19,36 @@
 }
 - (void)settingItem{
     // 自定义图标
-    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"add_white"];
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@""];
     
     UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"pic2"];
     
-    UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"pic3"];
+    UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"tabbar_activity"];
     
-    UIApplicationShortcutIcon *icon4 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"pic4"];
+    UIApplicationShortcutIcon *icon4 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"add_white"];
     
     
     UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"0"
-                                                                                     localizedTitle:@"添加新事项"
-                                                                                  localizedSubtitle:@"快速打开添加功能"
+                                                                                     localizedTitle:@"更换图标"
+                                                                                  localizedSubtitle:@"选择其他App图标"
                                                                                                icon:icon1
                                                                                            userInfo:nil];
     
     UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"1"
-                                                                                     localizedTitle:@"进入pic4"
-                                                                                  localizedSubtitle:@"自定义图标pic4"
+                                                                                     localizedTitle:@"1"
+                                                                                  localizedSubtitle:@"1"
                                                                                                icon:icon2
                                                                                            userInfo:nil];
     
     UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"2"
-                                                                                     localizedTitle:@"进入pic4"
-                                                                                  localizedSubtitle:@"自定义图标pic4"
+                                                                                     localizedTitle:@"本周活动"
+                                                                                  localizedSubtitle:@"本周活动项目列表"
                                                                                                icon:icon3
                                                                                            userInfo:nil];
     
     UIMutableApplicationShortcutItem *item4 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"3"
-                                                                                     localizedTitle:@"进入pic4"
-                                                                                  localizedSubtitle:@"自定义图标pic4"
+                                                                                     localizedTitle:@"新任务"
+                                                                                  localizedSubtitle:@"快速添加任务"
                                                                                                icon:icon4
                                                                                            userInfo:nil];
     
@@ -57,17 +57,21 @@
 }
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
     // 1.获得shortcutItem的type type就是初始化shortcutItem的时候传入的唯一标识符
-    NSString *type = shortcutItem.type;
-    // 自下向上
-    //2.可以通过type来判断点击的是哪一个快捷按钮 并进行每个按钮相应的点击事件
-    if ([type isEqualToString:@"pic1"]) {
-        // do something
-    }else if ([type isEqualToString:@"pic2"]){
-        // do something
-    }else if ([type isEqualToString:@"pic3"]){
-        // do something
-    }else if ([type isEqualToString:@"pic4"]){
-        // do something
+    NSInteger type = shortcutItem.type.integerValue;
+    switch (type) {
+        case 0:{
+            [AxcRoute pushVCName:@"SwitchIconVC" selectIndex:4];
+        } break;
+        case 1:{
+            
+        } break;
+        case 2:{
+            [AxcRoute seleteTabBarIndex:1];
+        } break;
+        case 3:{
+            [AxcRoute pushVCName:@"AddTaskVC" selectIndex:0];
+        } break;
+        default: break;
     }
 }
 

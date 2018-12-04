@@ -29,10 +29,10 @@
 
 
 #pragma mark - 懒加载
-- (UITextField *)taskNameTextFiled{
-    if (!_taskNameTextFiled) {
-        _taskNameTextFiled = [UITextField ];
-    }
-}
+//- (UITextField *)taskNameTextFiled{
+//    if (!_taskNameTextFiled) {
+//        _taskNameTextFiled = [UITextField ];
+//    }
+//}
 
 @end

@@ -9,7 +9,6 @@
 #import "MyTaskVC.h"
 #import "TaskCell.h"
 #import "DZNSegmentedControl.h"
-#import "AddTaskVC.h"
 
 @interface MyTaskVC ()<
 UIViewControllerPreviewingDelegate
@@ -85,10 +84,7 @@ UIViewControllerPreviewingDelegate
 
 // 插入事件
 - (void)insertTask{
-    AddTaskVC *vc = [AddTaskVC new];
-    [vc AxcBase_settingBackBtn];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    [AxcRoute pushVCName:@"AddTaskVC"];
 }
 // 下拉刷新数据
 - (void)tableView_headerAction{
