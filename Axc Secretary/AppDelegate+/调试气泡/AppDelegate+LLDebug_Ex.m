@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate+LLDebug_Ex.h"
-#import <LLDebug.h>
+#import "LLDebug.h"
 
 @implementation AppDelegate (LLDebug_Ex)
 

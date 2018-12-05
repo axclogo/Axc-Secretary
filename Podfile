@@ -3,6 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, ’8.0’
 
 inhibit_all_warnings!
+use_frameworks!
 
 target “Axc Secretary” do
 
@@ -30,6 +31,9 @@ target “Axc Secretary” do
    pod 'iCarousel'
    pod 'WMDragView' # 拖动按钮
    pod 'JLRoutes'  # 路由跳转模式
+   pod 'IQDropDownTextField'
+   
+   #   pod 'NumberMorphView' # 数字label 要设置swift3
    
    #   pod 'QMUIKit/QMUIComponents/QMUIMarqueeLabel'
    #   pod 'zhPopupController'

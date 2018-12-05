@@ -9,7 +9,7 @@
 #import "AppDelegate+JLRoutes_Ex.h"
 #import <objc/runtime.h>
 
-#import <JLRoutes.h>
+#import "JLRoutes.h"
 #import "BaseTabbarVC.h"
 
 #define StrIsTrue(str) ([str isEqualToString:@"true"] ||\

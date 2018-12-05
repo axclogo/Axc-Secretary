@@ -40,6 +40,11 @@
                 return @(![obj integerValue]);
             }];
         } break;
+        case SettingTypeDisTitleIQDropDownTextField:{
+            [self getValueForKey:^id(id obj) {
+                return @(weakSelf.selectRow);
+            }];
+        } break;
             
         default:
             break;

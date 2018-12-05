@@ -9,7 +9,7 @@
 #import "SettingVC.h"
 #import "SettingCell.h"
 
-#import <LLDebug.h>
+#import "LLDebug.h"
 
 @interface SettingVC ()
 
@@ -85,6 +85,13 @@
             }];
         });
     };
+    /** 定位精度 **************************************/
+    SettingModel *positioningAccuracy = [SettingModel title:@"定位精度"
+                                                   disTitle:[AxcLocation getCurrentPositioningAccuracy]
+                                                 settingKey:kSetting_PositioningAccuracy];
+    positioningAccuracy.settingType = SettingTypeDisTitleIQDropDownTextField;
+    positioningAccuracy.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    positioningAccuracy.selectArray = POSITIONING_ACCURACYS;
     /** DeBug的气泡开关 **************************************/
     SettingModel *debugAirBubblesSetting = [SettingModel title:@"开启调试气泡"
                                                     settingKey:kSetting_DebugAirBubbles];
@@ -98,7 +105,7 @@
     };
     ////////////////////////////////////////////////////////////
     SettingGroupModel *otherGroupModel = [SettingGroupModel title:@"性能"
-                                                        subModels:@[clearCache,debugAirBubblesSetting]];
+                                                        subModels:@[clearCache,positioningAccuracy,debugAirBubblesSetting]];
     [self.dataListArray addObject:otherGroupModel];
 }
 #pragma mark - tableViewDelegate

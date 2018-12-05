@@ -15,12 +15,15 @@
 
 #define MonthFormat @"yyyy 年 MM 月"
 #define WEEK_DAY_STRINGS @[@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六"]
+#define POSITIONING_ACCURACYS @[@"可用的最佳准确度",@"精确到十米范围内",@"精确到百米以内",@"准确到一公里",@"准确到三公里"]
+
 
 #define kSettingKeys @"kSettingKeys_"
 
 #define kSetting_DebugAirBubbles @"kSetting_DebugAirBubbles"
 #define kSetting_HideNavigation @"kSetting_HideNavigation"
 #define kSetting_TaskQuickOperation @"kSetting_TaskQuickOperation"
+#define kSetting_PositioningAccuracy @"kSetting_PositioningAccuracy"
 
 
 #define kNotification_TaskQuickOperationChange @"kNotification_TaskQuickOperationChange"

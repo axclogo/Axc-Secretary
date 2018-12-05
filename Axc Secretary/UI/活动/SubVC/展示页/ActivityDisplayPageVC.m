@@ -19,16 +19,22 @@
     [super viewDidLoad];
 }
 - (void)createUI{
-    [self AxcBase_settingTableType:UITableViewStylePlain nibName:@"ActivityDisplayPageCell" cellID:@"axc"];
+    NSDate *today = [NSDate date];
+    BOOL isToday = (_date.month == today.month && _date.day == today.day);
+    [self AxcBase_settingTableType:UITableViewStylePlain nibName:@"ActivityDisplayPageCell" cellID:@"axc" refreshing:isToday loading:NO];
+    MJRefreshNormalHeader *refreshHeader = (MJRefreshNormalHeader *)self.tableView.mj_header;
+    refreshHeader.lastUpdatedTimeLabel.textColor = refreshHeader.stateLabel.textColor = kUncheckColor;
+    [refreshHeader setTitle:@"下拉可以刷新地理信息" forState:MJRefreshStateIdle];
+    [refreshHeader setTitle:@"松开刷新地理信息" forState:MJRefreshStatePulling];
+    [refreshHeader setTitle:@"正在刷新地理信息中..." forState:MJRefreshStateRefreshing];
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = kMainBackColor;
-    self.tableView.tableHeaderView = self.tableHeaderView;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
 }
-
 #define DurationTime 0.5
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -37,7 +43,11 @@
         self.view.alpha = 1;
     }];
 }
-
+// 重新加载地理位置
+- (void)tableView_headerAction{
+    [self.tableHeaderView loadLocation];
+    [self AxcBase_tableEndRefreshing];
+}
 
 - (void)setDataListArray:(NSMutableArray *)dataListArray{
     [super setDataListArray:dataListArray];
@@ -47,7 +57,7 @@
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     self.tableHeaderView.frame = CGRectMake(0, 0, self.isHorizontal ? kScreenHeight : kScreenWidth, 65);
-    self.tableView.tableHeaderView = self.tableHeaderView;
+    self.tableView.tableHeaderView = self.isHorizontal ? nil : self.tableHeaderView;
 }
 
 #pragma mark - delegate

@@ -1,1 +1,0 @@
-../../../LLDebugTool/LLDebugTool/Components/General/UserInterface/Resources/LLImageNameConfig.h

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E31884DAC8B7FE30B3FA525 /* libPods-Axc Secretary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE8817DBBF060476B1F8AC40 /* libPods-Axc Secretary.a */; };
+		650074AF091AA66F923D22F5 /* Pods_Axc_Secretary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE81A55C776353D62E34D79 /* Pods_Axc_Secretary.framework */; };
 		EA09EDF6219AA04500713AFB /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EA09EDF5219AA04500713AFB /* libsqlite3.0.tbd */; };
 		EA0B110C21A2554900340FEA /* AxcDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0B110B21A2554900340FEA /* AxcDBManager.m */; };
+		EA1D3D4521B77E1200C72902 /* AxcLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D3D4421B77E1200C72902 /* AxcLocation.m */; };
 		EA1E435021995A9500B95CF8 /* AxcBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E434F21995A9500B95CF8 /* AxcBaseModel.m */; };
 		EA1E435321995AA900B95CF8 /* TaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E435221995AA900B95CF8 /* TaskModel.m */; };
 		EA1E435C21995AD300B95CF8 /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1E435A21995AD300B95CF8 /* TaskCell.m */; };
@@ -154,10 +155,12 @@
 
 /* Begin PBXFileReference section */
 		7FB384BC73673694CC99A1B5 /* Pods-Axc Secretary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axc Secretary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary.debug.xcconfig"; sourceTree = "<group>"; };
-		AE8817DBBF060476B1F8AC40 /* libPods-Axc Secretary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Axc Secretary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE81A55C776353D62E34D79 /* Pods_Axc_Secretary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Axc_Secretary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA09EDF5219AA04500713AFB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		EA0B110A21A2554900340FEA /* AxcDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcDBManager.h; sourceTree = "<group>"; };
 		EA0B110B21A2554900340FEA /* AxcDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AxcDBManager.m; sourceTree = "<group>"; };
+		EA1D3D4321B77E1200C72902 /* AxcLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcLocation.h; sourceTree = "<group>"; };
+		EA1D3D4421B77E1200C72902 /* AxcLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AxcLocation.m; sourceTree = "<group>"; };
 		EA1E434E21995A9500B95CF8 /* AxcBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxcBaseModel.h; sourceTree = "<group>"; };
 		EA1E434F21995A9500B95CF8 /* AxcBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxcBaseModel.m; sourceTree = "<group>"; };
 		EA1E435121995AA900B95CF8 /* TaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskModel.h; sourceTree = "<group>"; };
@@ -377,7 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA09EDF6219AA04500713AFB /* libsqlite3.0.tbd in Frameworks */,
-				7E31884DAC8B7FE30B3FA525 /* libPods-Axc Secretary.a in Frameworks */,
+				650074AF091AA66F923D22F5 /* Pods_Axc_Secretary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,8 +414,8 @@
 			isa = PBXGroup;
 			children = (
 				EA09EDF5219AA04500713AFB /* libsqlite3.0.tbd */,
-				AE8817DBBF060476B1F8AC40 /* libPods-Axc Secretary.a */,
 				EA5FEEC621ABFB6700405C28 /* NotificationCenter.framework */,
+				CFE81A55C776353D62E34D79 /* Pods_Axc_Secretary.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -424,6 +427,24 @@
 				EA0B110B21A2554900340FEA /* AxcDBManager.m */,
 			);
 			path = AxcDBManager;
+			sourceTree = "<group>";
+		};
+		EA1D3D3A21B76A7000C72902 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1FDD62187F5FA001AC774 /* PrefixHeader.pch */,
+				EA1E435E219964DA00B95CF8 /* DefineHeader.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		EA1D3D4221B77E0400C72902 /* AxcLocation */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D3D4321B77E1200C72902 /* AxcLocation.h */,
+				EA1D3D4421B77E1200C72902 /* AxcLocation.m */,
+			);
+			path = AxcLocation;
 			sourceTree = "<group>";
 		};
 		EA1E434C21995A6300B95CF8 /* Model */ = {
@@ -843,11 +864,10 @@
 		EA891EE72186FB6F008AFD21 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				EA1E435E219964DA00B95CF8 /* DefineHeader.h */,
+				EA1D3D3A21B76A7000C72902 /* Header */,
 				EA5CBE2D21B66D4A0024B443 /* newIcon.png */,
 				EAC1FDF321885877001AC774 /* icon.png */,
 				EAC1FDEE21884C82001AC774 /* Assets.xcassets */,
-				EAC1FDD62187F5FA001AC774 /* PrefixHeader.pch */,
 				EA891EB72186FB67008AFD21 /* ViewController.h */,
 				EA891EB82186FB67008AFD21 /* ViewController.m */,
 				EA891EBA2186FB67008AFD21 /* Main.storyboard */,
@@ -861,6 +881,7 @@
 		EAADC2432187F3BB0043BB9D /* AxcFramework */ = {
 			isa = PBXGroup;
 			children = (
+				EA1D3D4221B77E0400C72902 /* AxcLocation */,
 				EA5CBE2121B65F5E0024B443 /* AxcRoute */,
 				EADA9D5C21AF84970003FF9C /* AxcBasicSuit */,
 				EA5FEEB021ABDA8D00405C28 /* AxcThemeManager */,
@@ -1584,8 +1605,8 @@
 				EA891EAD2186FB67008AFD21 /* Sources */,
 				EA891EAE2186FB67008AFD21 /* Frameworks */,
 				EA891EAF2186FB67008AFD21 /* Resources */,
-				F05B56834087893476BE1376 /* [CP] Copy Pods Resources */,
 				EA5FEED621ABFB6700405C28 /* Embed App Extensions */,
+				B9443238B7CE35197D8E9801 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1732,6 +1753,76 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B9443238B7CE35197D8E9801 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/AxcAE_TabBar/AxcAE_TabBar.framework",
+				"${BUILT_PRODUCTS_DIR}/AxcDrawPath_Tool/AxcDrawPath_Tool.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNSegmentedControl/DZNSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBDigitalFont/FBDigitalFont.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/IQDropDownTextField/IQDropDownTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
+				"${BUILT_PRODUCTS_DIR}/JWNetAutoCache/JWNetAutoCache.framework",
+				"${BUILT_PRODUCTS_DIR}/KSPhotoBrowser/KSPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/LLDebugTool/LLDebugTool.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/PPNumberButton/PPNumberButton.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/WHC_Model/WHC_Model.framework",
+				"${BUILT_PRODUCTS_DIR}/WMDragView/WMDragView.framework",
+				"${BUILT_PRODUCTS_DIR}/WMPageController/WMPageController.framework",
+				"${BUILT_PRODUCTS_DIR}/ZLPhotoBrowser/ZLPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AxcAE_TabBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AxcDrawPath_Tool.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBDigitalFont.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQDropDownTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWNetAutoCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLDebugTool.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPNumberButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WHC_Model.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WMDragView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WMPageController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZLPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E4E3517BD60890FB93A1739B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1748,64 +1839,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F05B56834087893476BE1376 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/Crash/UserInterface/LLCrashCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/Crash/UserInterface/LLCrashContentCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/General/UserInterface/Controls/LLFilterView/LLFilterLabelCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/General/UserInterface/Controls/LLFilterView/LLFilterTextFieldCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/General/UserInterface/Controls/LLSubTitleTableViewCell/LLSubTitleTableViewCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/Log/UserInterface/LLLogCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/Network/UserInterface/LLNetworkCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/Network/UserInterface/LLNetworkImageCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/Sandbox/UserInterface/LLSandboxCell.xib",
-				"${PODS_ROOT}/LLDebugTool/LLDebugTool/Components/General/UserInterface/Resources/LLDebugTool.bundle",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
-				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
-				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
-				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLCrashCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLCrashContentCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLFilterLabelCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLFilterTextFieldCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLSubTitleTableViewCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLLogCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLNetworkCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLNetworkImageCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLSandboxCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LLDebugTool.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowser.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1860,6 +1893,7 @@
 				EADA9E1321AF84970003FF9C /* UIImage+AxcSpecialEffectsDrawing.m in Sources */,
 				EA1E435021995A9500B95CF8 /* AxcBaseModel.m in Sources */,
 				EAADC2F52187F4490043BB9D /* AxcBaseAppVC.m in Sources */,
+				EA1D3D4521B77E1200C72902 /* AxcLocation.m in Sources */,
 				EADA9DF021AF84970003FF9C /* AxcLanguageManagement.m in Sources */,
 				EA2570DF21A7DE0200FCF7EE /* SettingCell.m in Sources */,
 				EA37874C21B51C780049D6F1 /* ActivityDisplayPageCell.m in Sources */,

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03D937D463772A2AC05B1DF05F5D9C49"
+               BlueprintIdentifier = "FAF18D26F7B464D895EF7380340E1E66"
                BlueprintName = "FBDigitalFont"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libFBDigitalFont.a">
+               BuildableName = "FBDigitalFont.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

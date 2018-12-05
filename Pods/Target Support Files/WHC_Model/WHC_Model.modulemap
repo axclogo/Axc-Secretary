@@ -1,0 +1,6 @@
+framework module WHC_Model {
+  umbrella header "WHC_Model-umbrella.h"
+
+  export *
+  module * { export * }
+}

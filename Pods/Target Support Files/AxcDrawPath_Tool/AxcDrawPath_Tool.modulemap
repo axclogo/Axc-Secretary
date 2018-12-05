@@ -1,0 +1,6 @@
+framework module AxcDrawPath_Tool {
+  umbrella header "AxcDrawPath_Tool-umbrella.h"
+
+  export *
+  module * { export * }
+}

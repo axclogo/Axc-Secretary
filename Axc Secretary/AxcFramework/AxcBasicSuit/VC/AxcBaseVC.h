@@ -327,7 +327,7 @@ typedef NS_ENUM(NSInteger, AxcBaseBarButtonItemBearing) {
 #define MJRefresh_Exist __has_include("MJRefresh.h")
 
 #if MJRefresh_Exist
-#import <MJRefresh.h>
+#import "MJRefresh.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

@@ -1,1 +1,0 @@
-../../../LLDebugTool/LLDebugTool/Components/Screenshot/UserInterface/LLScreenshotBaseOperation.h

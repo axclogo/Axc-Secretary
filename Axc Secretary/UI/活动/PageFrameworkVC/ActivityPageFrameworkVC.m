@@ -11,6 +11,10 @@
 @interface ActivityPageFrameworkVC ()
 // 今日的角标Label
 @property(nonatomic , strong)UILabel *todayBadge;
+// 左右的渐变
+@property(nonatomic , strong)CAGradientLayer *leftGradientLayer;
+@property(nonatomic , strong)CAGradientLayer *rightGradientLayer;
+
 @end
 
 @implementation ActivityPageFrameworkVC
@@ -37,6 +41,13 @@
     
     [self loadData];
 }
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    CGFloat gradientLayerWidth = 40;
+    self.leftGradientLayer.frame = CGRectMake(0, 0, gradientLayerWidth, kMenuHeight);
+    self.rightGradientLayer.frame = CGRectMake(self.menuView.axcTool_width - gradientLayerWidth, 0, gradientLayerWidth, kMenuHeight);
+}
+
 
 - (void)loadData{
     // 计算这周的所有日期
@@ -108,6 +119,31 @@
 }
 
 #pragma mark - 懒加载
+// 渐变色
+- (CAGradientLayer *)leftGradientLayer{
+    if (!_leftGradientLayer) {
+        _leftGradientLayer = [CAGradientLayer new];
+        _leftGradientLayer.colors = @[(id)[kNavColor colorWithAlphaComponent:1].CGColor ,
+                                      (id)[kNavColor colorWithAlphaComponent:0].CGColor ];
+        _leftGradientLayer.locations = @[[NSNumber numberWithFloat:0.3],
+                                         [NSNumber numberWithFloat:0.7]];
+        _leftGradientLayer.startPoint = CGPointMake(0, 0);
+        _leftGradientLayer.endPoint = CGPointMake(1, 0);
+        [self.menuView.layer addSublayer:_leftGradientLayer];
+    }
+    return _leftGradientLayer;
+}
+- (CAGradientLayer *)rightGradientLayer{
+    if (!_rightGradientLayer) {
+        _rightGradientLayer = [CAGradientLayer new];
+        _rightGradientLayer.colors = self.leftGradientLayer.colors;
+        _rightGradientLayer.locations = self.leftGradientLayer.locations;
+        _rightGradientLayer.startPoint = self.leftGradientLayer.endPoint;
+        _rightGradientLayer.endPoint = self.leftGradientLayer.startPoint;
+        [self.menuView.layer addSublayer:_rightGradientLayer];
+    }
+    return _rightGradientLayer;
+}
 - (UILabel *)todayBadge{
     if (!_todayBadge) {
         _todayBadge = [[UILabel alloc] init];

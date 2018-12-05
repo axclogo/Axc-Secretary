@@ -7,17 +7,10 @@
 //
 
 #import "ActivityHeaderView.h"
+#import "AxcLocation.h"
 
 @implementation ActivityHeaderView
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self createUI];
-    }
-    return self;
-}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -50,9 +43,46 @@
         make.right.mas_equalTo(self.yearsMonthLabel.mas_right).offset(0);
     }];
     
+    
+    [self.countriesLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.yearsMonthLabel.mas_top).offset(0);
+        make.left.mas_equalTo(self.yearsMonthLabel.mas_right).offset(10);
+        make.bottom.mas_equalTo(self.yearsMonthLabel.mas_bottom).offset(0);
+        make.right.mas_equalTo(-10);
+    }];
+    [self.latitudeLongitudeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.weekLabel.mas_top).offset(0);
+        make.left.mas_equalTo(self.weekLabel.mas_right).offset(10);
+        make.bottom.mas_equalTo(self.weekLabel.mas_bottom).offset(0);
+        make.right.mas_equalTo(-10);
+    }];
+    [self loadLocation];
 }
 
-- (void)createUI{
+- (void)loadLocation{
+    NSDate *today = [NSDate date];
+    // 当天
+    if (_date.month == today.month &&
+        _date.day == today.day) {
+        self.countriesLabel.hidden =
+        self.latitudeLongitudeLabel.hidden = NO;
+        
+        [[AxcLocation sharedGpsManager] getMoLocationWithSuccess:^(double lat, double lng, CLPlacemark * _Nonnull place) {
+            self.countriesLabel.text = [NSString stringWithFormat:@"%@-%@ %@ %@ %@",
+                                        place.country,
+                                        place.administrativeArea,
+                                        place.locality,
+                                        place.subLocality,
+                                        place.thoroughfare];
+            self.latitudeLongitudeLabel.text = [NSString stringWithFormat:@"经度：%f | 纬度：%f",lat,lng];
+        } Failure:^(NSError * _Nonnull error) {
+            [SVProgressHUD showErrorWithStatus:@"获取定位失败！"];
+        }];
+    }else{
+        self.countriesLabel.hidden =
+        self.latitudeLongitudeLabel.hidden = YES;
+        
+    }
 }
 
 
@@ -84,5 +114,26 @@
     }
     return _weekLabel;
 }
+- (UILabel *)countriesLabel{
+    if (!_countriesLabel) {
+        _countriesLabel = [UILabel new];
+        _countriesLabel.textColor = kUncheckColor;
+        _countriesLabel.adjustsFontSizeToFitWidth = YES;
+        _countriesLabel.textAlignment = NSTextAlignmentRight;
+        [self addSubview:_countriesLabel];
+    }
+    return _countriesLabel;
+}
+- (UILabel *)latitudeLongitudeLabel{
+    if (!_latitudeLongitudeLabel) {
+        _latitudeLongitudeLabel = [UILabel new];
+        _latitudeLongitudeLabel.textColor = kUncheckColor;
+        _latitudeLongitudeLabel.font = [UIFont systemFontOfSize:12];
+        _latitudeLongitudeLabel.textAlignment = NSTextAlignmentRight;
+        [self addSubview:_latitudeLongitudeLabel];
+    }
+    return _latitudeLongitudeLabel;
+}
+
 
 @end

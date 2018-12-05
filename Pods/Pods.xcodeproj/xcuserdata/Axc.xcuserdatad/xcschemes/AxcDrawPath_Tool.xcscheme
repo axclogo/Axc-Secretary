@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B777135D79629BEC51D11C6D6A79E38"
+               BlueprintIdentifier = "6E4A931AE672D3C0C06658FF7F54F053"
                BlueprintName = "AxcDrawPath_Tool"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libAxcDrawPath_Tool.a">
+               BuildableName = "AxcDrawPath_Tool.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -1,0 +1,6 @@
+framework module FBDigitalFont {
+  umbrella header "FBDigitalFont-umbrella.h"
+
+  export *
+  module * { export * }
+}

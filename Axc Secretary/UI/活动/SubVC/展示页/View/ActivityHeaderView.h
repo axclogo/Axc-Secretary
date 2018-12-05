@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic , strong)UILabel *dayLabel;
 @property(nonatomic , strong)UILabel *yearsMonthLabel;
 @property(nonatomic , strong)UILabel *weekLabel;
+// 地理位置Label
+@property(nonatomic , strong)UILabel *countriesLabel;
+@property(nonatomic , strong)UILabel *latitudeLongitudeLabel;
+
+- (void)loadLocation;
 
 @end
 

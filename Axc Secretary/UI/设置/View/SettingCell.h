@@ -9,14 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "SettingModel.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SettingCell : UITableViewCell
+@interface SettingCell : UITableViewCell <IQDropDownTextFieldDelegate>
 
 @property(nonatomic , strong)SettingModel *model;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *switchOn;
 @property (weak, nonatomic) IBOutlet UILabel *disTitleLabel;
+@property (weak, nonatomic) IBOutlet IQDropDownTextField *pickTextField;
 
 @end
 

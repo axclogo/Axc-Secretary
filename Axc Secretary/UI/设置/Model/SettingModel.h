@@ -7,6 +7,7 @@
 //
 
 #import "AxcBaseModel.h"
+#import "AxcLocation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,7 @@ typedef NS_ENUM(NSInteger, SettingType) {
     SettingTypeNone,
     SettingTypeSwitch,
     SettingTypeDisTitle,
+    SettingTypeDisTitleIQDropDownTextField,
 };
 
 typedef void (^SettingModelTiggerBlock )(id obj);
@@ -32,8 +34,12 @@ typedef void (^SettingModelTiggerBlock )(id obj);
 @property(nonatomic , assign)SettingType settingType;
 // cell的后缀类型，默认none
 @property(nonatomic , assign)UITableViewCellAccessoryType accessoryType;
-// 获取Key后开关的状态
+// 获取Key后开关的状态 SettingTypeSwitch
 @property(nonatomic , assign)BOOL switch_on;
+// 下拉选项的数组 SettingTypeDisTitleIQDropDownTextField
+@property(nonatomic , strong)NSArray <NSString *>*selectArray;
+// 选择的行数
+@property(nonatomic , assign)NSInteger selectRow;
 // 进行改变设置
 - (void)trigger;
 @property(nonatomic , copy)SettingModelTiggerBlock tiggerBlock;

@@ -10,7 +10,8 @@
 #import "ActivityPageFrameworkVC.h"
 #import "EditorActivityVC.h"
 
-#import <WMDragView.h>
+#import "WMDragView.h"
+//#import "NumberMorphView-Swift.h"
 
 @interface ActivityVC ()
 // 周分页控制器
@@ -19,6 +20,7 @@
 @property(nonatomic , strong)WMDragView *dragView;
 // 编辑图片
 @property(nonatomic , strong)UIImageView *editorImageView;
+
 @end
 
 @implementation ActivityVC
@@ -35,13 +37,14 @@
     [self.weekAcitvityVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
-    
+    // 设置编辑按钮
     [self.view addSubview:self.dragView];
 }
-
+- (void)settingDragBtn{
+    
+}
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-//    [self.weekAcitvityVC forceLayoutSubviews];
     self.weekAcitvityVC.view.backgroundColor =
     self.weekAcitvityVC.scrollView.backgroundColor =
     self.view.backgroundColor;
@@ -63,6 +66,7 @@
     self.editorImageView.axcTool_y = dragViewSize/2.f - self.editorImageView.axcTool_size.height/2.f;
     self.editorImageView.axcTool_x = dragViewSize/2.f - self.editorImageView.axcTool_size.width/2.f;
     [self.dragView addSubview:self.editorImageView];
+    
 }
 
 #pragma mark - 懒加载

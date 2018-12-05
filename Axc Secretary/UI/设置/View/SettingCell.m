@@ -21,6 +21,18 @@
     
     self.disTitleLabel.textColor = kMarkColor;
     self.titleLabel.textColor = kMainTitleColor;
+    self.pickTextField.textColor = kMarkColor;
+    self.pickTextField.textAlignment = NSTextAlignmentRight;
+    self.pickTextField.dropDownMode = IQDropDownModeTextPicker;
+    self.pickTextField.delegate = self;
+    self.pickTextField.isOptionalDropDown = NO;
+    self.pickTextField.pickerView.backgroundColor = kMainBackColor;
+    self.pickTextField.dropDownTextColor = kUncheckColor;
+//    UIToolbar *toolBar = [self.pickTextField valueForKeyPath:@"dismissToolbar"];
+//    toolBar.translucent = NO;
+//    toolBar.backgroundColor = kNavColor;
+//    toolBar.tintColor = kSelectedColor;
+//    toolBar.barTintColor = kSelectedColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -40,19 +52,31 @@
     // 设置状态
     self.switchOn.hidden = YES;
     self.disTitleLabel.hidden = YES;
+    self.pickTextField.hidden = YES;
+    
     switch (_model.settingType) {
         case SettingTypeSwitch:{
             self.switchOn.hidden = NO;
             // 匹配开关状态
-            self.switchOn.on = _model.switch_on;
+            [self.switchOn setOn:_model.switch_on animated:YES];
         }break;
         case SettingTypeDisTitle:{
             self.disTitleLabel.hidden = NO;
             self.disTitleLabel.text = _model.disTitle;
         }break;
+        case SettingTypeDisTitleIQDropDownTextField:{
+            self.pickTextField.hidden = NO;
+            self.pickTextField.itemList = _model.selectArray;
+            self.pickTextField.selectedItem = _model.disTitle;
+        }break;
 
         default:  break;
     }
 }
+-(void)textField:(nonnull IQDropDownTextField*)textField didSelectItem:(nullable NSString*)item{
+    self.model.selectRow = textField.selectedRow;
+    [self.model trigger];
+}
 
 @end
+

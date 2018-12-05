@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E445043F4A047DFCC20255E185937DF"
+               BlueprintIdentifier = "92E26CE691FF77FE6E8B9941C771941F"
                BlueprintName = "JWNetAutoCache"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libJWNetAutoCache.a">
+               BuildableName = "JWNetAutoCache.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

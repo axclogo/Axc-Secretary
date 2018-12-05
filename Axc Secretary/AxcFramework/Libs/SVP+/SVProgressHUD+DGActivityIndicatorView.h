@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SVProgressHUD.h>
-#import <SVIndefiniteAnimatedView.h>
+#import "SVProgressHUD.h"
+#import "SVIndefiniteAnimatedView.h"
 
 typedef NS_ENUM(NSUInteger, DDActivityIndicatorAnimationType) {
     DDActivityIndicatorAnimationTypeNineDots,

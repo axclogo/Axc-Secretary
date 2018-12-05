@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "144F03F99654281D96A3B695637A205E"
+               BlueprintIdentifier = "50FFE322619BCB712D5F8A49EDEDEE7C"
                BlueprintName = "AxcAE_TabBar"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libAxcAE_TabBar.a">
+               BuildableName = "AxcAE_TabBar.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
