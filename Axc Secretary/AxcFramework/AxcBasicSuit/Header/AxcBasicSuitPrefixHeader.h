@@ -38,6 +38,7 @@
 #import "UIImage+AxcTransfromZoom.h"                    // 缩放图片
 #import "UIImage+AxcSpecialEffectsDrawing.h"            // 特效渲染
 #import "UIImage+AxcImageRotating.h"                    // 绘制旋转图片
+#import "UIImageView+AxcTintColor.h"                    // 颜色渲染
 
 #import "UITableView+AxcEmptyData.h"                    // 页面空数据源TV
 #import "UICollectionView+AxcEmptyData.h"               // 页面空数据源CV

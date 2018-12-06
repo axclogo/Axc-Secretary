@@ -20,8 +20,9 @@
 }
 - (void)createUI{
     self.title = @"编辑所有活动";
+    WeakSelf;
     [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationRight image:@"add_white" handler:^(UIButton *barItemBtn) {
-        [self AxcTool_pushVCName:@"AddActivityVC"];
+        [weakSelf AxcTool_pushVCName:@"AddActivityVC"];
     }];
 }
 

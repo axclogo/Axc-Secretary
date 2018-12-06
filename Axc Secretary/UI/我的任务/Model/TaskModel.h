@@ -17,12 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MonthEventModel : AxcBaseModel
 // 日期
 @property(nonatomic , strong)NSDate *date;
-// 日期
+// 添加日期
 @property(nonatomic , strong)NSDate *addDate;
 // 标题
 @property(nonatomic , strong)NSString *title;
 // 简介
 @property(nonatomic , strong)NSString *Introduction;
+
 // 是否合并单元格 默认NO
 @property(nonatomic , assign)BOOL isMergeUnit;
 // 是否隐藏日期显示

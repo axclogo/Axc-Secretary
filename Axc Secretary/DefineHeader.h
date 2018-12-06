@@ -14,6 +14,7 @@
 
 
 #define MonthFormat @"yyyy 年 MM 月"
+#define MonthDayFormat @"yyyy年MM月dd日HH时mm分"
 #define WEEK_DAY_STRINGS @[@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六"]
 #define POSITIONING_ACCURACYS @[@"可用的最佳准确度",@"精确到十米范围内",@"精确到百米以内",@"准确到一公里",@"准确到三公里"]
 

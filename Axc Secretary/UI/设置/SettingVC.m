@@ -77,13 +77,25 @@
     clearCache.settingType = SettingTypeDisTitle;
     clearCache.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     clearCache.tiggerBlock = ^(id  _Nonnull obj) {
-        kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{   //   异步清缓存
-            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
-                [[SDImageCache sharedImageCache] clearMemory];
-                [SVProgressHUD showSuccessWithStatus:@"清理完成!"];
-                [weakSelf requestData];
-            }];
-        });
+
+        JCAlertController *alert = [JCAlertController alertWithTitle:@"清除缓存" message:@"清除缓存后将重新加载网络的图片"];
+        [alert addButtonWithTitle:@"取消" type:JCButtonTypeCancel clicked:nil];
+        [alert addButtonWithTitle:@"确定" type:JCButtonTypeNormal clicked:^{
+            
+            [SVProgressHUD show];
+            kDISPATCH_GLOBAL_QUEUE_DEFAULT(^{   //   异步清缓存
+                KDISPATCH_AFTER_MAIN(1, ^{
+                    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+                        [[SDImageCache sharedImageCache] clearMemory];
+                        [SVProgressHUD showSuccessWithStatus:@"清理完成!"];
+                        [weakSelf requestData];
+                    }];
+                });
+            });
+            
+        }];
+        [JCPresentController presentViewControllerLIFO:alert presentCompletion:nil dismissCompletion:nil];
+        
     };
     /** 定位精度 **************************************/
     SettingModel *positioningAccuracy = [SettingModel title:@"定位精度"

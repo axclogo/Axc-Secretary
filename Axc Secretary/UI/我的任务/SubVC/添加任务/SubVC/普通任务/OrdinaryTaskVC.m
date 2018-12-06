@@ -24,7 +24,7 @@
     
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self AxcBase_showDateSelectCompleteBlock:nil];
+//    [self AxcBase_showDateSelectCompleteBlock:nil];
 }
 
 

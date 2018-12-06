@@ -7,6 +7,8 @@
 //
 
 #import "AxcBaseAppVC.h"
+#import "TextFieldEffects-Swift.h"
+#import "RSKGrowingTextView-Swift.h"
 
 typedef NS_ENUM(NSInteger, TaskType) {
     TaskTypeNone,           // 未设置
@@ -21,7 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 任务类型
 @property(nonatomic , assign)TaskType taskType;
 // 任务名称的TextField
-@property(nonatomic , strong)UITextField *taskNameTextFiled;
+@property(nonatomic , strong)HoshiTextField *taskNameTextFiled;
+// 任务描述
+@property(nonatomic , strong)RSKGrowingTextView *taskInstructionsTextView;
+// 时间选择
+@property(nonatomic , strong)UIButton *taskTimeBtn;
 // 确认添加的按钮
 @property(nonatomic , strong)UIButton *confirmBtn;
 

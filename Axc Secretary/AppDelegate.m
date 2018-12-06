@@ -12,6 +12,7 @@
 #import "AppDelegate+SVProgressHUD_Ex.h"
 #import "AppDelegate+LLDebug_Ex.h"
 #import "AppDelegate+JLRoutes_Ex.h"
+#import "AppDelegate+JCAlertController_Ex.h"
 
 #import "AppDelegate+AxcThemeManager_Ex.h"
 #import "AppDelegate+Axc3DTouch_Ex.h"
@@ -46,6 +47,8 @@
     [self setting3DTouch];
     // 注册路由
     [self registerRoute];
+    // 设置弹出层风格
+    [self settingJCAlentStyle];
 }
 
 - (void)resetWindow:(BOOL )animation{

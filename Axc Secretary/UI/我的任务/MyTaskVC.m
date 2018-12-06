@@ -25,7 +25,6 @@ UIViewControllerPreviewingDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadDataBaseData];
 }
 - (void)createUI{
     UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
@@ -93,6 +92,7 @@ UIViewControllerPreviewingDelegate
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self tableView_headerAction];
     self.isHideNavigation = [[[self.userDefaults objectForKey:kSettingKeys] objectForKey:kSetting_HideNavigation] integerValue];
 }
 #pragma mark - 事项操作函数复用

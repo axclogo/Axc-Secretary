@@ -15,6 +15,9 @@
     if (self == [super initWithCoder:aDecoder]) {
         self.axcTool_size = [UIScreen mainScreen].bounds.size;
         self.axcTool_width = kScreenWidth;
+        self.backgroundColor = kMainBackColor;
+        self.titleImageView.axcTintColor = kUncheckColor;
+        self.disLable.textColor = kUncheckColor;
     }
     return self;
 }

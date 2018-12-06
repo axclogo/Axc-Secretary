@@ -44,10 +44,16 @@ WMPageControllerDelegate
 }
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    [self.taskTypeVC forceLayoutSubviews];
     _taskTypeVC.view.backgroundColor =
     _taskTypeVC.scrollView.backgroundColor =
     self.view.backgroundColor;
+    // 体验优化部分
+    WeakSelf;   // 过度转屏过程中的偏移问题
+    KDISPATCH_AFTER_MAIN(0.3, ^{
+        CGPoint scrollPoint = CGPointMake((self.isHorizontal ? kScreenHeight : kScreenWidth) * weakSelf.taskTypeVC.selectIndex, 0);
+        [weakSelf.taskTypeVC.scrollView setContentOffset:scrollPoint animated:YES];
+        
+    })
 }
 #pragma mark - 触发事件
 

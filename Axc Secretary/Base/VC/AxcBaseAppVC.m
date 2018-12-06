@@ -21,15 +21,23 @@
 
 }
 - (void)AxcBase_settingBackBtn{
+    WeakSelf;
     [self AxcBase_addBarButtonItem:AxcBaseBarButtonItemLocationLeft
                              image:@"back_white"
                            handler:^(UIButton *barItemBtn) {
-                               [self.navigationController popViewControllerAnimated:YES];
+                               [weakSelf.navigationController popViewControllerAnimated:YES];
                            }];
 }
 
+//- (void)AxcBase_popAlentTitle:(NSString *)title content:(NSString *)content clicked:(void (^)(void))clicked{
+//    JCAlertController *alert = [JCAlertController alertWithTitle:title message:content];
+//    [alert addButtonWithTitle:@"确定" type:JCButtonTypeNormal clicked:clicked];
+//    [JCPresentController presentViewControllerLIFO:alert presentCompletion:nil dismissCompletion:nil];
+//}
+
+
 - (void)AxcBase_showDateSelectCompleteBlock:(void(^)(NSDate *))completeBlock{
-    WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDay CompleteBlock:completeBlock];
+    WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDayHourMinute CompleteBlock:completeBlock];
     datepicker.dateLabelColor = kSelectedColor;
     datepicker.datePickerColor = kMarkColor;//滚轮日期颜色
     datepicker.doneButtonColor = kSelectedColor;//确定按钮的颜色
@@ -45,7 +53,7 @@
         NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"AxcTemporarilyDataView" owner:nil options:nil];
         _emptyDataView = [nibView firstObject];
         _emptyDataView.axcTool_size = kScreenSize;
-        _emptyDataView.backgroundColor = self.view.backgroundColor;
+        _emptyDataView.backgroundColor = kMainBackColor;
         _emptyDataView.titleImageView.image = [_emptyDataView.titleImageView.image
                                                imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)];
         [_emptyDataView.titleImageView setTintColor:kUncheckColor];
@@ -74,6 +82,7 @@
 #pragma mark - 销毁
 - (void)dealloc{
     [JWCacheURLProtocol cancelListeningNetWorking];
+    LLog([NSString stringWithFormat:@"控制器：%@ 已销毁",self]);
 }
 
 @end

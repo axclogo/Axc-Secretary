@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "940543A2B80D1BDC086A004B2CE0AF8D"
+               BlueprintIdentifier = "8C7145593F0700006ADAA30BF1205361"
                BlueprintName = "PPNumberButton"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "PPNumberButton.framework">

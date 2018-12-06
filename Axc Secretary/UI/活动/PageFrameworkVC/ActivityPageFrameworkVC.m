@@ -38,6 +38,7 @@
     self.progressHeight = kMenuHeight - 5;
     self.progressWidth = 50;
     self.progressViewCornerRadius = kMenuHeight/2;
+    self.pageAnimatable = YES;
     
     [self loadData];
 }

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "56DC102295188440B1A52B5C91427E6D"
+               BlueprintIdentifier = "F3627469644E18155882C01D41152343"
                BlueprintName = "WMDragView"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "WMDragView.framework">

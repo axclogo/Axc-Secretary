@@ -26,6 +26,7 @@ PODS:
   - iCarousel (1.8.3)
   - IQDropDownTextField (1.1.1)
   - IQKeyboardManager (6.2.0)
+  - JCAlertController (3.0.2)
   - JLRoutes (2.1)
   - JWNetAutoCache (0.0.2)
   - KSPhotoBrowser (0.2.4):
@@ -61,7 +62,11 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MGSwipeTableCell (1.6.7)
   - MJRefresh (3.1.15.7)
+  - NumberMorphView (0.2.0)
   - PPNumberButton (0.8.0)
+  - RSKGrowingTextView (4.0.0):
+    - RSKPlaceholderTextView (= 4.0.0)
+  - RSKPlaceholderTextView (4.0.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.4.2):
@@ -71,6 +76,7 @@ PODS:
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
   - SVProgressHUD (2.1.2)
+  - TextFieldEffects (1.5.1)
   - WHC_Model (1.7.0.1)
   - WMDragView (1.0.0)
   - WMPageController (2.4.3)
@@ -88,6 +94,7 @@ DEPENDENCIES:
   - iCarousel
   - IQDropDownTextField
   - IQKeyboardManager
+  - JCAlertController
   - JLRoutes
   - JWNetAutoCache
   - KSPhotoBrowser
@@ -96,10 +103,13 @@ DEPENDENCIES:
   - MBProgressHUD
   - MGSwipeTableCell
   - MJRefresh
+  - NumberMorphView
   - PPNumberButton
+  - RSKGrowingTextView
   - SDCycleScrollView
   - SDWebImage (~> 4.4.2)
   - SVProgressHUD
+  - TextFieldEffects
   - WHC_Model
   - WMDragView
   - WMPageController
@@ -118,6 +128,7 @@ SPEC REPOS:
     - iCarousel
     - IQDropDownTextField
     - IQKeyboardManager
+    - JCAlertController
     - JLRoutes
     - JWNetAutoCache
     - KSPhotoBrowser
@@ -126,10 +137,14 @@ SPEC REPOS:
     - MBProgressHUD
     - MGSwipeTableCell
     - MJRefresh
+    - NumberMorphView
     - PPNumberButton
+    - RSKGrowingTextView
+    - RSKPlaceholderTextView
     - SDCycleScrollView
     - SDWebImage
     - SVProgressHUD
+    - TextFieldEffects
     - WHC_Model
     - WMDragView
     - WMPageController
@@ -147,6 +162,7 @@ SPEC CHECKSUMS:
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQDropDownTextField: 3d2e5728a2b83ff5dbb14cb9b497a80005124cbe
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  JCAlertController: 35e86a97b1915cf8821c2af6ab79b9a07648af91
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   JWNetAutoCache: 434f10855da06d29a381359552ae9d27ef35cad7
   KSPhotoBrowser: 1f60c68401f34bcc223838c8592269b4a10a83bf
@@ -155,15 +171,19 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MGSwipeTableCell: fb20e983988bde2b8d0df29c2d9e1d8ffd10b74a
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  NumberMorphView: d364796d0c0bd343505b94350b5f4ba8e67de37c
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
+  RSKGrowingTextView: 8c428a0f2e4452b03a4266ea29721d5a443c6992
+  RSKPlaceholderTextView: 15f1dc1883e103ea605874b863f19ff6b08496d5
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
   WHC_Model: 8268100386a9d450fa7ff72e9671910da8334e3f
   WMDragView: d8f98a0d14d8581bbefebb2a1ddb6b5b87c283e6
   WMPageController: 4c7f2c636675a71aea5eecf8fdc07a0ce86954e3
   ZLPhotoBrowser: b666fe8f68edc63dc5c4edccca071885b87553f5
 
-PODFILE CHECKSUM: b2e81f3c308c1ba93173eebff11c6ee42dfd2e23
+PODFILE CHECKSUM: 7bc767e7a3fda39975029f24356141b5e822128e
 
 COCOAPODS: 1.5.3

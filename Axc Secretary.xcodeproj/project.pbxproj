@@ -112,6 +112,8 @@
 		EADA9E1521AF84970003FF9C /* AxcTouchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EADA9DE121AF84970003FF9C /* AxcTouchManager.m */; };
 		EADA9E1621AF84970003FF9C /* AxcDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EADA9DE421AF84970003FF9C /* AxcDataCache.m */; };
 		EADA9E1721AF84970003FF9C /* AxcBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EADA9DE921AF84970003FF9C /* AxcBaseVC.m */; };
+		EAF5E63C21B8CB8A00FF297D /* AppDelegate+JCAlertController_Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5E63B21B8CB8A00FF297D /* AppDelegate+JCAlertController_Ex.m */; };
+		EAF5E64721B8F7C300FF297D /* UIImageView+AxcTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5E64621B8F7C300FF297D /* UIImageView+AxcTintColor.m */; };
 		EAF898BD21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF898BB21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m */; };
 /* End PBXBuildFile section */
 
@@ -361,6 +363,10 @@
 		EADA9DE921AF84970003FF9C /* AxcBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxcBaseVC.m; sourceTree = "<group>"; };
 		EADA9DEB21AF84970003FF9C /* AxcBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxcBaseVC.h; sourceTree = "<group>"; };
 		EADA9DEE21AF84970003FF9C /* AxcBasicSuitPrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxcBasicSuitPrefixHeader.h; sourceTree = "<group>"; };
+		EAF5E63A21B8CB8A00FF297D /* AppDelegate+JCAlertController_Ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JCAlertController_Ex.h"; sourceTree = "<group>"; };
+		EAF5E63B21B8CB8A00FF297D /* AppDelegate+JCAlertController_Ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JCAlertController_Ex.m"; sourceTree = "<group>"; };
+		EAF5E64521B8F7C300FF297D /* UIImageView+AxcTintColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AxcTintColor.h"; sourceTree = "<group>"; };
+		EAF5E64621B8F7C300FF297D /* UIImageView+AxcTintColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AxcTintColor.m"; sourceTree = "<group>"; };
 		EAF898BB21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+DGActivityIndicatorView.m"; sourceTree = "<group>"; };
 		EAF898BC21A55D3D00FE54B6 /* SVProgressHUD+DGActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+DGActivityIndicatorView.h"; sourceTree = "<group>"; };
 		FF841F8DBA0445B1969BC6A0 /* Pods-Axc Secretary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Axc Secretary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Axc Secretary/Pods-Axc Secretary.release.xcconfig"; sourceTree = "<group>"; };
@@ -630,6 +636,7 @@
 		EA2570E121A7ECAF00FCF7EE /* AppDelegate+ */ = {
 			isa = PBXGroup;
 			children = (
+				EAF5E63921B8CB7700FF297D /* 弹框风格 */,
 				EA5CBE1D21B64D910024B443 /* 路由跳转 */,
 				EA5FEEBC21ABF56900405C28 /* 3DTouch */,
 				EA5FEEB421ABDC4100405C28 /* 主题管理 */,
@@ -1280,6 +1287,7 @@
 		EADA9D9E21AF84970003FF9C /* UIKit+ */ = {
 			isa = PBXGroup;
 			children = (
+				EAF5E64121B8F79A00FF297D /* UIImageView+ */,
 				EADA9D9F21AF84970003FF9C /* UITextField+ */,
 				EADA9DA221AF84970003FF9C /* UIColor+ */,
 				EADA9DA521AF84970003FF9C /* UIButton+ */,
@@ -1559,6 +1567,24 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		EAF5E63921B8CB7700FF297D /* 弹框风格 */ = {
+			isa = PBXGroup;
+			children = (
+				EAF5E63A21B8CB8A00FF297D /* AppDelegate+JCAlertController_Ex.h */,
+				EAF5E63B21B8CB8A00FF297D /* AppDelegate+JCAlertController_Ex.m */,
+			);
+			path = "弹框风格";
+			sourceTree = "<group>";
+		};
+		EAF5E64121B8F79A00FF297D /* UIImageView+ */ = {
+			isa = PBXGroup;
+			children = (
+				EAF5E64521B8F7C300FF297D /* UIImageView+AxcTintColor.h */,
+				EAF5E64621B8F7C300FF297D /* UIImageView+AxcTintColor.m */,
+			);
+			path = "UIImageView+";
+			sourceTree = "<group>";
+		};
 		EAF898B921A55D3200FE54B6 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1770,6 +1796,7 @@
 				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/IQDropDownTextField/IQDropDownTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JCAlertController/JCAlertController.framework",
 				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
 				"${BUILT_PRODUCTS_DIR}/JWNetAutoCache/JWNetAutoCache.framework",
 				"${BUILT_PRODUCTS_DIR}/KSPhotoBrowser/KSPhotoBrowser.framework",
@@ -1778,10 +1805,14 @@
 				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/NumberMorphView/NumberMorphView.framework",
 				"${BUILT_PRODUCTS_DIR}/PPNumberButton/PPNumberButton.framework",
+				"${BUILT_PRODUCTS_DIR}/RSKGrowingTextView/RSKGrowingTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/RSKPlaceholderTextView/RSKPlaceholderTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/WHC_Model/WHC_Model.framework",
 				"${BUILT_PRODUCTS_DIR}/WMDragView/WMDragView.framework",
 				"${BUILT_PRODUCTS_DIR}/WMPageController/WMPageController.framework",
@@ -1800,6 +1831,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQDropDownTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JCAlertController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWNetAutoCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSPhotoBrowser.framework",
@@ -1808,10 +1840,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NumberMorphView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPNumberButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSKGrowingTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSKPlaceholderTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WHC_Model.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WMDragView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WMPageController.framework",
@@ -1858,6 +1894,7 @@
 			files = (
 				EADA9DFB21AF84970003FF9C /* NSString+AxcRegularEx.m in Sources */,
 				EA5CBE2C21B669D10024B443 /* SwitchIconVC.m in Sources */,
+				EAF5E63C21B8CB8A00FF297D /* AppDelegate+JCAlertController_Ex.m in Sources */,
 				EA37875521B5276C0049D6F1 /* ActivityModel.m in Sources */,
 				EADA9E0D21AF84970003FF9C /* UISearchBar+AxcTextFieldEx.m in Sources */,
 				EADA9E0821AF84970003FF9C /* UIView+AxcViewAppearanceEx.m in Sources */,
@@ -1904,6 +1941,7 @@
 				EADA9DF321AF84970003FF9C /* NSDate+AxcProcessingEx.m in Sources */,
 				EA5CBE2421B65F780024B443 /* AxcRoute.m in Sources */,
 				EADA9DFE21AF84970003FF9C /* NSString+AxcDataConversionEx.m in Sources */,
+				EAF5E64721B8F7C300FF297D /* UIImageView+AxcTintColor.m in Sources */,
 				EADA9E0621AF84970003FF9C /* UIView+AxcViewRectEx.m in Sources */,
 				EADA9E0A21AF84970003FF9C /* UIViewController+AxcVCBackButtonEvent.m in Sources */,
 				EA37875121B51EBF0049D6F1 /* EditorActivityVC.m in Sources */,

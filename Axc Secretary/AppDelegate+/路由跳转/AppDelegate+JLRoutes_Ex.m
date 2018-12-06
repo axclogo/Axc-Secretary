@@ -24,11 +24,12 @@
     
     // AxcRoute://push/ViewController
     // 推出
+    WeakSelf;
     [[JLRoutes routesForScheme:kRouteScheme] addRoute:JLRP.pushController handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
         
         Class class = NSClassFromString(parameters[JLRP.controller]);
         UIViewController *nextVC = [[class alloc] init];
-        [self paramToVc:nextVC param:parameters];
+        [weakSelf paramToVc:nextVC param:parameters];
         // 获取推出动画
         NSString *animationStr = [parameters objectForKey:JLRP.animated];
         BOOL animation = NO;
@@ -38,9 +39,9 @@
             animation = YES;
         }
         // 获取tabbar
-        [self seleteTabBarParameters:parameters];
+        [weakSelf seleteTabBarParameters:parameters];
         // 然后获取VC
-        UIViewController *currentVc = [self currentViewController];
+        UIViewController *currentVc = [weakSelf currentViewController];
         // 选择推出模式
         if ([parameters[JLRP.RoutePattern] isEqualToString:JLRP.pushController]) {
             nextVC.hidesBottomBarWhenPushed = YES;
@@ -52,7 +53,7 @@
     }];
     // 选择tabbar
     [[JLRoutes routesForScheme:kRouteScheme] addRoute:JLRP.seleteTabbarIndex handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
-        [self seleteTabBarParameters:parameters];
+        [weakSelf seleteTabBarParameters:parameters];
         return YES;
     }];
 }
@@ -72,8 +73,9 @@
 
 //确定是哪个viewcontroller
 -(UIViewController *)currentViewController{
+    WeakSelf;
     UIViewController * currVC = nil;
-    UIViewController * Rootvc = self.window.rootViewController ;
+    UIViewController * Rootvc = weakSelf.window.rootViewController ;
     do {
         if ([Rootvc isKindOfClass:[UINavigationController class]]) {
             UINavigationController * nav = (UINavigationController *)Rootvc;
