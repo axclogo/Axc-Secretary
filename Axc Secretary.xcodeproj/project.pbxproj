@@ -61,6 +61,7 @@
 		EA891EC42186FB68008AFD21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891EC32186FB68008AFD21 /* main.m */; };
 		EA891ECE2186FB68008AFD21 /* Axc_SecretaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891ECD2186FB68008AFD21 /* Axc_SecretaryTests.m */; };
 		EA891ED92186FB68008AFD21 /* Axc_SecretaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA891ED82186FB68008AFD21 /* Axc_SecretaryUITests.m */; };
+		EA96266521BA525600D9A738 /* AxcThemeConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96266421BA525600D9A738 /* AxcThemeConfiguration.m */; };
 		EAADC2F52187F4490043BB9D /* AxcBaseAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAADC2F42187F4490043BB9D /* AxcBaseAppVC.m */; };
 		EAADC2F92187F4C40043BB9D /* BaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAADC2F82187F4C40043BB9D /* BaseTabbarVC.m */; };
 		EAC1FDE0218840A8001AC774 /* MyTaskVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC1FDDF218840A8001AC774 /* MyTaskVC.m */; };
@@ -259,6 +260,9 @@
 		EA891ED42186FB68008AFD21 /* Axc SecretaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Axc SecretaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA891ED82186FB68008AFD21 /* Axc_SecretaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Axc_SecretaryUITests.m; sourceTree = "<group>"; };
 		EA891EDA2186FB68008AFD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA96266221BA4A8B00D9A738 /* AxcThemeStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcThemeStruct.h; sourceTree = "<group>"; };
+		EA96266321BA525600D9A738 /* AxcThemeConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcThemeConfiguration.h; sourceTree = "<group>"; };
+		EA96266421BA525600D9A738 /* AxcThemeConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AxcThemeConfiguration.m; sourceTree = "<group>"; };
 		EAADC2F32187F4490043BB9D /* AxcBaseAppVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AxcBaseAppVC.h; sourceTree = "<group>"; };
 		EAADC2F42187F4490043BB9D /* AxcBaseAppVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AxcBaseAppVC.m; sourceTree = "<group>"; };
 		EAADC2F72187F4C40043BB9D /* BaseTabbarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabbarVC.h; sourceTree = "<group>"; };
@@ -747,6 +751,9 @@
 			children = (
 				EA5FEEB121ABDAA200405C28 /* AxcThemeManager.h */,
 				EA5FEEB221ABDAA200405C28 /* AxcThemeManager.m */,
+				EA96266321BA525600D9A738 /* AxcThemeConfiguration.h */,
+				EA96266421BA525600D9A738 /* AxcThemeConfiguration.m */,
+				EA96266221BA4A8B00D9A738 /* AxcThemeStruct.h */,
 			);
 			path = AxcThemeManager;
 			sourceTree = "<group>";
@@ -1907,6 +1914,7 @@
 				EA0B110C21A2554900340FEA /* AxcDBManager.m in Sources */,
 				EADA9E0921AF84970003FF9C /* UIViewController+AxcVCPushName.m in Sources */,
 				EAC1FDED21884238001AC774 /* AxcNavVC.m in Sources */,
+				EA96266521BA525600D9A738 /* AxcThemeConfiguration.m in Sources */,
 				EADA9E0321AF84970003FF9C /* UIButton+AxcButtonContentLayout.m in Sources */,
 				EA5CBE1A21B617300024B443 /* WSDatePickerView.m in Sources */,
 				EA2570E421A7ECD400FCF7EE /* AppDelegate+LLDebug_Ex.m in Sources */,

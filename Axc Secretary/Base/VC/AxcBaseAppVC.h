@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 数据库操作对象
 @property(nonatomic , strong)AxcDBManager *db;
 // 日期选择
-- (void)AxcBase_showDateSelectCompleteBlock:(void(^)(NSDate *))completeBlock;
+- (void)AxcBase_showDate:(NSDate *)date selectCompleteBlock:(void(^)(NSDate *))completeBlock;
 
 @end
 

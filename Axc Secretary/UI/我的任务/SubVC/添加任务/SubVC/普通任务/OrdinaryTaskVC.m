@@ -23,16 +23,19 @@
     [super createUI];
     
 }
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    [self AxcBase_showDateSelectCompleteBlock:nil];
+// 添加
+- (void)click_confirmBtn{
+    MonthEventModel *addModel = [MonthEventModel new];
+    addModel.title = self.taskNameTextFiled.text;
+    addModel.Introduction = self.taskInstructionsTextView.text;
+    addModel.date = self.selectDate;
+    addModel.addDate = [NSDate date];
+    addModel.level = 1;
+    [self.db addTaskMatter:addModel];
+    [SVProgressHUD showSuccessWithStatus:@"添加成功！"];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-
 #pragma mark - 懒加载
-//- (UITextField *)taskNameTextFiled{
-//    if (!_taskNameTextFiled) {
-//        _taskNameTextFiled = [UITextField ];
-//    }
-//}
 
 @end

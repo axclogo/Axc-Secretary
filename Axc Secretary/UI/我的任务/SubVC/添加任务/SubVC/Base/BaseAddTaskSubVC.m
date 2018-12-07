@@ -10,7 +10,6 @@
 
 @interface BaseAddTaskSubVC ()<RSKGrowingTextViewDelegate,UITextViewDelegate>
 
-@property(nonatomic , strong)NSDate *selectDate;
 
 @end
 
@@ -69,25 +68,19 @@
 #pragma mark - 触发事件
 - (void)click_selectDate{
     WeakSelf
-    [self AxcBase_showDateSelectCompleteBlock:^(NSDate * _Nonnull date) {
+    NSDate *btnDate = (NSDate *)self.taskTimeBtn.saveValueObj;
+    [self AxcBase_showDate:btnDate selectCompleteBlock:^(NSDate * _Nonnull date) {
+        weakSelf.taskTimeBtn.saveValueObj =
         weakSelf.selectDate = date;
         [weakSelf.taskTimeBtn setTitle:[date AxcTool_getDateWithFomant:MonthDayFormat] forState:UIControlStateNormal];
-        weakSelf.taskTimeBtn.backgroundColor = kSelectedColor;
     }];
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.taskNameTextFiled resignFirstResponder];
-    [self.taskInstructionsTextView resignFirstResponder];
+    [self.taskNameTextFiled endEditing:YES];
+    [self.taskInstructionsTextView endEditing:YES];
 }
 // 添加
 - (void)click_confirmBtn{
-    MonthEventModel *addModel = [MonthEventModel new];
-    addModel.title = self.taskNameTextFiled.text;
-    addModel.Introduction = self.taskInstructionsTextView.text;
-    addModel.date = self.selectDate;
-    addModel.addDate = [NSDate date];
-    addModel.level = 1;
-    [self.db addTaskMatter:addModel];
 }
 
 #pragma mark - 懒加载
@@ -101,7 +94,9 @@
     if (!_taskTimeBtn) {
         _taskTimeBtn = [UIButton new];
         _taskTimeBtn.backgroundColor = kUncheckColor;
-        [_taskTimeBtn setTitle:[[NSDate date] AxcTool_getDateWithFomant:MonthDayFormat] forState:UIControlStateNormal];
+        NSDate *today = [NSDate date];
+        _taskTimeBtn.saveValueObj = today;
+        [_taskTimeBtn setTitle:[today AxcTool_getDateWithFomant:MonthDayFormat] forState:UIControlStateNormal];
         [_taskTimeBtn setTitleColor:kViceTitleColor forState:UIControlStateNormal];
         [_taskTimeBtn AxcTool_cornerWithRadius:5];
         [_taskTimeBtn addTarget:self action:@selector(click_selectDate) forControlEvents:UIControlEventTouchUpInside];

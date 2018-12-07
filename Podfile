@@ -66,7 +66,7 @@ post_install do |installer|
     installer.pods_project.targets.each do |target|
         if target.name == 'NumberMorphView'
             target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '3'
+                config.build_settings['SWIFT_VERSION'] = '2'
             end
         else
             target.build_configurations.each do |config|

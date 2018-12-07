@@ -36,8 +36,8 @@
 //}
 
 
-- (void)AxcBase_showDateSelectCompleteBlock:(void(^)(NSDate *))completeBlock{
-    WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDayHourMinute CompleteBlock:completeBlock];
+- (void)AxcBase_showDate:(NSDate *)date selectCompleteBlock:(void(^)(NSDate *))completeBlock{
+    WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDayHourMinute scrollToDate:date CompleteBlock:completeBlock];
     datepicker.dateLabelColor = kSelectedColor;
     datepicker.datePickerColor = kMarkColor;//滚轮日期颜色
     datepicker.doneButtonColor = kSelectedColor;//确定按钮的颜色

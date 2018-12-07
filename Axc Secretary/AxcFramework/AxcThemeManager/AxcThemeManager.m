@@ -49,7 +49,7 @@ static AxcThemeManager    *_manager;
             self.markColor = [UIColor AxcTool_colorHex:@"00285A"];
             self.viceColor = [UIColor AxcTool_colorHex:@"f6f6f6"];
             self.viceTitleColor = self.mainTitleColor;
-        }break;
+                    }break;
             
             
         case AxcThemeDark:{

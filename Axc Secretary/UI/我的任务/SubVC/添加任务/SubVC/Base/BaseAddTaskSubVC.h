@@ -28,8 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic , strong)RSKGrowingTextView *taskInstructionsTextView;
 // 时间选择
 @property(nonatomic , strong)UIButton *taskTimeBtn;
+@property(nonatomic , strong)NSDate *selectDate;
 // 确认添加的按钮
 @property(nonatomic , strong)UIButton *confirmBtn;
+- (void)click_confirmBtn;
 
 
 @end

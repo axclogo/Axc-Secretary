@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AxcThemeStruct.h"
 
 typedef NS_ENUM(NSInteger, AxcTheme) {
     AxcThemeNone,           // 无
@@ -23,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic , assign)AxcTheme theme;
 
-
+@property(nonatomic , assign)AxcThemeStruct themeStruct;
 
 
 #pragma mark - 主题获取口
