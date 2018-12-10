@@ -193,9 +193,10 @@ static CGFloat onOffsetY = 0;
     cell.rightExpansion.buttonIndex = cell.leftExpansion.buttonIndex = self.isSwipeSettings ? 0 : -1;
     cell.swipeBackgroundColor = kViceColor;
     // 注册3DTouch
+    WeakSelf;
     if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
         //给cell注册3DTouch的peek（预览）和pop功能 ，注册(在哪个页面上使用该功能就注册在哪个页面上)
-        [self registerForPreviewingWithDelegate:self sourceView:cell];
+        [self registerForPreviewingWithDelegate:weakSelf sourceView:cell];
     }
     return cell;
 }
